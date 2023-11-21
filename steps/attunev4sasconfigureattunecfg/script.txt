@@ -7,7 +7,7 @@ then
     cat <<EOF >> ~/attune.home/config.cfg
     
 [disk_storage]
-home_path = /home/{automationWorkerLinuxNode.user}/attune.home
+home_path = /home/{automationWorkerLinuxUser.user}/attune.home
 archives_path = %(home_path)s/archives_contents
 tmp_path = %(home_path)s/tmp
 archives_unlocked_contents = %(home_path)s/archives_unlocked_contents
@@ -18,10 +18,10 @@ project_storage_path = %(home_path)s/projects
 # path to migration scripts
 script_location = /home/attune/python/lib/python2.7/site-packages/attune/alembic
 sourceless = true
-sqlalchemy.url = postgresql://{automationWorkerLinuxNode.user}:${SQLPASSWD}@localhost/attune
+sqlalchemy.url = postgresql://{automationWorkerLinuxUser.user}:${SQLPASSWD}@localhost/attune
 
 [user]
-admin.pass = {automationWorkerLinuxNode.password}
+admin.pass = {automationWorkerLinuxUser.password}
 
 [http]
 key_file_path =

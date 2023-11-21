@@ -1,0 +1,16 @@
+{
+    "actionOnStepFail": "stop", 
+    "concurrency": 1, 
+    "enabled": true, 
+    "externalUuid4": "2106e144-c7d8-48ec-b129-91ac96aa9e5b", 
+    "isBlueprint": false, 
+    "key": "setupwimlibutilsonlinuxworker", 
+    "links": [
+        {
+            "order": 0, 
+            "stepKey": "installwimlibonlinuxworker"
+        }
+    ], 
+    "name": "Setup wimlib-utils on Linux Worker", 
+    "type": "com.servertribe.attune.tuples.StepGroupTuple"
+}

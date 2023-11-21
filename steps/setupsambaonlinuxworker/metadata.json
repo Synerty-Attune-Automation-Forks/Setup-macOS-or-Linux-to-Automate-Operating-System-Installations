@@ -1,0 +1,64 @@
+{
+    "actionOnStepFail": null, 
+    "concurrency": 1, 
+    "enabled": true, 
+    "externalUuid4": "deff9413-ef53-4e3a-bd4a-0804b49e9ab8", 
+    "isBlueprint": false, 
+    "key": "setupsambaonlinuxworker", 
+    "links": [
+        {
+            "order": 0, 
+            "stepKey": "swpesssinstallsamba"
+        }, 
+        {
+            "order": 50, 
+            "stepKey": "sssetupsharedfolder"
+        }, 
+        {
+            "order": 100, 
+            "stepKey": "swpessssetupsmbconf"
+        }, 
+        {
+            "order": 150, 
+            "stepKey": "swpessschecksmbconf"
+        }, 
+        {
+            "order": 200, 
+            "stepKey": "swpessssetupfirewall"
+        }, 
+        {
+            "order": 250, 
+            "stepKey": "swpesssinstallprerequisites"
+        }, 
+        {
+            "order": 300, 
+            "stepKey": "swpessssetupselinux"
+        }, 
+        {
+            "order": 350, 
+            "stepKey": "swpessscheckselinux"
+        }, 
+        {
+            "order": 400, 
+            "stepKey": "swpesssstartsmb"
+        }, 
+        {
+            "order": 450, 
+            "stepKey": "swpessscheckservicesmb"
+        }, 
+        {
+            "order": 500, 
+            "stepKey": "swpesssstartservicenmb"
+        }, 
+        {
+            "order": 550, 
+            "stepKey": "swpessscheckservicenmb"
+        }, 
+        {
+            "order": 600, 
+            "stepKey": "swpessssetattunefolderpermissions"
+        }
+    ], 
+    "name": "Setup Samba on Linux Worker", 
+    "type": "com.servertribe.attune.tuples.StepGroupTuple"
+}

@@ -206,18 +206,132 @@
         
 
                     <p class="text-muted pt-2">
-                        <a href="#attunev5swpessetupsambalink">
-                            <strong>Step 1 -</strong> Attune v5 SWPES Setup Samba (Link)
+                        <a href="#setupsambaonlinuxworker">
+                            <strong>Step 1 -</strong> Setup Samba on Linux Worker
+                        </a>
+                    </p>
+    
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#swpesssinstallsamba">
+                            <strong>Step 1.1 -</strong> SWPES SS Install Samba
                         </a>
                     </p>
 
         
 
                     <p class="text-muted pt-2">
-                        <a href="#attunev5swpeinstallcwimliblink">
-                            <strong>Step 2 -</strong> Attune v5 SWPE Install C wimlib (Link)
+                        <a href="#sssetupsharedfolder">
+                            <strong>Step 1.2 -</strong> SS Setup Shared Folder
                         </a>
                     </p>
+
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#swpessssetupsmbconf">
+                            <strong>Step 1.3 -</strong> SWPES SS Setup smb.conf
+                        </a>
+                    </p>
+
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#swpessschecksmbconf">
+                            <strong>Step 1.4 -</strong> SWPES SS Check smb.conf
+                        </a>
+                    </p>
+
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#swpessssetupfirewall">
+                            <strong>Step 1.5 -</strong> SWPES SS Setup Firewall
+                        </a>
+                    </p>
+
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#swpesssinstallprerequisites">
+                            <strong>Step 1.6 -</strong> SWPES SS Install Prerequisites
+                        </a>
+                    </p>
+
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#swpessssetupselinux">
+                            <strong>Step 1.7 -</strong> SWPES SS Setup SELinux
+                        </a>
+                    </p>
+
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#swpessscheckselinux">
+                            <strong>Step 1.8 -</strong> SWPES SS Check SELinux
+                        </a>
+                    </p>
+
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#swpesssstartsmb">
+                            <strong>Step 1.9 -</strong> SWPES SS Start smb
+                        </a>
+                    </p>
+
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#swpessscheckservicesmb">
+                            <strong>Step 1.10 -</strong> SWPES SS Check Service smb
+                        </a>
+                    </p>
+
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#swpesssstartservicenmb">
+                            <strong>Step 1.11 -</strong> SWPES SS Start Service nmb
+                        </a>
+                    </p>
+
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#swpessscheckservicenmb">
+                            <strong>Step 1.12 -</strong> SWPES SS Check Service nmb
+                        </a>
+                    </p>
+
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#swpessssetattunefolderpermissions">
+                            <strong>Step 1.13 -</strong> SWPES SS Set Attune Folder Permissions
+                        </a>
+                    </p>
+
+
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#setupwimlibutilsonlinuxworker">
+                            <strong>Step 2 -</strong> Setup wimlib-utils on Linux Worker
+                        </a>
+                    </p>
+    
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#installwimlibonlinuxworker">
+                            <strong>Step 2.1 -</strong> Install wimlib on Linux Worker
+                        </a>
+                    </p>
+
 
         
 
@@ -317,11 +431,40 @@
 
 
                     <div class="row pt-5">
-                        <h3 id="attunev5swpessetupsambalink">
-                            <a href="#attunev5swpessetupsambalink">
-                                <strong>Step 1 -</strong> Attune v5 SWPES Setup Samba (Link)
+                        <h3 id="setupsambaonlinuxworker">
+                            <a href="#setupsambaonlinuxworker">
+                                <strong>Step 1 -</strong> Setup Samba on Linux Worker
                             </a>
                         </h3>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                <p>Sets up a Samba server at "/home/attune/windows_iso_data_for_winpe".</p>
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+    
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h4 id="swpesssinstallsamba">
+                            <a href="#swpesssinstallsamba">
+                                <strong>Step 1.1 -</strong> SWPES SS Install Samba
+                            </a>
+                        </h4>
                     </div>
 
                     <div class="row">
@@ -337,7 +480,833 @@
 
 
 
+
+
+
+
+                        <div class="row">
+                            <p>
+                                Connect via ssh:
+                            </p>
+                        </div>
+                        <div class="row py-1">
+                            <code class="language-sql">
+ssh {automationworkerlinuxuserroot}@{automationworkerlinuxnode}
+                            </code>
+                        </div>
+
+
+
     
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+dnf -y install samba samba-common samba-client
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h4 id="sssetupsharedfolder">
+                            <a href="#sssetupsharedfolder">
+                                <strong>Step 1.2 -</strong> SS Setup Shared Folder
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                <p>https://www.linuxbabe.com/redhat/set-up-samba-server-on-centos-8-rhel-8-for-file-sharing
+https://www.linuxquestions.org/questions/linux-general-1/chcon-can't-apply-partial-context-to-unlabeled-file-371977/</p>
+<h5>For RHEL 7</h5>
+<p>chcon -h system_u:object_r:samba_share_t $shared_dir</p>
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+shared_dir=&quot;/home/attune/windows_iso_data_for_winpe&quot;
+mkdir -p $shared_dir
+chmod -R 0775 $shared_dir
+chown -R nobody:{automationWorkerLinuxUser.user} $shared_dir
+
+chcon -R -t samba_share_t $shared_dir
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h4 id="swpessssetupsmbconf">
+                            <a href="#swpessssetupsmbconf">
+                                <strong>Step 1.3 -</strong> SWPES SS Setup smb.conf
+                            </a>
+                        </h4>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+cd /etc/samba/
+
+cat &lt;&lt; EOF &gt; smb.conf
+# See smb.conf.example for a more detailed config file or
+# read the smb.conf manpage.
+# Run &#x27;testparm&#x27; to verify the config is correct after
+# you modified it.
+
+[global]
+	workgroup = WORKGROUP
+	security = user
+	passdb backend = tdbsam
+	map to guest = bad user
+
+[share]
+        comment = public share
+        path = /home/{automationWorkerLinuxUser.user}/windows_iso_data_for_winpe
+        browseable = yes
+        guest ok = yes
+        guest only = yes
+        writable = yes
+        read only = no
+EOF
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h4 id="swpessschecksmbconf">
+                            <a href="#swpessschecksmbconf">
+                                <strong>Step 1.4 -</strong> SWPES SS Check smb.conf
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                        <div class="row">
+                            <p>
+                                Connect via ssh:
+                            </p>
+                        </div>
+                        <div class="row py-1">
+                            <code class="language-sql">
+ssh {automationworkerlinuxuser}@{automationworkerlinuxnode}
+                            </code>
+                        </div>
+
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+testparm --suppress-prompt
+exit $?
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h4 id="swpessssetupfirewall">
+                            <a href="#swpessssetupfirewall">
+                                <strong>Step 1.5 -</strong> SWPES SS Setup Firewall
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                        <div class="row">
+                            <p>
+                                Connect via ssh:
+                            </p>
+                        </div>
+                        <div class="row py-1">
+                            <code class="language-sql">
+ssh {automationworkerlinuxuserroot}@{automationworkerlinuxnode}
+                            </code>
+                        </div>
+
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+firewall-cmd --add-service=samba --zone=public --permanent
+firewall-cmd --reload
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h4 id="swpesssinstallprerequisites">
+                            <a href="#swpesssinstallprerequisites">
+                                <strong>Step 1.6 -</strong> SWPES SS Install Prerequisites
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+dnf -y install \
+    policycoreutils-python-utils \
+    fuse3-devel \
+    fuse3-libs
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h4 id="swpessssetupselinux">
+                            <a href="#swpessssetupselinux">
+                                <strong>Step 1.7 -</strong> SWPES SS Setup SELinux
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+if sestatus | grep -i &quot;SELinux status:&quot; | grep -q &quot;enabled&quot;
+then
+    setsebool -P samba_export_all_ro=1 samba_export_all_rw=1
+    semanage fcontext -at samba_share_t &quot;/home/attune/windows_iso_data_for_winpe(/.*)?&quot;
+else
+    echo &quot;SElinux is disabled&quot;
+fi
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h4 id="swpessscheckselinux">
+                            <a href="#swpessscheckselinux">
+                                <strong>Step 1.8 -</strong> SWPES SS Check SELinux
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                        <div class="row">
+                            <p>
+                                Connect via ssh:
+                            </p>
+                        </div>
+                        <div class="row py-1">
+                            <code class="language-sql">
+ssh {automationworkerlinuxuser}@{automationworkerlinuxnode}
+                            </code>
+                        </div>
+
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+if sestatus | grep -i &quot;SELinux status:&quot; | grep -q &quot;enabled&quot;
+then
+    line_count=$(getsebool -a | grep samba_export | wc -l)
+    
+    if [ $line_count -eq 2 ]
+    then
+        echo &quot;ok&quot;
+    else
+        echo &quot;wrong number of occurrences for samba_export&quot;
+        exit 1
+    fi
+else
+    echo &quot;SElinux is disabled&quot;
+fi
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h4 id="swpesssstartsmb">
+                            <a href="#swpesssstartsmb">
+                                <strong>Step 1.9 -</strong> SWPES SS Start smb
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                        <div class="row">
+                            <p>
+                                Connect via ssh:
+                            </p>
+                        </div>
+                        <div class="row py-1">
+                            <code class="language-sql">
+ssh {automationworkerlinuxuserroot}@{automationworkerlinuxnode}
+                            </code>
+                        </div>
+
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+systemctl restart smb
+systemctl enable smb
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h4 id="swpessscheckservicesmb">
+                            <a href="#swpessscheckservicesmb">
+                                <strong>Step 1.10 -</strong> SWPES SS Check Service smb
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                        <div class="row">
+                            <p>
+                                Connect via ssh:
+                            </p>
+                        </div>
+                        <div class="row py-1">
+                            <code class="language-sql">
+ssh {automationworkerlinuxuser}@{automationworkerlinuxnode}
+                            </code>
+                        </div>
+
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+service=&quot;smb&quot;
+line_count=$(systemctl status $service | grep running | wc -l)
+if [ $line_count -eq 0 ]
+then
+    echo &quot;$service is not running&quot;
+    exit 1
+else
+    echo &quot;ok&quot;
+fi
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h4 id="swpesssstartservicenmb">
+                            <a href="#swpesssstartservicenmb">
+                                <strong>Step 1.11 -</strong> SWPES SS Start Service nmb
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                        <div class="row">
+                            <p>
+                                Connect via ssh:
+                            </p>
+                        </div>
+                        <div class="row py-1">
+                            <code class="language-sql">
+ssh {automationworkerlinuxuserroot}@{automationworkerlinuxnode}
+                            </code>
+                        </div>
+
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+systemctl restart nmb
+systemctl enable nmb
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h4 id="swpessscheckservicenmb">
+                            <a href="#swpessscheckservicenmb">
+                                <strong>Step 1.12 -</strong> SWPES SS Check Service nmb
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                        <div class="row">
+                            <p>
+                                Connect via ssh:
+                            </p>
+                        </div>
+                        <div class="row py-1">
+                            <code class="language-sql">
+ssh {automationworkerlinuxuser}@{automationworkerlinuxnode}
+                            </code>
+                        </div>
+
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+service=&quot;nmb&quot;
+line_count=$(systemctl status $service | grep running | wc -l)
+if [ $line_count -eq 0 ]
+then
+    echo &quot;$service is not running&quot;
+    exit 1
+else
+    echo &quot;ok&quot;
+fi
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h4 id="swpessssetattunefolderpermissions">
+                            <a href="#swpessssetattunefolderpermissions">
+                                <strong>Step 1.13 -</strong> SWPES SS Set Attune Folder Permissions
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+cd /home
+chmod -v +rx {automationWorkerLinuxUser.user}
+                </code>
+            </pre>
+        </div>
+    </div>
+
 
 
 
@@ -348,9 +1317,9 @@
 
 
                     <div class="row pt-5">
-                        <h3 id="attunev5swpeinstallcwimliblink">
-                            <a href="#attunev5swpeinstallcwimliblink">
-                                <strong>Step 2 -</strong> Attune v5 SWPE Install C wimlib (Link)
+                        <h3 id="setupwimlibutilsonlinuxworker">
+                            <a href="#setupwimlibutilsonlinuxworker">
+                                <strong>Step 2 -</strong> Setup wimlib-utils on Linux Worker
                             </a>
                         </h3>
                     </div>
@@ -367,8 +1336,72 @@
 
 
 
+    
+
+
+
 
     
+
+
+
+                    <div class="row pt-5">
+                        <h4 id="installwimlibonlinuxworker">
+                            <a href="#installwimlibonlinuxworker">
+                                <strong>Step 2.1 -</strong> Install wimlib on Linux Worker
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                        <div class="row">
+                            <p>
+                                Connect via ssh:
+                            </p>
+                        </div>
+                        <div class="row py-1">
+                            <code class="language-sql">
+ssh {automationworkerlinuxuserroot}@{automationworkerlinuxnode}
+                            </code>
+                        </div>
+
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+dnf -y install wimlib wimlib-utils fuse
+                </code>
+            </pre>
+        </div>
+    </div>
+
 
 
 
@@ -438,7 +1471,7 @@ then
     cat &lt;&lt;EOF &gt;&gt; ~/attune.home/config.cfg
     
 [disk_storage]
-home_path = /home/{automationWorkerLinuxNode.user}/attune.home
+home_path = /home/{automationWorkerLinuxUser.user}/attune.home
 archives_path = %(home_path)s/archives_contents
 tmp_path = %(home_path)s/tmp
 archives_unlocked_contents = %(home_path)s/archives_unlocked_contents
@@ -449,10 +1482,10 @@ project_storage_path = %(home_path)s/projects
 # path to migration scripts
 script_location = /home/attune/python/lib/python2.7/site-packages/attune/alembic
 sourceless = true
-sqlalchemy.url = postgresql://{automationWorkerLinuxNode.user}:${SQLPASSWD}@localhost/attune
+sqlalchemy.url = postgresql://{automationWorkerLinuxUser.user}:${SQLPASSWD}@localhost/attune
 
 [user]
-admin.pass = {automationWorkerLinuxNode.password}
+admin.pass = {automationWorkerLinuxUser.password}
 
 [http]
 key_file_path =

@@ -7,15 +7,15 @@
     "key": "setupwinpesupportonlinuxworker", 
     "links": [
         {
-            "order": 0, 
-            "stepKey": "attunev5swpessetupsambalink"
-        }, 
-        {
             "order": 50, 
-            "stepKey": "attunev5swpeinstallcwimliblink"
+            "stepKey": "setupsambaonlinuxworker"
         }, 
         {
             "order": 150, 
+            "stepKey": "setupwimlibutilsonlinuxworker"
+        }, 
+        {
+            "order": 200, 
             "stepKey": "attunev4sasconfigureattunecfg"
         }
     ], 

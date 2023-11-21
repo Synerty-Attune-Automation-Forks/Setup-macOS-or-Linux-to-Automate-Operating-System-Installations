@@ -54,9 +54,6 @@ This Project contains the following Blueprints.
 
 
 
-### Setup WinPE Support on Linux Worker
-
-
 ### Add-On Hyper-V Support on Linux Worker
 
 
@@ -71,6 +68,9 @@ This is for OS installs to download ISOs from HTTP.
 
 
 ### Setup vCenter Support on Linux Worker
+
+
+### Setup WinPE Support on Linux Worker
 
 
 
