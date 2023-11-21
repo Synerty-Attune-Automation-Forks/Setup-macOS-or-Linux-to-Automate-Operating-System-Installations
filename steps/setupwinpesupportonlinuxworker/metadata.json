@@ -13,10 +13,6 @@
         {
             "order": 150, 
             "stepKey": "setupwimlibutilsonlinuxworker"
-        }, 
-        {
-            "order": 200, 
-            "stepKey": "attunev4sasconfigureattunecfg"
         }
     ], 
     "name": "Setup WinPE Support on Linux Worker", 

@@ -332,14 +332,14 @@
                         </a>
                     </p>
 
-
         
 
                     <p class="text-muted pt-2">
-                        <a href="#attunev4sasconfigureattunecfg">
-                            <strong>Step 3 -</strong> Attune v4 SAS Configure Attune CFG
+                        <a href="#checkwimlibinstalledonlinuxworker">
+                            <strong>Step 2.2 -</strong> Check wimlib Installed on Linux Worker
                         </a>
                     </p>
+
 
 
                 </div>
@@ -1413,25 +1413,16 @@ dnf -y install wimlib wimlib-utils fuse
 
 
 
-
-        
+    
 
 
 
                     <div class="row pt-5">
-                        <h3 id="attunev4sasconfigureattunecfg">
-                            <a href="#attunev4sasconfigureattunecfg">
-                                <strong>Step 3 -</strong> Attune v4 SAS Configure Attune CFG
+                        <h4 id="checkwimlibinstalledonlinuxworker">
+                            <a href="#checkwimlibinstalledonlinuxworker">
+                                <strong>Step 2.2 -</strong> Check wimlib Installed on Linux Worker
                             </a>
-                        </h3>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                
-                            </p>
-                        </div>
+                        </h4>
                     </div>
 
 
@@ -1443,17 +1434,7 @@ dnf -y install wimlib wimlib-utils fuse
 
 
 
-                        <div class="row">
-                            <p>
-                                Connect via ssh:
-                            </p>
-                        </div>
-                        <div class="row py-1">
-                            <code class="language-sql">
-ssh {automationworkerlinuxuser}@{automationworkerlinuxnode}
-                            </code>
-                        </div>
-
+    
 
 
     
@@ -1469,52 +1450,13 @@ ssh {automationworkerlinuxuser}@{automationworkerlinuxnode}
         <div class="col px-0">
             <pre>
                 <code class="language-sql py-0">
-[ -d ~/attune.home ] || mkdir ~/attune.home
-SQLPASSWD=$(openssl rand -base64 32 | tr -dc _A-Z-a-z-0-9)
-
-if ! grep -q &quot;[disk_storage]&quot; ~/attune.home/config.cfg
-then
-
-    cat &lt;&lt;EOF &gt;&gt; ~/attune.home/config.cfg
-    
-[disk_storage]
-home_path = /home/{automationWorkerLinuxUser.user}/attune.home
-archives_path = %(home_path)s/archives_contents
-tmp_path = %(home_path)s/tmp
-archives_unlocked_contents = %(home_path)s/archives_unlocked_contents
-executions_path = %(home_path)s/historical_jobs
-project_storage_path = %(home_path)s/projects
-
-[alembic]
-# path to migration scripts
-script_location = /home/attune/python/lib/python2.7/site-packages/attune/alembic
-sourceless = true
-sqlalchemy.url = postgresql://{automationWorkerLinuxUser.user}:${SQLPASSWD}@localhost/attune
-
-[user]
-admin.pass = {automationWorkerLinuxUser.password}
-
-[http]
-key_file_path =
-cert_file_path =
-http_port = 8000
-
-EOF
-
-else
-    echo &quot;[disk_storage] is already written, skipping.&quot;
-fi
-
-# Set Postgresql Password to the New random password
-psql &lt;&lt;&lt; &quot;alter role attune password &#x27;${SQLPASSWD}&#x27;;&quot;
-echo &quot;Attune PostgreSQL password has been reset&quot;
-
-echo &quot;~/attune.home/config.cfg:&quot;
-cat ~/attune.home/config.cfg
+which mkwinpeimg
+which wimcapture
                 </code>
             </pre>
         </div>
     </div>
+
 
 
 

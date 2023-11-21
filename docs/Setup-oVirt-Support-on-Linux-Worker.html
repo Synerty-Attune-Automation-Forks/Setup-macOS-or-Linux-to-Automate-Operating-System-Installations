@@ -214,8 +214,16 @@
         
 
                     <p class="text-muted pt-2">
+                        <a href="#installlibcurldevel">
+                            <strong>Step 2 -</strong> Install libcurl-devel
+                        </a>
+                    </p>
+
+        
+
+                    <p class="text-muted pt-2">
                         <a href="#rhelattunesovscreatevirtualenv">
-                            <strong>Step 2 -</strong> RHEL Attune SOVS Create Virtualenv
+                            <strong>Step 3 -</strong> RHEL Attune SOVS Create Virtualenv
                         </a>
                     </p>
 
@@ -374,9 +382,64 @@ yum install -y gcc libxml2-devel nss-devel python3-devel python3 virtualenv
 
 
                     <div class="row pt-5">
+                        <h3 id="installlibcurldevel">
+                            <a href="#installlibcurldevel">
+                                <strong>Step 2 -</strong> Install libcurl-devel
+                            </a>
+                        </h3>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                <p>This step is a prerequisite for the installation of <code>pycurl</code> in the next step.</p>
+<p>Reference: https://stackoverflow.com/questions/66419978/could-not-install-pycurl-7-43-0-6-on-python-3-8-8-rhel-8-3</p>
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+dnf -y install libcurl-devel
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+        
+
+
+
+                    <div class="row pt-5">
                         <h3 id="rhelattunesovscreatevirtualenv">
                             <a href="#rhelattunesovscreatevirtualenv">
-                                <strong>Step 2 -</strong> RHEL Attune SOVS Create Virtualenv
+                                <strong>Step 3 -</strong> RHEL Attune SOVS Create Virtualenv
                             </a>
                         </h3>
                     </div>

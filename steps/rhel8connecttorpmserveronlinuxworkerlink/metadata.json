@@ -7,17 +7,7 @@
     "externalUuid4": "1c29cfd8-848c-494c-8e48-fe81b50c8fc7", 
     "key": "rhel8connecttorpmserveronlinuxworkerlink", 
     "name": "RHEL8 Connect to RPM Server on Linux Worker (link)", 
-    "parameterMap": [
-        {
-            "childParameterName": null, 
-            "childParameterType": "c.s.s.b.phv.LinuxServer", 
-            "childParameterUuid": "fbf883e7-bfa6-4530-8ddc-7816ea16c07b", 
-            "childProjectName": null, 
-            "childProjectUuid": "d0c58a02-9cfc-483f-9777-9c8fe7285609", 
-            "parentParameterKey": "newautomationworkerlinuxnode", 
-            "parentStaticTextValue": null
-        }
-    ], 
+    "parameterMap": [], 
     "projectName": "", 
     "projectUuid": "d0c58a02-9cfc-483f-9777-9c8fe7285609", 
     "projectVersion": "", 

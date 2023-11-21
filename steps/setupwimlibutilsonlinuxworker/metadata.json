@@ -9,6 +9,10 @@
         {
             "order": 0, 
             "stepKey": "installwimlibonlinuxworker"
+        }, 
+        {
+            "order": 50, 
+            "stepKey": "checkwimlibinstalledonlinuxworker"
         }
     ], 
     "name": "Setup wimlib-utils on Linux Worker", 

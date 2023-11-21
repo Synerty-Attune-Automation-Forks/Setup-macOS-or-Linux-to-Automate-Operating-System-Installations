@@ -1,1 +1,0 @@
-The new Linux automation worker node to be built.

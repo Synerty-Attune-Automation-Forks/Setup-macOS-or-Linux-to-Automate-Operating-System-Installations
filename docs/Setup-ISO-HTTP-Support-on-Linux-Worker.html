@@ -213,8 +213,32 @@
         
 
                     <p class="text-muted pt-2">
+                        <a href="#installpython39onlinuxworker">
+                            <strong>Step 1 -</strong> Install Python 3.9 on Linux Worker
+                        </a>
+                    </p>
+
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#installtwistdonlinuxworker">
+                            <strong>Step 2 -</strong> Install twistd on Linux Worker
+                        </a>
+                    </p>
+
+        
+
+                    <p class="text-muted pt-2">
                         <a href="#adtcheckiftwistdisinstalled">
-                            <strong>Step 1 -</strong> ADT Check if twistd is Installed
+                            <strong>Step 3 -</strong> ADT Check if twistd is Installed
+                        </a>
+                    </p>
+
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#createstandarduseronlinuxworker">
+                            <strong>Step 4 -</strong> Create Standard User on Linux Worker
                         </a>
                     </p>
 
@@ -222,7 +246,7 @@
 
                     <p class="text-muted pt-2">
                         <a href="#adtdeployrunhttpisosh">
-                            <strong>Step 2 -</strong> ADT Deploy run_httpiso.sh
+                            <strong>Step 5 -</strong> ADT Deploy run_httpiso.sh
                         </a>
                     </p>
 
@@ -230,7 +254,7 @@
 
                     <p class="text-muted pt-2">
                         <a href="#adtsetpermissionsforrunhttpisosh">
-                            <strong>Step 3 -</strong> ADT Set Permissions for run_httpiso.sh
+                            <strong>Step 6 -</strong> ADT Set Permissions for run_httpiso.sh
                         </a>
                     </p>
 
@@ -238,7 +262,15 @@
 
                     <p class="text-muted pt-2">
                         <a href="#adtpushhttpisoservice">
-                            <strong>Step 4 -</strong> ADT Push httpiso.service
+                            <strong>Step 7 -</strong> ADT Push httpiso.service
+                        </a>
+                    </p>
+
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#createdkickstartdirectoryonlinuxworker">
+                            <strong>Step 8 -</strong> Created kickstart Directory on Linux Worker
                         </a>
                     </p>
 
@@ -246,7 +278,7 @@
 
                     <p class="text-muted pt-2">
                         <a href="#adtreloadsystemd">
-                            <strong>Step 5 -</strong> ADT Reload Systemd
+                            <strong>Step 9 -</strong> ADT Reload Systemd
                         </a>
                     </p>
 
@@ -254,7 +286,15 @@
 
                     <p class="text-muted pt-2">
                         <a href="#adtstartandenablehttpiso">
-                            <strong>Step 6 -</strong> ADT Start and Enable httpiso
+                            <strong>Step 10 -</strong> ADT Start and Enable httpiso
+                        </a>
+                    </p>
+
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#checkhttpisostarted">
+                            <strong>Step 11 -</strong> Check httpiso Started
                         </a>
                     </p>
 
@@ -262,7 +302,7 @@
 
                     <p class="text-muted pt-2">
                         <a href="#adtopenport8050onfirewalld">
-                            <strong>Step 7 -</strong> ADT Open Port 8050 on firewalld
+                            <strong>Step 12 -</strong> ADT Open Port 8050 on firewalld
                         </a>
                     </p>
 
@@ -356,9 +396,239 @@
 
 
                     <div class="row pt-5">
+                        <h3 id="installpython39onlinuxworker">
+                            <a href="#installpython39onlinuxworker">
+                                <strong>Step 1 -</strong> Install Python 3.9 on Linux Worker
+                            </a>
+                        </h3>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                        <div class="row">
+                            <p>
+                                Connect via ssh:
+                            </p>
+                        </div>
+                        <div class="row py-1">
+                            <code class="language-sql">
+ssh {automationworkerlinuxuserroot}@{automationworkerlinuxnode}
+                            </code>
+                        </div>
+
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+dnf -y install python39 python39-pip
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+        
+
+
+
+                    <div class="row pt-5">
+                        <h3 id="installtwistdonlinuxworker">
+                            <a href="#installtwistdonlinuxworker">
+                                <strong>Step 2 -</strong> Install twistd on Linux Worker
+                            </a>
+                        </h3>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+pip3.9 install twisted
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+        
+
+
+
+                    <div class="row pt-5">
                         <h3 id="adtcheckiftwistdisinstalled">
                             <a href="#adtcheckiftwistdisinstalled">
-                                <strong>Step 1 -</strong> ADT Check if twistd is Installed
+                                <strong>Step 3 -</strong> ADT Check if twistd is Installed
+                            </a>
+                        </h3>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+which twistd
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+        
+
+
+
+                    <div class="row pt-5">
+                        <h3 id="createstandarduseronlinuxworker">
+                            <a href="#createstandarduseronlinuxworker">
+                                <strong>Step 4 -</strong> Create Standard User on Linux Worker
+                            </a>
+                        </h3>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+useradd --create-home &quot;{automationWorkerLinuxUser.user}&quot;
+
+echo &quot;{automationWorkerLinuxUser.user}&quot;:&quot;{automationWorkerLinuxUser.password}&quot; \
+    | chpasswd
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+        
+
+
+
+                    <div class="row pt-5">
+                        <h3 id="adtdeployrunhttpisosh">
+                            <a href="#adtdeployrunhttpisosh">
+                                <strong>Step 5 -</strong> ADT Deploy run_httpiso.sh
                             </a>
                         </h3>
                     </div>
@@ -391,60 +661,6 @@ ssh {automationworkerlinuxuser}@{automationworkerlinuxnode}
                             </code>
                         </div>
 
-
-
-    
-
-
-
-    <div class="row">
-        <p>
-            Execute the following script:
-        </p>
-    </div>
-    <div class="row">
-        <div class="col px-0">
-            <pre>
-                <code class="language-sql py-0">
-which twistd
-                </code>
-            </pre>
-        </div>
-    </div>
-
-
-
-
-
-        
-
-
-
-                    <div class="row pt-5">
-                        <h3 id="adtdeployrunhttpisosh">
-                            <a href="#adtdeployrunhttpisosh">
-                                <strong>Step 2 -</strong> ADT Deploy run_httpiso.sh
-                            </a>
-                        </h3>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-    
 
     
 
@@ -480,7 +696,7 @@ $HOME, relative to the home directory
                     <div class="row pt-5">
                         <h3 id="adtsetpermissionsforrunhttpisosh">
                             <a href="#adtsetpermissionsforrunhttpisosh">
-                                <strong>Step 3 -</strong> ADT Set Permissions for run_httpiso.sh
+                                <strong>Step 6 -</strong> ADT Set Permissions for run_httpiso.sh
                             </a>
                         </h3>
                     </div>
@@ -534,7 +750,7 @@ chmod a+x run_httpiso.sh
                     <div class="row pt-5">
                         <h3 id="adtpushhttpisoservice">
                             <a href="#adtpushhttpisoservice">
-                                <strong>Step 4 -</strong> ADT Push httpiso.service
+                                <strong>Step 7 -</strong> ADT Push httpiso.service
                             </a>
                         </h3>
                     </div>
@@ -600,9 +816,9 @@ ssh {automationworkerlinuxuserroot}@{automationworkerlinuxnode}
 
 
                     <div class="row pt-5">
-                        <h3 id="adtreloadsystemd">
-                            <a href="#adtreloadsystemd">
-                                <strong>Step 5 -</strong> ADT Reload Systemd
+                        <h3 id="createdkickstartdirectoryonlinuxworker">
+                            <a href="#createdkickstartdirectoryonlinuxworker">
+                                <strong>Step 8 -</strong> Created kickstart Directory on Linux Worker
                             </a>
                         </h3>
                     </div>
@@ -623,7 +839,83 @@ ssh {automationworkerlinuxuserroot}@{automationworkerlinuxnode}
 
 
 
+
+                        <div class="row">
+                            <p>
+                                Connect via ssh:
+                            </p>
+                        </div>
+                        <div class="row py-1">
+                            <code class="language-sql">
+ssh {automationworkerlinuxuser}@{automationworkerlinuxnode}
+                            </code>
+                        </div>
+
+
+
     
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+mkdir --parents kickstart
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+        
+
+
+
+                    <div class="row pt-5">
+                        <h3 id="adtreloadsystemd">
+                            <a href="#adtreloadsystemd">
+                                <strong>Step 9 -</strong> ADT Reload Systemd
+                            </a>
+                        </h3>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                        <div class="row">
+                            <p>
+                                Connect via ssh:
+                            </p>
+                        </div>
+                        <div class="row py-1">
+                            <code class="language-sql">
+ssh {automationworkerlinuxuserroot}@{automationworkerlinuxnode}
+                            </code>
+                        </div>
+
 
 
     
@@ -656,7 +948,7 @@ systemctl daemon-reload
                     <div class="row pt-5">
                         <h3 id="adtstartandenablehttpiso">
                             <a href="#adtstartandenablehttpiso">
-                                <strong>Step 6 -</strong> ADT Start and Enable httpiso
+                                <strong>Step 10 -</strong> ADT Start and Enable httpiso
                             </a>
                         </h3>
                     </div>
@@ -708,9 +1000,9 @@ systemctl enable --now httpiso
 
 
                     <div class="row pt-5">
-                        <h3 id="adtopenport8050onfirewalld">
-                            <a href="#adtopenport8050onfirewalld">
-                                <strong>Step 7 -</strong> ADT Open Port 8050 on firewalld
+                        <h3 id="checkhttpisostarted">
+                            <a href="#checkhttpisostarted">
+                                <strong>Step 11 -</strong> Check httpiso Started
                             </a>
                         </h3>
                     </div>
@@ -731,7 +1023,83 @@ systemctl enable --now httpiso
 
 
 
+
+                        <div class="row">
+                            <p>
+                                Connect via ssh:
+                            </p>
+                        </div>
+                        <div class="row py-1">
+                            <code class="language-sql">
+ssh {automationworkerlinuxuser}@{automationworkerlinuxnode}
+                            </code>
+                        </div>
+
+
+
     
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+systemctl status httpiso
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+        
+
+
+
+                    <div class="row pt-5">
+                        <h3 id="adtopenport8050onfirewalld">
+                            <a href="#adtopenport8050onfirewalld">
+                                <strong>Step 12 -</strong> ADT Open Port 8050 on firewalld
+                            </a>
+                        </h3>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                        <div class="row">
+                            <p>
+                                Connect via ssh:
+                            </p>
+                        </div>
+                        <div class="row py-1">
+                            <code class="language-sql">
+ssh {automationworkerlinuxuserroot}@{automationworkerlinuxnode}
+                            </code>
+                        </div>
+
 
 
     

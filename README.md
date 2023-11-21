@@ -84,7 +84,6 @@ This is for OS installs to download ISOs from HTTP.
 | Automation Worker Linux Node | Linux/Unix Node | `automationworkerlinuxnode` | The Linux automation worker node used to perform tasks to create the ISO. |
 | Automation Worker Linux User | Linux/Unix Credential | `automationworkerlinuxuser` |  |
 | Automation Worker Linux User: root | Linux/Unix Credential | `automationworkerlinuxuserroot` | root user on the Linux Automation Worker node. |
-| New Automation Worker Linux Node | Linux/Unix Node | `newautomationworkerlinuxnode` | The new Linux automation worker node to be built. |
 
 
 

@@ -1,0 +1,1 @@
+dnf -y install python39 python39-pip
