@@ -1,0 +1,15 @@
+{
+    "actionOnStepFail": "stop", 
+    "blueprintName": "Attune v5 SWPES Setup Samba", 
+    "blueprintUuid": "b79b9e1b-ce17-4732-b458-ddb3b8137246", 
+    "cloneUrl": null, 
+    "enabled": true, 
+    "externalUuid4": "b79b9e1b-ce17-4732-b458-ddb3b8137246", 
+    "key": "attunev5swpessetupsambalink", 
+    "name": "Attune v5 SWPES Setup Samba (Link)", 
+    "parameterMap": [], 
+    "projectName": "Kickstart-Windows", 
+    "projectUuid": "24a458c3-5025-400b-bb49-4eae2055a149", 
+    "projectVersion": "master", 
+    "type": "com.servertribe.attune.tuples.StepProjectLinkTuple"
+}

@@ -1,3 +1,0 @@
-chmod ugo+r /etc/hosts
-
-ls -ltrh /etc/hosts

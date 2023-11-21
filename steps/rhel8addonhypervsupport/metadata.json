@@ -3,7 +3,7 @@
     "concurrency": 1, 
     "enabled": true, 
     "externalUuid4": "ec8f7618-96b1-4c1a-9d08-f867ce88f76c", 
-    "isBlueprint": false, 
+    "isBlueprint": true, 
     "key": "rhel8addonhypervsupport", 
     "links": [
         {

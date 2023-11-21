@@ -1,2 +1,0 @@
-
-lvextend --size 30g --resizefs /dev/rootvg/tmp

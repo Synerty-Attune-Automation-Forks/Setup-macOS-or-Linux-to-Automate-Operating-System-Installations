@@ -1,3 +1,0 @@
-systemctl enable postgresql-12 --now
-
-systemctl status postgresql-12

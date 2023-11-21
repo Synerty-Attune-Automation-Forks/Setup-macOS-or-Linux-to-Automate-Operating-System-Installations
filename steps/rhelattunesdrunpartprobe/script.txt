@@ -1,9 +1,0 @@
-echo "\"partprobe --summary\" original:"
-partprobe --summary
-
-partprobe /dev/sdb
-partprobe /dev/sdc
-partprobe /dev/sdd
-
-echo "\"partprobe --summary\" after:"
-partprobe --summary

@@ -3,7 +3,7 @@
     "concurrency": 1, 
     "enabled": true, 
     "externalUuid4": "068d4eba-c984-42e0-a1c3-6424c226a834", 
-    "isBlueprint": false, 
+    "isBlueprint": true, 
     "key": "rhelattunesetupvcentersupport", 
     "links": [
         {

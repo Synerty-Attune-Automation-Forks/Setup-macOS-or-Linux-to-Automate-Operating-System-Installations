@@ -1,1 +1,0 @@
-rm -rvf Python-${ATTUNE_PY_VER}*

@@ -3,7 +3,7 @@
     "concurrency": 1, 
     "enabled": true, 
     "externalUuid4": "cd5406d6-2cb3-4b88-8f0b-553ec813d389", 
-    "isBlueprint": false, 
+    "isBlueprint": true, 
     "key": "rhelattunesetupbootisosupport", 
     "links": [
         {

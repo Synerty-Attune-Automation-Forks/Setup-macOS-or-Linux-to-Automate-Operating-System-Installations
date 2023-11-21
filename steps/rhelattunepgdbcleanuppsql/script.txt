@@ -1,3 +1,0 @@
-[ ! -e ~/.psql_history ] || rm ~/.psql_history
-
-echo "Cleaning psql history..."

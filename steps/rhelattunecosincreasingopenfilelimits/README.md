@@ -1,1 +1,0 @@
-The symptom is seeing 'exceptions.IOError: [Errno 24] Too many open files:' in the 'attune.log'

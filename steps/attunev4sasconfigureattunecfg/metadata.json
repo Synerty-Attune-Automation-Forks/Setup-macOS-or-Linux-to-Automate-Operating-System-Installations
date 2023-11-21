@@ -1,0 +1,12 @@
+{
+    "actionOnStepFail": null, 
+    "enabled": true, 
+    "externalUuid4": "4207a26e-e991-4679-81cd-5497c1034f59", 
+    "interpreter": 1, 
+    "key": "attunev4sasconfigureattunecfg", 
+    "name": "Attune v4 SAS Configure Attune CFG", 
+    "osCredKey": "linuxattuneuser", 
+    "serverKey": "attuneserver", 
+    "successExitCode": 0, 
+    "type": "com.servertribe.attune.tuples.StepSshTuple"
+}

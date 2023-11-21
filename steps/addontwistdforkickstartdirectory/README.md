@@ -1,1 +1,0 @@
-SYNSO-300: This is for Hyper-V to pull kickstarts from.
