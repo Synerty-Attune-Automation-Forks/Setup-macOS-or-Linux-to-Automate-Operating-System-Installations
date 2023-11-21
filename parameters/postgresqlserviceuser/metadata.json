@@ -1,7 +1,0 @@
-{
-    "externalUuid4": "107c5259-8b2e-4c7f-bbff-dec19b9c1cce", 
-    "key": "postgresqlserviceuser", 
-    "name": "PostGreSQL Service User", 
-    "showInPlan": true, 
-    "type": "c.s.s.b.phv.OsCred"
-}

@@ -5,8 +5,8 @@
     "interpreter": 1, 
     "key": "adtsetpermissionsforrunhttpisosh", 
     "name": "ADT Set Permissions for run_httpiso.sh", 
-    "osCredKey": "linuxattuneuser", 
-    "serverKey": "attuneserver", 
+    "osCredKey": "automationworkerlinuxuser", 
+    "serverKey": "automationworkerlinuxnode", 
     "successExitCode": 0, 
     "type": "com.servertribe.attune.tuples.StepSshTuple"
 }

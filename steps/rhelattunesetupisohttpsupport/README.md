@@ -1,1 +1,0 @@
-This is for OS installs to download ISOs from HTTPS.

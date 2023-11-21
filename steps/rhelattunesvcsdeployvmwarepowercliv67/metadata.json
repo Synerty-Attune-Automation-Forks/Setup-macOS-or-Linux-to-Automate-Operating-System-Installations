@@ -6,8 +6,8 @@
     "externalUuid4": "847ff195-894c-4de3-b42a-a09470819402", 
     "key": "rhelattunesvcsdeployvmwarepowercliv67", 
     "name": "RHEL Attune SVCS Deploy VMWare.PowerCLI v6.7", 
-    "osCredKey": "attunenodeuserattune", 
-    "serverKey": "attunenode", 
+    "osCredKey": "automationworkerlinuxuser", 
+    "serverKey": "automationworkerlinuxnode", 
     "type": "com.servertribe.attune.tuples.StepPushDesignFileTuple", 
     "unpack": true
 }

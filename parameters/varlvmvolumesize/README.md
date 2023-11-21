@@ -1,1 +1,0 @@
-Size in MB of /var logical volume
