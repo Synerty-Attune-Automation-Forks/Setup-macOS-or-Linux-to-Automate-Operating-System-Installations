@@ -8,6 +8,10 @@
     "links": [
         {
             "order": 0, 
+            "stepKey": "rhel8connecttorpmserveronlinuxworkerlink"
+        }, 
+        {
+            "order": 50, 
             "stepKey": "rhel8installgssntlmssplink"
         }
     ], 

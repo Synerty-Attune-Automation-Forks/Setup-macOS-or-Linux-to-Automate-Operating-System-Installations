@@ -75,32 +75,17 @@ This is for OS installs to download ISOs from HTTP.
 
 
 
+
 ## Parameters
 
 
 | Name | Type | Script Reference | Comment |
 | ---- | ---- | ---------------- | ------- |
-| AD Full Domain Name | Text | `adfulldomainname` |  |
-| Attune Kickstart Base Dir | Text | `attunekickstartbasedir` | This is the parameter for the base directory on the Attune node for storing kickstart files. |
-| Attune Node | Linux/Unix Node | `attunenode` | This is the target node that we want to build Attune on. |
-| Attune Node User: attune | Linux/Unix Credential | `attunenodeuserattune` |  |
-| Attune Node User: root | Linux/Unix Credential | `attunenodeuserroot` |  |
-| Attune Server | Linux/Unix Node | `attuneserver` |  |
-| Attune Subnet | Network IPv4 Subnet | `attunesubnet` |  |
-| CMake Ver | Text | `cmakever` |  |
-| Environment Servers | Node List | `environmentservers` |  |
-| Linux: Attune User | Linux/Unix Credential | `linuxattuneuser` |  |
-| Linux: Root User | Linux/Unix Credential | `linuxrootuser` |  |
-| NTP Servers | Node List | `ntpservers` |  |
-| PostGreSQL Service User | Basic Credential | `postgresqlserviceuser` |  |
-| PostgreSQL Ver | Text | `postgresqlver` |  |
-| Python Ver | Text | `pythonver` |  |
-| RPM Mirror | Linux/Unix Node | `rpmmirror` |  |
-| RPM Mirrors Enabled | Text | `rpmmirrorsenabled` | Accept values are '1' for enabled or '0' for disabled. |
-| TimescaleDB Ver | Text | `timescaledbver` |  |
-| /var LVM Volume Size | Text | `varlvmvolumesize` | Size in MB of /var logical volume |
-| vCenter Server | Basic Node | `vcenterserver` | Node details for the vCenter Server. |
-| vCenter User | Basic Credential | `vcenteruser` | vCenter Credentials. |
+| Automation Worker Linux Node | Linux/Unix Node | `automationworkerlinuxnode` | The Linux automation worker node used to perform tasks to create the ISO. |
+| Automation Worker Linux User | Linux/Unix Credential | `automationworkerlinuxuser` |  |
+| Automation Worker Linux User: root | Linux/Unix Credential | `automationworkerlinuxuserroot` | root user on the Linux Automation Worker node. |
+| New Automation Worker Linux Node | Linux/Unix Node | `newautomationworkerlinuxnode` | The new Linux automation worker node to be built. |
+
 
 
 

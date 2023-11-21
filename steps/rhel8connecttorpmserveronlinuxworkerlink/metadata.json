@@ -1,12 +1,12 @@
 {
     "actionOnStepFail": null, 
     "blueprintName": "", 
-    "blueprintUuid": "0d3d0b05-9940-4e1b-bd06-c8668a10020f", 
+    "blueprintUuid": "8345c597-0b47-4802-b422-7807d1aca03a", 
     "cloneUrl": "", 
     "enabled": true, 
-    "externalUuid4": "6a9d3331-4d97-4d2e-b77a-edbe63e208fa", 
-    "key": "rhel8installgssntlmssplink", 
-    "name": "RHEL8 Install gssntlmssp (link)", 
+    "externalUuid4": "1c29cfd8-848c-494c-8e48-fe81b50c8fc7", 
+    "key": "rhel8connecttorpmserveronlinuxworkerlink", 
+    "name": "RHEL8 Connect to RPM Server on Linux Worker (link)", 
     "parameterMap": [
         {
             "childParameterName": null, 
