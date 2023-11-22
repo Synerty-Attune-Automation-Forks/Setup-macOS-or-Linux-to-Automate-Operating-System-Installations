@@ -16,7 +16,7 @@
         }, 
         {
             "order": 100, 
-            "stepKey": "adtcheckiftwistdisinstalled"
+            "stepKey": "adtcheckiftwistdisinstalledonlinuxworker"
         }, 
         {
             "order": 150, 
@@ -24,15 +24,15 @@
         }, 
         {
             "order": 200, 
-            "stepKey": "adtdeployrunhttpisosh"
+            "stepKey": "adtdeployrunhttpisoshonlinuxworker"
         }, 
         {
             "order": 250, 
-            "stepKey": "adtsetpermissionsforrunhttpisosh"
+            "stepKey": "adtsetpermissionsforrunhttpisoshonlinuxworker"
         }, 
         {
             "order": 300, 
-            "stepKey": "adtpushhttpisoservice"
+            "stepKey": "adtpushhttpisoserviceonlinuxworker"
         }, 
         {
             "order": 350, 
@@ -40,19 +40,19 @@
         }, 
         {
             "order": 400, 
-            "stepKey": "adtreloadsystemd"
+            "stepKey": "adtreloadsystemdonlinuxworker"
         }, 
         {
             "order": 450, 
-            "stepKey": "adtstartandenablehttpiso"
+            "stepKey": "adtstartandenablehttpisoonlinuxworker"
         }, 
         {
             "order": 500, 
-            "stepKey": "checkhttpisostarted"
+            "stepKey": "checkhttpisostartedonlinuxworker"
         }, 
         {
             "order": 550, 
-            "stepKey": "adtopenport8050onfirewalld"
+            "stepKey": "adtopenport8050onfirewalldonlinuxworker"
         }
     ], 
     "name": "Setup ISO HTTP Support on Linux Worker", 

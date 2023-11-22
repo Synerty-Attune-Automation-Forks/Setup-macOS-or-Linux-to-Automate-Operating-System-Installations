@@ -8,55 +8,55 @@
     "links": [
         {
             "order": 0, 
-            "stepKey": "swpesssinstallsamba"
+            "stepKey": "installsambaonlinuxworker"
         }, 
         {
             "order": 50, 
-            "stepKey": "sssetupsharedfolder"
+            "stepKey": "setupsharedfolderonlinuxworker"
         }, 
         {
             "order": 100, 
-            "stepKey": "swpessssetupsmbconf"
+            "stepKey": "setupsmbconfonlinuxworker"
         }, 
         {
             "order": 150, 
-            "stepKey": "swpessschecksmbconf"
+            "stepKey": "checksmbconfonlinuxworker"
         }, 
         {
             "order": 200, 
-            "stepKey": "swpessssetupfirewall"
+            "stepKey": "setupfirewallforsambaonlinuxworker"
         }, 
         {
             "order": 250, 
-            "stepKey": "swpesssinstallprerequisites"
+            "stepKey": "installprerequisitesonlinuxworker"
         }, 
         {
             "order": 300, 
-            "stepKey": "swpessssetupselinux"
+            "stepKey": "setupselinuxforsambaonlinuxworker"
         }, 
         {
             "order": 350, 
-            "stepKey": "swpessscheckselinux"
+            "stepKey": "checkselinuxonlinuxworker"
         }, 
         {
             "order": 400, 
-            "stepKey": "swpesssstartsmb"
+            "stepKey": "startsmbonlinuxworker"
         }, 
         {
             "order": 450, 
-            "stepKey": "swpessscheckservicesmb"
+            "stepKey": "checkservicesmbonlinuxworker"
         }, 
         {
             "order": 500, 
-            "stepKey": "swpesssstartservicenmb"
+            "stepKey": "startservicenmbonlinuxworker"
         }, 
         {
             "order": 550, 
-            "stepKey": "swpessscheckservicenmb"
+            "stepKey": "checkservicenmbonlinuxworker"
         }, 
         {
             "order": 600, 
-            "stepKey": "swpessssetattunefolderpermissions"
+            "stepKey": "setattunefolderpermissionsonlinuxworker"
         }
     ], 
     "name": "Setup Samba on Linux Worker", 

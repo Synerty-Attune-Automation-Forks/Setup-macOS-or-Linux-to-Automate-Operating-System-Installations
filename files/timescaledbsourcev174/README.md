@@ -1,1 +1,0 @@
-https://github.com/timescale/timescaledb/archive/refs/tags/1.7.4.tar.gz
