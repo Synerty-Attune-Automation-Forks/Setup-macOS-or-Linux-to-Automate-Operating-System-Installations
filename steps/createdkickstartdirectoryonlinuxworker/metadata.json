@@ -1,0 +1,12 @@
+{
+    "actionOnStepFail": "stop", 
+    "enabled": true, 
+    "externalUuid4": "bab52202-308b-4eec-bcc8-aa6267b86fa5", 
+    "interpreter": 1, 
+    "key": "createdkickstartdirectoryonlinuxworker", 
+    "name": "Created kickstart Directory on Linux Worker", 
+    "osCredKey": "automationworkerlinuxuser", 
+    "serverKey": "automationworkerlinuxnode", 
+    "successExitCode": 0, 
+    "type": "com.servertribe.attune.tuples.StepSshTuple"
+}

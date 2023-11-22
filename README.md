@@ -54,6 +54,25 @@ This Project contains the following Blueprints.
 
 
 
+### Add-On Hyper-V Support on Linux Worker
+
+
+### Setup Boot ISO Support on Linux Worker
+
+
+### Setup ISO HTTP Support on Linux Worker
+
+This is for OS installs to download ISOs from HTTP.
+
+### Setup oVirt Support on Linux Worker
+
+
+### Setup vCenter Support on Linux Worker
+
+
+### Setup WinPE Support on Linux Worker
+
+
 
 
 
@@ -62,6 +81,9 @@ This Project contains the following Blueprints.
 
 | Name | Type | Script Reference | Comment |
 | ---- | ---- | ---------------- | ------- |
+| Automation Worker Linux Node | Linux/Unix Node | `automationworkerlinuxnode` | The Linux automation worker node used to perform tasks to create the ISO. |
+| Automation Worker Linux User | Linux/Unix Credential | `automationworkerlinuxuser` |  |
+| Automation Worker Linux User: root | Linux/Unix Credential | `automationworkerlinuxuserroot` | root user on the Linux Automation Worker node. |
 
 
 
@@ -70,6 +92,10 @@ This Project contains the following Blueprints.
 
 | Name | Type | Comment |
 | ---- | ---- | ------- |
+| httpiso.service | Version Controlled Files |  |
+| Powershell v6.2.4 | Large Archives | https://github.com/PowerShell/PowerShell/releases<br><br>https://github.com/PowerShell/PowerShell/releases/tag/v6.2.4 |
+| run_httpiso.sh | Version Controlled Files |  |
+| VMWare.PowerCLI v6.7 | Large Archives | This was downloaded with :<br>sudo pwsh -Command "Save-Module -name VMware.PowerCLI -Path /root" |
 
 
 

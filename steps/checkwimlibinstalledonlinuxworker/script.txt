@@ -1,0 +1,2 @@
+which mkwinpeimg
+which wimcapture
