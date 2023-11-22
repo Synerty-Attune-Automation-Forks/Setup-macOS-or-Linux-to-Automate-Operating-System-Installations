@@ -214,104 +214,104 @@
         
 
                     <p class="text-muted pt-2">
-                        <a href="#swpesssinstallsamba">
-                            <strong>Step 1.1 -</strong> SWPES SS Install Samba
+                        <a href="#installsambaonlinuxworker">
+                            <strong>Step 1.1 -</strong> Install Samba on Linux Worker
                         </a>
                     </p>
 
         
 
                     <p class="text-muted pt-2">
-                        <a href="#sssetupsharedfolder">
-                            <strong>Step 1.2 -</strong> SS Setup Shared Folder
+                        <a href="#setupsharedfolderonlinuxworker">
+                            <strong>Step 1.2 -</strong> Setup Shared Folder on Linux Worker
                         </a>
                     </p>
 
         
 
                     <p class="text-muted pt-2">
-                        <a href="#swpessssetupsmbconf">
-                            <strong>Step 1.3 -</strong> SWPES SS Setup smb.conf
+                        <a href="#setupsmbconfonlinuxworker">
+                            <strong>Step 1.3 -</strong> Setup smb.conf on Linux Worker
                         </a>
                     </p>
 
         
 
                     <p class="text-muted pt-2">
-                        <a href="#swpessschecksmbconf">
-                            <strong>Step 1.4 -</strong> SWPES SS Check smb.conf
+                        <a href="#checksmbconfonlinuxworker">
+                            <strong>Step 1.4 -</strong> Check smb.conf on Linux Worker
                         </a>
                     </p>
 
         
 
                     <p class="text-muted pt-2">
-                        <a href="#swpessssetupfirewall">
-                            <strong>Step 1.5 -</strong> SWPES SS Setup Firewall
+                        <a href="#setupfirewallforsambaonlinuxworker">
+                            <strong>Step 1.5 -</strong> Setup Firewall for Samba on Linux Worker
                         </a>
                     </p>
 
         
 
                     <p class="text-muted pt-2">
-                        <a href="#swpesssinstallprerequisites">
-                            <strong>Step 1.6 -</strong> SWPES SS Install Prerequisites
+                        <a href="#installprerequisitesonlinuxworker">
+                            <strong>Step 1.6 -</strong> Install Prerequisites on Linux Worker
                         </a>
                     </p>
 
         
 
                     <p class="text-muted pt-2">
-                        <a href="#swpessssetupselinux">
-                            <strong>Step 1.7 -</strong> SWPES SS Setup SELinux
+                        <a href="#setupselinuxforsambaonlinuxworker">
+                            <strong>Step 1.7 -</strong> Setup SELinux for Samba on Linux Worker
                         </a>
                     </p>
 
         
 
                     <p class="text-muted pt-2">
-                        <a href="#swpessscheckselinux">
-                            <strong>Step 1.8 -</strong> SWPES SS Check SELinux
+                        <a href="#checkselinuxonlinuxworker">
+                            <strong>Step 1.8 -</strong> Check SELinux on Linux Worker
                         </a>
                     </p>
 
         
 
                     <p class="text-muted pt-2">
-                        <a href="#swpesssstartsmb">
-                            <strong>Step 1.9 -</strong> SWPES SS Start smb
+                        <a href="#startsmbonlinuxworker">
+                            <strong>Step 1.9 -</strong> Start smb on Linux Worker
                         </a>
                     </p>
 
         
 
                     <p class="text-muted pt-2">
-                        <a href="#swpessscheckservicesmb">
-                            <strong>Step 1.10 -</strong> SWPES SS Check Service smb
+                        <a href="#checkservicesmbonlinuxworker">
+                            <strong>Step 1.10 -</strong> Check Service smb on Linux Worker
                         </a>
                     </p>
 
         
 
                     <p class="text-muted pt-2">
-                        <a href="#swpesssstartservicenmb">
-                            <strong>Step 1.11 -</strong> SWPES SS Start Service nmb
+                        <a href="#startservicenmbonlinuxworker">
+                            <strong>Step 1.11 -</strong> Start Service nmb on Linux Worker
                         </a>
                     </p>
 
         
 
                     <p class="text-muted pt-2">
-                        <a href="#swpessscheckservicenmb">
-                            <strong>Step 1.12 -</strong> SWPES SS Check Service nmb
+                        <a href="#checkservicenmbonlinuxworker">
+                            <strong>Step 1.12 -</strong> Check Service nmb on Linux Worker
                         </a>
                     </p>
 
         
 
                     <p class="text-muted pt-2">
-                        <a href="#swpessssetattunefolderpermissions">
-                            <strong>Step 1.13 -</strong> SWPES SS Set Attune Folder Permissions
+                        <a href="#setattunefolderpermissionsonlinuxworker">
+                            <strong>Step 1.13 -</strong> Set Attune Folder Permissions on Linux Worker
                         </a>
                     </p>
 
@@ -460,20 +460,13 @@
 
 
                     <div class="row pt-5">
-                        <h4 id="swpesssinstallsamba">
-                            <a href="#swpesssinstallsamba">
-                                <strong>Step 1.1 -</strong> SWPES SS Install Samba
+                        <h4 id="installsambaonlinuxworker">
+                            <a href="#installsambaonlinuxworker">
+                                <strong>Step 1.1 -</strong> Install Samba on Linux Worker
                             </a>
                         </h4>
                     </div>
 
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                
-                            </p>
-                        </div>
-                    </div>
 
 
 
@@ -525,9 +518,9 @@ dnf -y install samba samba-common samba-client
 
 
                     <div class="row pt-5">
-                        <h4 id="sssetupsharedfolder">
-                            <a href="#sssetupsharedfolder">
-                                <strong>Step 1.2 -</strong> SS Setup Shared Folder
+                        <h4 id="setupsharedfolderonlinuxworker">
+                            <a href="#setupsharedfolderonlinuxworker">
+                                <strong>Step 1.2 -</strong> Setup Shared Folder on Linux Worker
                             </a>
                         </h4>
                     </div>
@@ -587,9 +580,9 @@ chcon -R -t samba_share_t $shared_dir
 
 
                     <div class="row pt-5">
-                        <h4 id="swpessssetupsmbconf">
-                            <a href="#swpessssetupsmbconf">
-                                <strong>Step 1.3 -</strong> SWPES SS Setup smb.conf
+                        <h4 id="setupsmbconfonlinuxworker">
+                            <a href="#setupsmbconfonlinuxworker">
+                                <strong>Step 1.3 -</strong> Setup smb.conf on Linux Worker
                             </a>
                         </h4>
                     </div>
@@ -663,9 +656,9 @@ EOF
 
 
                     <div class="row pt-5">
-                        <h4 id="swpessschecksmbconf">
-                            <a href="#swpessschecksmbconf">
-                                <strong>Step 1.4 -</strong> SWPES SS Check smb.conf
+                        <h4 id="checksmbconfonlinuxworker">
+                            <a href="#checksmbconfonlinuxworker">
+                                <strong>Step 1.4 -</strong> Check smb.conf on Linux Worker
                             </a>
                         </h4>
                     </div>
@@ -729,9 +722,9 @@ exit $?
 
 
                     <div class="row pt-5">
-                        <h4 id="swpessssetupfirewall">
-                            <a href="#swpessssetupfirewall">
-                                <strong>Step 1.5 -</strong> SWPES SS Setup Firewall
+                        <h4 id="setupfirewallforsambaonlinuxworker">
+                            <a href="#setupfirewallforsambaonlinuxworker">
+                                <strong>Step 1.5 -</strong> Setup Firewall for Samba on Linux Worker
                             </a>
                         </h4>
                     </div>
@@ -795,9 +788,9 @@ firewall-cmd --reload
 
 
                     <div class="row pt-5">
-                        <h4 id="swpesssinstallprerequisites">
-                            <a href="#swpesssinstallprerequisites">
-                                <strong>Step 1.6 -</strong> SWPES SS Install Prerequisites
+                        <h4 id="installprerequisitesonlinuxworker">
+                            <a href="#installprerequisitesonlinuxworker">
+                                <strong>Step 1.6 -</strong> Install Prerequisites on Linux Worker
                             </a>
                         </h4>
                     </div>
@@ -852,9 +845,9 @@ dnf -y install \
 
 
                     <div class="row pt-5">
-                        <h4 id="swpessssetupselinux">
-                            <a href="#swpessssetupselinux">
-                                <strong>Step 1.7 -</strong> SWPES SS Setup SELinux
+                        <h4 id="setupselinuxforsambaonlinuxworker">
+                            <a href="#setupselinuxforsambaonlinuxworker">
+                                <strong>Step 1.7 -</strong> Setup SELinux for Samba on Linux Worker
                             </a>
                         </h4>
                     </div>
@@ -912,9 +905,9 @@ fi
 
 
                     <div class="row pt-5">
-                        <h4 id="swpessscheckselinux">
-                            <a href="#swpessscheckselinux">
-                                <strong>Step 1.8 -</strong> SWPES SS Check SELinux
+                        <h4 id="checkselinuxonlinuxworker">
+                            <a href="#checkselinuxonlinuxworker">
+                                <strong>Step 1.8 -</strong> Check SELinux on Linux Worker
                             </a>
                         </h4>
                     </div>
@@ -990,9 +983,9 @@ fi
 
 
                     <div class="row pt-5">
-                        <h4 id="swpesssstartsmb">
-                            <a href="#swpesssstartsmb">
-                                <strong>Step 1.9 -</strong> SWPES SS Start smb
+                        <h4 id="startsmbonlinuxworker">
+                            <a href="#startsmbonlinuxworker">
+                                <strong>Step 1.9 -</strong> Start smb on Linux Worker
                             </a>
                         </h4>
                     </div>
@@ -1056,9 +1049,9 @@ systemctl enable smb
 
 
                     <div class="row pt-5">
-                        <h4 id="swpessscheckservicesmb">
-                            <a href="#swpessscheckservicesmb">
-                                <strong>Step 1.10 -</strong> SWPES SS Check Service smb
+                        <h4 id="checkservicesmbonlinuxworker">
+                            <a href="#checkservicesmbonlinuxworker">
+                                <strong>Step 1.10 -</strong> Check Service smb on Linux Worker
                             </a>
                         </h4>
                     </div>
@@ -1129,9 +1122,9 @@ fi
 
 
                     <div class="row pt-5">
-                        <h4 id="swpesssstartservicenmb">
-                            <a href="#swpesssstartservicenmb">
-                                <strong>Step 1.11 -</strong> SWPES SS Start Service nmb
+                        <h4 id="startservicenmbonlinuxworker">
+                            <a href="#startservicenmbonlinuxworker">
+                                <strong>Step 1.11 -</strong> Start Service nmb on Linux Worker
                             </a>
                         </h4>
                     </div>
@@ -1195,9 +1188,9 @@ systemctl enable nmb
 
 
                     <div class="row pt-5">
-                        <h4 id="swpessscheckservicenmb">
-                            <a href="#swpessscheckservicenmb">
-                                <strong>Step 1.12 -</strong> SWPES SS Check Service nmb
+                        <h4 id="checkservicenmbonlinuxworker">
+                            <a href="#checkservicenmbonlinuxworker">
+                                <strong>Step 1.12 -</strong> Check Service nmb on Linux Worker
                             </a>
                         </h4>
                     </div>
@@ -1268,9 +1261,9 @@ fi
 
 
                     <div class="row pt-5">
-                        <h4 id="swpessssetattunefolderpermissions">
-                            <a href="#swpessssetattunefolderpermissions">
-                                <strong>Step 1.13 -</strong> SWPES SS Set Attune Folder Permissions
+                        <h4 id="setattunefolderpermissionsonlinuxworker">
+                            <a href="#setattunefolderpermissionsonlinuxworker">
+                                <strong>Step 1.13 -</strong> Set Attune Folder Permissions on Linux Worker
                             </a>
                         </h4>
                     </div>

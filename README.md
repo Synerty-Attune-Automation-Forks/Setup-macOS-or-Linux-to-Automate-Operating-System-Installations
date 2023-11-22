@@ -92,17 +92,9 @@ This is for OS installs to download ISOs from HTTP.
 
 | Name | Type | Comment |
 | ---- | ---- | ------- |
-| Attune Release v5 | Large Archives |  |
-| CMake Source v3.19.2 | Large Archives |  |
-| etc Configs | Version Controlled Files |  |
 | httpiso.service | Version Controlled Files |  |
-| Offline Python 3.9.1 Source | Large Archives |  |
-| Offline Python PyPIs for Attune | Large Archives | https://pypi.org/project/distlib/#files<br>https://pypi.org/project/filelock/#files<br>https://pypi.org/project/pip/#files<br>https://pypi.org/project/platformdirs/#files<br>https://pypi.org/project/virtualenv/#files<br>https://pypi.org/project/wheel/#files |
-| PostgreSQL Source v12.5 | Large Archives |  |
 | Powershell v6.2.4 | Large Archives | https://github.com/PowerShell/PowerShell/releases<br><br>https://github.com/PowerShell/PowerShell/releases/tag/v6.2.4 |
-| RHEL yum repos | Version Controlled Files |  |
 | run_httpiso.sh | Version Controlled Files |  |
-| TimescaleDB Source v1.7.4 | Large Archives | https://github.com/timescale/timescaledb/archive/refs/tags/1.7.4.tar.gz |
 | VMWare.PowerCLI v6.7 | Large Archives | This was downloaded with :<br>sudo pwsh -Command "Save-Module -name VMware.PowerCLI -Path /root" |
 
 
