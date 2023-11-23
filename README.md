@@ -54,9 +54,6 @@ This Project contains the following Blueprints.
 
 
 
-### Add-On Hyper-V Support on Linux Worker
-
-
 ### Setup Boot ISO Support on Linux Worker
 
 
