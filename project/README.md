@@ -1,5 +1,7 @@
-This Attune Project contains the Blueprints to setup a worker for the 
-automate OS installation projects.
+This 
+[Attune Project](https://github.com/Attune-Automation/Automate-OS-Installation-Worker-Setup) 
+contains the Blueprints to setup a worker for the automate OS 
+installation projects.
 
 # What is a worker?
 
