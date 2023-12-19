@@ -102,7 +102,7 @@ This is for OS installs to download ISOs from HTTP.
 ### Setup WinPE Support on Linux Worker
 
 
-### Setup Samba on macOS or Linux
+### Setup Samba Share for Windows OS Files on macOS or Linux
 
 Sets up a Samba server with the folder at 
 `{automationWorkerLinuxBaseDirectory}/windows_iso_data_for_winpe`.

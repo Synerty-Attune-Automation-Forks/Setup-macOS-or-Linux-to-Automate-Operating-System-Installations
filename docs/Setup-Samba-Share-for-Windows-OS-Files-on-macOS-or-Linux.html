@@ -6,29 +6,50 @@
 
 
 <head>
-    <title>How to Setup WinPE Support on Linux Worker - Attune Automation</title>
+    <title>How to Setup Samba Share for Windows OS Files on macOS or Linux - Attune Automation</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="title"
-          content="How to Setup WinPE Support on Linux Worker - Attune Automation">
+          content="How to Setup Samba Share for Windows OS Files on macOS or Linux - Attune Automation">
     <meta name="description"
-          content="">
+          content="Sets up a Samba server with the folder at 
+`{automationWorkerLinuxBaseDirectory}/windows_iso_data_for_winpe`.
+
+This Samba Share on Linux is required to host the Windows OS files 
+making them accessible over the network.
+
+For uploading specific Windows distributions to the Samba Share, see 
+`Deploy a">
     <meta name="robots"
           content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
 
     <meta property="og:locale" content="en_AU" />
     <meta property="og:type" content="article" />
     <meta property="og:title"
-          content="HowTo Setup WinPE Support on Linux Worker - Attune Automation" />
-    <meta property="og:description" content="" />
+          content="HowTo Setup Samba Share for Windows OS Files on macOS or Linux - Attune Automation" />
+    <meta property="og:description" content="Sets up a Samba server with the folder at 
+`{automationWorkerLinuxBaseDirectory}/windows_iso_data_for_winpe`.
+
+This Samba Share on Linux is required to host the Windows OS files 
+making them accessible over the network.
+
+For uploading specific Windows distributions to the Samba Share, see 
+`Deploy a" />
     <meta property="og:site_name" content="Attune Automation" />
     <meta property="article:section" content="IT Instruction" />
 
     <meta name="twitter:title"
-          content="How to Setup WinPE Support on Linux Worker - Attune Automation" />
-    <meta name="twitter:description" content="" />
+          content="How to Setup Samba Share for Windows OS Files on macOS or Linux - Attune Automation" />
+    <meta name="twitter:description" content="Sets up a Samba server with the folder at 
+`{automationWorkerLinuxBaseDirectory}/windows_iso_data_for_winpe`.
+
+This Samba Share on Linux is required to host the Windows OS files 
+making them accessible over the network.
+
+For uploading specific Windows distributions to the Samba Share, see 
+`Deploy a" />
 
     <link rel="icon" href="https://www.servertribe.com/wp-content/uploads/2020/10/cropped-server_tribe_favicon-32x32.png" sizes="32x32">
     <link rel="icon" href="https://www.servertribe.com/wp-content/uploads/2020/10/cropped-server_tribe_favicon-192x192.png" sizes="192x192">
@@ -119,7 +140,7 @@
                     </a>
                 </li>
                 <li class="breadcrumb-item active" aria-current="page">
-                    <strong>Setup WinPE Support on Linux Worker</strong>
+                    <strong>Setup Samba Share for Windows OS Files on macOS or Linux</strong>
                 </li>
             </ol>
         </nav>
@@ -133,12 +154,25 @@
     <div class="row">
         <div class="col px-0">
             <h1 class="text-left">
-                How to Setup WinPE Support on Linux Worker
+                How to Setup Samba Share for Windows OS Files on macOS or Linux
             </h1>
         </div>
     </div>
 
 <!-- Blueprint Description -->
+    <div class="row">
+        <div class="description col px-0">
+            <p class="text-left">
+                <p>Sets up a Samba server with the folder at 
+<code>{automationWorkerLinuxBaseDirectory}/windows_iso_data_for_winpe</code>.</p>
+<p>This Samba Share on Linux is required to host the Windows OS files 
+making them accessible over the network.</p>
+<p>For uploading specific Windows distributions to the Samba Share, see 
+<code>Deploy and extract {os_name} ISO for Samba Share</code> Blueprints in 
+this Project.</p>
+            </p>
+        </div>
+    </div>
     <div class="row pt-4">
         <div class="col-6 px-0">
             <h6 class="text-left">
@@ -197,25 +231,17 @@
                     </p>
                     <p class="text-muted">
                         <a href="#top">
-                            <strong>Setup WinPE Support on Linux Worker</strong>
+                            <strong>Setup Samba Share for Windows OS Files on macOS or Linux</strong>
                         </a>
                     </p>
 
 
-    
-        
-
-                    <p class="text-muted pt-2">
-                        <a href="#setupsambashareforwindowsosfilesonmacosorlinux">
-                            <strong>Step 1 -</strong> Setup Samba Share for Windows OS Files on macOS or Linux
-                        </a>
-                    </p>
     
         
 
                     <p class="text-muted pt-2">
                         <a href="#installsambaonlinux">
-                            <strong>Step 1.1 -</strong> Install Samba on Linux
+                            <strong>Step 1 -</strong> Install Samba on Linux
                         </a>
                     </p>
 
@@ -223,7 +249,7 @@
 
                     <p class="text-muted pt-2">
                         <a href="#setupsharedfolderonlinux">
-                            <strong>Step 1.2 -</strong> Setup Shared Folder on Linux
+                            <strong>Step 2 -</strong> Setup Shared Folder on Linux
                         </a>
                     </p>
 
@@ -231,7 +257,7 @@
 
                     <p class="text-muted pt-2">
                         <a href="#configureselinuxsecuritycontextonlinux">
-                            <strong>Step 1.3 -</strong> Configure SELinux Security Context on Linux
+                            <strong>Step 3 -</strong> Configure SELinux Security Context on Linux
                         </a>
                     </p>
 
@@ -239,7 +265,7 @@
 
                     <p class="text-muted pt-2">
                         <a href="#setupsmbconfonlinux">
-                            <strong>Step 1.4 -</strong> Setup smb.conf on Linux
+                            <strong>Step 4 -</strong> Setup smb.conf on Linux
                         </a>
                     </p>
 
@@ -247,7 +273,7 @@
 
                     <p class="text-muted pt-2">
                         <a href="#checksmbconfonlinux">
-                            <strong>Step 1.5 -</strong> Check smb.conf on Linux
+                            <strong>Step 5 -</strong> Check smb.conf on Linux
                         </a>
                     </p>
 
@@ -255,7 +281,7 @@
 
                     <p class="text-muted pt-2">
                         <a href="#setupfirewallforsambaonlinux">
-                            <strong>Step 1.6 -</strong> Setup Firewall for Samba on Linux
+                            <strong>Step 6 -</strong> Setup Firewall for Samba on Linux
                         </a>
                     </p>
 
@@ -263,7 +289,7 @@
 
                     <p class="text-muted pt-2">
                         <a href="#installprerequisitesonlinux">
-                            <strong>Step 1.7 -</strong> Install Prerequisites on Linux
+                            <strong>Step 7 -</strong> Install Prerequisites on Linux
                         </a>
                     </p>
 
@@ -271,7 +297,7 @@
 
                     <p class="text-muted pt-2">
                         <a href="#setupselinuxforsambaonlinux">
-                            <strong>Step 1.8 -</strong> Setup SELinux for Samba on Linux
+                            <strong>Step 8 -</strong> Setup SELinux for Samba on Linux
                         </a>
                     </p>
 
@@ -279,7 +305,7 @@
 
                     <p class="text-muted pt-2">
                         <a href="#checkselinuxforsambaonlinux">
-                            <strong>Step 1.9 -</strong> Check SELinux for Samba on Linux
+                            <strong>Step 9 -</strong> Check SELinux for Samba on Linux
                         </a>
                     </p>
 
@@ -287,7 +313,7 @@
 
                     <p class="text-muted pt-2">
                         <a href="#startsmbonlinux">
-                            <strong>Step 1.10 -</strong> Start smb on Linux
+                            <strong>Step 10 -</strong> Start smb on Linux
                         </a>
                     </p>
 
@@ -295,7 +321,7 @@
 
                     <p class="text-muted pt-2">
                         <a href="#checkservicesmbonlinux">
-                            <strong>Step 1.11 -</strong> Check Service smb on Linux
+                            <strong>Step 11 -</strong> Check Service smb on Linux
                         </a>
                     </p>
 
@@ -303,7 +329,7 @@
 
                     <p class="text-muted pt-2">
                         <a href="#startservicenmbonlinux">
-                            <strong>Step 1.12 -</strong> Start Service nmb on Linux
+                            <strong>Step 12 -</strong> Start Service nmb on Linux
                         </a>
                     </p>
 
@@ -311,7 +337,7 @@
 
                     <p class="text-muted pt-2">
                         <a href="#checkservicenmbonlinux">
-                            <strong>Step 1.13 -</strong> Check Service nmb on Linux
+                            <strong>Step 13 -</strong> Check Service nmb on Linux
                         </a>
                     </p>
 
@@ -319,35 +345,9 @@
 
                     <p class="text-muted pt-2">
                         <a href="#setlinuxhomefolderpermissionsforsamba">
-                            <strong>Step 1.14 -</strong> Set Linux Home Folder Permissions for Samba
+                            <strong>Step 14 -</strong> Set Linux Home Folder Permissions for Samba
                         </a>
                     </p>
-
-
-        
-
-                    <p class="text-muted pt-2">
-                        <a href="#setupwimlibutilsonlinuxworker">
-                            <strong>Step 2 -</strong> Setup wimlib-utils on Linux Worker
-                        </a>
-                    </p>
-    
-        
-
-                    <p class="text-muted pt-2">
-                        <a href="#installwimlibonlinuxworker">
-                            <strong>Step 2.1 -</strong> Install wimlib on Linux Worker
-                        </a>
-                    </p>
-
-        
-
-                    <p class="text-muted pt-2">
-                        <a href="#checkwimlibinstalledonlinuxworker">
-                            <strong>Step 2.2 -</strong> Check wimlib Installed on Linux Worker
-                        </a>
-                    </p>
-
 
 
                 </div>
@@ -408,7 +408,7 @@
                 </ol>
             </p>
             <p class="lead text-center">
-                You've automated: <strong>Setup WinPE Support on Linux Worker</strong>
+                You've automated: <strong>Setup Samba Share for Windows OS Files on macOS or Linux</strong>
             </p>
             <hr class="my-4 text-center">
             <div class="col px-0">
@@ -439,46 +439,11 @@
 
 
                     <div class="row pt-5">
-                        <h3 id="setupsambashareforwindowsosfilesonmacosorlinux">
-                            <a href="#setupsambashareforwindowsosfilesonmacosorlinux">
-                                <strong>Step 1 -</strong> Setup Samba Share for Windows OS Files on macOS or Linux
+                        <h3 id="installsambaonlinux">
+                            <a href="#installsambaonlinux">
+                                <strong>Step 1 -</strong> Install Samba on Linux
                             </a>
                         </h3>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                <p>Sets up a Samba server with the folder at 
-<code>{automationWorkerLinuxBaseDirectory}/windows_iso_data_for_winpe</code>.</p>
-<p>This Samba Share on Linux is required to host the Windows OS files 
-making them accessible over the network.</p>
-<p>For uploading specific Windows distributions to the Samba Share, see 
-<code>Deploy and extract {os_name} ISO for Samba Share</code> Blueprints in 
-this Project.</p>
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-    
-
-
-
-
-    
-
-
-
-                    <div class="row pt-5">
-                        <h4 id="installsambaonlinux">
-                            <a href="#installsambaonlinux">
-                                <strong>Step 1.1 -</strong> Install Samba on Linux
-                            </a>
-                        </h4>
                     </div>
 
                     <div class="row">
@@ -553,16 +518,16 @@ fi
 
 
 
-    
+        
 
 
 
                     <div class="row pt-5">
-                        <h4 id="setupsharedfolderonlinux">
+                        <h3 id="setupsharedfolderonlinux">
                             <a href="#setupsharedfolderonlinux">
-                                <strong>Step 1.2 -</strong> Setup Shared Folder on Linux
+                                <strong>Step 2 -</strong> Setup Shared Folder on Linux
                             </a>
-                        </h4>
+                        </h3>
                     </div>
 
                     <div class="row">
@@ -616,16 +581,16 @@ ls -lrh $shared_dir
 
 
 
-    
+        
 
 
 
                     <div class="row pt-5">
-                        <h4 id="configureselinuxsecuritycontextonlinux">
+                        <h3 id="configureselinuxsecuritycontextonlinux">
                             <a href="#configureselinuxsecuritycontextonlinux">
-                                <strong>Step 1.3 -</strong> Configure SELinux Security Context on Linux
+                                <strong>Step 3 -</strong> Configure SELinux Security Context on Linux
                             </a>
-                        </h4>
+                        </h3>
                     </div>
 
                     <div class="row">
@@ -691,16 +656,16 @@ fi
 
 
 
-    
+        
 
 
 
                     <div class="row pt-5">
-                        <h4 id="setupsmbconfonlinux">
+                        <h3 id="setupsmbconfonlinux">
                             <a href="#setupsmbconfonlinux">
-                                <strong>Step 1.4 -</strong> Setup smb.conf on Linux
+                                <strong>Step 4 -</strong> Setup smb.conf on Linux
                             </a>
-                        </h4>
+                        </h3>
                     </div>
 
                     <div class="row">
@@ -783,16 +748,16 @@ cat smb.conf
 
 
 
-    
+        
 
 
 
                     <div class="row pt-5">
-                        <h4 id="checksmbconfonlinux">
+                        <h3 id="checksmbconfonlinux">
                             <a href="#checksmbconfonlinux">
-                                <strong>Step 1.5 -</strong> Check smb.conf on Linux
+                                <strong>Step 5 -</strong> Check smb.conf on Linux
                             </a>
-                        </h4>
+                        </h3>
                     </div>
 
                     <div class="row">
@@ -849,16 +814,16 @@ exit $?
 
 
 
-    
+        
 
 
 
                     <div class="row pt-5">
-                        <h4 id="setupfirewallforsambaonlinux">
+                        <h3 id="setupfirewallforsambaonlinux">
                             <a href="#setupfirewallforsambaonlinux">
-                                <strong>Step 1.6 -</strong> Setup Firewall for Samba on Linux
+                                <strong>Step 6 -</strong> Setup Firewall for Samba on Linux
                             </a>
-                        </h4>
+                        </h3>
                     </div>
 
                     <div class="row">
@@ -934,16 +899,16 @@ fi
 
 
 
-    
+        
 
 
 
                     <div class="row pt-5">
-                        <h4 id="installprerequisitesonlinux">
+                        <h3 id="installprerequisitesonlinux">
                             <a href="#installprerequisitesonlinux">
-                                <strong>Step 1.7 -</strong> Install Prerequisites on Linux
+                                <strong>Step 7 -</strong> Install Prerequisites on Linux
                             </a>
-                        </h4>
+                        </h3>
                     </div>
 
                     <div class="row">
@@ -1016,16 +981,16 @@ fi
 
 
 
-    
+        
 
 
 
                     <div class="row pt-5">
-                        <h4 id="setupselinuxforsambaonlinux">
+                        <h3 id="setupselinuxforsambaonlinux">
                             <a href="#setupselinuxforsambaonlinux">
-                                <strong>Step 1.8 -</strong> Setup SELinux for Samba on Linux
+                                <strong>Step 8 -</strong> Setup SELinux for Samba on Linux
                             </a>
-                        </h4>
+                        </h3>
                     </div>
 
                     <div class="row">
@@ -1095,16 +1060,16 @@ fi
 
 
 
-    
+        
 
 
 
                     <div class="row pt-5">
-                        <h4 id="checkselinuxforsambaonlinux">
+                        <h3 id="checkselinuxforsambaonlinux">
                             <a href="#checkselinuxforsambaonlinux">
-                                <strong>Step 1.9 -</strong> Check SELinux for Samba on Linux
+                                <strong>Step 9 -</strong> Check SELinux for Samba on Linux
                             </a>
-                        </h4>
+                        </h3>
                     </div>
 
                     <div class="row">
@@ -1192,16 +1157,16 @@ fi
 
 
 
-    
+        
 
 
 
                     <div class="row pt-5">
-                        <h4 id="startsmbonlinux">
+                        <h3 id="startsmbonlinux">
                             <a href="#startsmbonlinux">
-                                <strong>Step 1.10 -</strong> Start smb on Linux
+                                <strong>Step 10 -</strong> Start smb on Linux
                             </a>
-                        </h4>
+                        </h3>
                     </div>
 
                     <div class="row">
@@ -1259,16 +1224,16 @@ systemctl status smb
 
 
 
-    
+        
 
 
 
                     <div class="row pt-5">
-                        <h4 id="checkservicesmbonlinux">
+                        <h3 id="checkservicesmbonlinux">
                             <a href="#checkservicesmbonlinux">
-                                <strong>Step 1.11 -</strong> Check Service smb on Linux
+                                <strong>Step 11 -</strong> Check Service smb on Linux
                             </a>
-                        </h4>
+                        </h3>
                     </div>
 
                     <div class="row">
@@ -1332,16 +1297,16 @@ fi
 
 
 
-    
+        
 
 
 
                     <div class="row pt-5">
-                        <h4 id="startservicenmbonlinux">
+                        <h3 id="startservicenmbonlinux">
                             <a href="#startservicenmbonlinux">
-                                <strong>Step 1.12 -</strong> Start Service nmb on Linux
+                                <strong>Step 12 -</strong> Start Service nmb on Linux
                             </a>
-                        </h4>
+                        </h3>
                     </div>
 
                     <div class="row">
@@ -1399,16 +1364,16 @@ systemctl status nmb
 
 
 
-    
+        
 
 
 
                     <div class="row pt-5">
-                        <h4 id="checkservicenmbonlinux">
+                        <h3 id="checkservicenmbonlinux">
                             <a href="#checkservicenmbonlinux">
-                                <strong>Step 1.13 -</strong> Check Service nmb on Linux
+                                <strong>Step 13 -</strong> Check Service nmb on Linux
                             </a>
-                        </h4>
+                        </h3>
                     </div>
 
                     <div class="row">
@@ -1472,16 +1437,16 @@ fi
 
 
 
-    
+        
 
 
 
                     <div class="row pt-5">
-                        <h4 id="setlinuxhomefolderpermissionsforsamba">
+                        <h3 id="setlinuxhomefolderpermissionsforsamba">
                             <a href="#setlinuxhomefolderpermissionsforsamba">
-                                <strong>Step 1.14 -</strong> Set Linux Home Folder Permissions for Samba
+                                <strong>Step 14 -</strong> Set Linux Home Folder Permissions for Samba
                             </a>
-                        </h4>
+                        </h3>
                     </div>
 
                     <div class="row">
@@ -1521,157 +1486,6 @@ chmod -v +rx $HOME
             </pre>
         </div>
     </div>
-
-
-
-
-
-
-        
-
-
-
-                    <div class="row pt-5">
-                        <h3 id="setupwimlibutilsonlinuxworker">
-                            <a href="#setupwimlibutilsonlinuxworker">
-                                <strong>Step 2 -</strong> Setup wimlib-utils on Linux Worker
-                            </a>
-                        </h3>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-    
-
-
-
-
-    
-
-
-
-                    <div class="row pt-5">
-                        <h4 id="installwimlibonlinuxworker">
-                            <a href="#installwimlibonlinuxworker">
-                                <strong>Step 2.1 -</strong> Install wimlib on Linux Worker
-                            </a>
-                        </h4>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-
-                        <div class="row">
-                            <p>
-                                Connect via ssh:
-                            </p>
-                        </div>
-                        <div class="row py-1">
-                            <code class="language-sql">
-ssh {automationworkerlinuxuserroot}@{automationworkerlinuxnode}
-                            </code>
-                        </div>
-
-
-
-    
-
-
-
-    <div class="row">
-        <p>
-            Execute the following script:
-        </p>
-    </div>
-    <div class="row">
-        <div class="col px-0">
-            <pre>
-                <code class="language-sql py-0">
-dnf -y install wimlib wimlib-utils fuse
-                </code>
-            </pre>
-        </div>
-    </div>
-
-
-
-
-
-    
-
-
-
-                    <div class="row pt-5">
-                        <h4 id="checkwimlibinstalledonlinuxworker">
-                            <a href="#checkwimlibinstalledonlinuxworker">
-                                <strong>Step 2.2 -</strong> Check wimlib Installed on Linux Worker
-                            </a>
-                        </h4>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-    
-
-
-    
-
-
-
-    <div class="row">
-        <p>
-            Execute the following script:
-        </p>
-    </div>
-    <div class="row">
-        <div class="col px-0">
-            <pre>
-                <code class="language-sql py-0">
-which mkwinpeimg
-which wimcapture
-                </code>
-            </pre>
-        </div>
-    </div>
-
 
 
 
