@@ -1,9 +1,7 @@
-This 
-[Attune Project](https://github.com/Attune-Automation/Automate-OS-Installation-Worker-Setup) 
-contains the Blueprints to setup a worker for the automate OS 
-installation projects.
+This Attune Project contains the Blueprints to setup a worker for 
+the automate OS installation projects.
 
-# What is a worker?
+**What is a worker?**
 
 The majority of the workload creating the ISO file(s) for the is 
 performed on either the Attune host machine or a separate machine. 
@@ -20,7 +18,7 @@ Clone the
 [Automate OS Installation Worker Setup](https://github.com/Attune-Automation/Automate-OS-Installation-Worker-Setup) 
 Project.
 
-Follow the instructions as per the 
+Find, clone, and follow the instructions as per the 
 `Automate {os_name} Installation with {method} on {controller}` Project 
 you are working on.
 
