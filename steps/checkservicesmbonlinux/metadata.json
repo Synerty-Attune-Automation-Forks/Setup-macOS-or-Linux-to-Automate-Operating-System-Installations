@@ -1,0 +1,12 @@
+{
+    "actionOnStepFail": null, 
+    "enabled": true, 
+    "externalUuid4": "39cfc64a-cdc8-42fd-b9c6-e1c87d66e6f4", 
+    "interpreter": 1, 
+    "key": "checkservicesmbonlinux", 
+    "name": "Check Service smb on Linux", 
+    "osCredKey": "automationworkerlinuxuser", 
+    "serverKey": "automationworkerlinuxnode", 
+    "successExitCode": 0, 
+    "type": "com.servertribe.attune.tuples.StepSshTuple"
+}

@@ -1,0 +1,12 @@
+{
+    "actionOnStepFail": null, 
+    "enabled": true, 
+    "externalUuid4": "732bd477-3bc6-4d5a-abc5-6277f350744d", 
+    "interpreter": 1, 
+    "key": "installp7ziponmacosorlinux", 
+    "name": "Install p7zip on macOS or Linux", 
+    "osCredKey": "automationworkerlinuxuserroot", 
+    "serverKey": "automationworkerlinuxnode", 
+    "successExitCode": 0, 
+    "type": "com.servertribe.attune.tuples.StepSshTuple"
+}

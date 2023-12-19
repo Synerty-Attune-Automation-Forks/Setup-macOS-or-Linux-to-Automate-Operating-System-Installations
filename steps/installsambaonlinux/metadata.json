@@ -1,0 +1,12 @@
+{
+    "actionOnStepFail": null, 
+    "enabled": true, 
+    "externalUuid4": "1376e5a6-6970-4baa-97e9-ab35834b67fc", 
+    "interpreter": 1, 
+    "key": "installsambaonlinux", 
+    "name": "Install Samba on Linux", 
+    "osCredKey": "automationworkerlinuxuserroot", 
+    "serverKey": "automationworkerlinuxnode", 
+    "successExitCode": 0, 
+    "type": "com.servertribe.attune.tuples.StepSshTuple"
+}

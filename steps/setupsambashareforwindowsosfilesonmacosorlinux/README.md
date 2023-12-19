@@ -1,0 +1,1 @@
+This Blueprint sets up a Samba Share for the WinPE installation.

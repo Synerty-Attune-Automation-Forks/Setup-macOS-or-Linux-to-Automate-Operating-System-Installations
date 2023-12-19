@@ -6,29 +6,29 @@
 
 
 <head>
-    <title>How to Setup WinPE Support on Linux Worker - Attune Automation</title>
+    <title>How to Setup ISO HTTP Support on Linux - Attune Automation</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="title"
-          content="How to Setup WinPE Support on Linux Worker - Attune Automation">
+          content="How to Setup ISO HTTP Support on Linux - Attune Automation">
     <meta name="description"
-          content="">
+          content="This is for OS installs to download ISOs from HTTP.">
     <meta name="robots"
           content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
 
     <meta property="og:locale" content="en_AU" />
     <meta property="og:type" content="article" />
     <meta property="og:title"
-          content="HowTo Setup WinPE Support on Linux Worker - Attune Automation" />
-    <meta property="og:description" content="" />
+          content="HowTo Setup ISO HTTP Support on Linux - Attune Automation" />
+    <meta property="og:description" content="This is for OS installs to download ISOs from HTTP." />
     <meta property="og:site_name" content="Attune Automation" />
     <meta property="article:section" content="IT Instruction" />
 
     <meta name="twitter:title"
-          content="How to Setup WinPE Support on Linux Worker - Attune Automation" />
-    <meta name="twitter:description" content="" />
+          content="How to Setup ISO HTTP Support on Linux - Attune Automation" />
+    <meta name="twitter:description" content="This is for OS installs to download ISOs from HTTP." />
 
     <link rel="icon" href="https://www.servertribe.com/wp-content/uploads/2020/10/cropped-server_tribe_favicon-32x32.png" sizes="32x32">
     <link rel="icon" href="https://www.servertribe.com/wp-content/uploads/2020/10/cropped-server_tribe_favicon-192x192.png" sizes="192x192">
@@ -119,7 +119,7 @@
                     </a>
                 </li>
                 <li class="breadcrumb-item active" aria-current="page">
-                    <strong>Setup WinPE Support on Linux Worker</strong>
+                    <strong>Setup ISO HTTP Support on Linux</strong>
                 </li>
             </ol>
         </nav>
@@ -133,12 +133,19 @@
     <div class="row">
         <div class="col px-0">
             <h1 class="text-left">
-                How to Setup WinPE Support on Linux Worker
+                How to Setup ISO HTTP Support on Linux
             </h1>
         </div>
     </div>
 
 <!-- Blueprint Description -->
+    <div class="row">
+        <div class="description col px-0">
+            <p class="text-left">
+                <p>This is for OS installs to download ISOs from HTTP.</p>
+            </p>
+        </div>
+    </div>
     <div class="row pt-4">
         <div class="col-6 px-0">
             <h6 class="text-left">
@@ -197,7 +204,7 @@
                     </p>
                     <p class="text-muted">
                         <a href="#top">
-                            <strong>Setup WinPE Support on Linux Worker</strong>
+                            <strong>Setup ISO HTTP Support on Linux</strong>
                         </a>
                     </p>
 
@@ -206,148 +213,98 @@
         
 
                     <p class="text-muted pt-2">
-                        <a href="#setupsambashareforwindowsosfilesonmacosorlinux">
-                            <strong>Step 1 -</strong> Setup Samba Share for Windows OS Files on macOS or Linux
-                        </a>
-                    </p>
-    
-        
-
-                    <p class="text-muted pt-2">
-                        <a href="#installsambaonlinux">
-                            <strong>Step 1.1 -</strong> Install Samba on Linux
+                        <a href="#installpython39onlinux">
+                            <strong>Step 1 -</strong> Install Python 3.9 on Linux
                         </a>
                     </p>
 
         
 
                     <p class="text-muted pt-2">
-                        <a href="#setupsharedfolderonlinux">
-                            <strong>Step 1.2 -</strong> Setup Shared Folder on Linux
+                        <a href="#installtwistdonlinux">
+                            <strong>Step 2 -</strong> Install twistd on Linux
                         </a>
                     </p>
 
         
 
                     <p class="text-muted pt-2">
-                        <a href="#configureselinuxsecuritycontextonlinux">
-                            <strong>Step 1.3 -</strong> Configure SELinux Security Context on Linux
+                        <a href="#adtcheckiftwistdisinstalledonlinux">
+                            <strong>Step 3 -</strong> ADT Check if twistd is Installed on Linux
                         </a>
                     </p>
 
         
 
                     <p class="text-muted pt-2">
-                        <a href="#setupsmbconfonlinux">
-                            <strong>Step 1.4 -</strong> Setup smb.conf on Linux
+                        <a href="#createstandarduseronlinux">
+                            <strong>Step 4 -</strong> Create Standard User on Linux
                         </a>
                     </p>
 
         
 
                     <p class="text-muted pt-2">
-                        <a href="#checksmbconfonlinux">
-                            <strong>Step 1.5 -</strong> Check smb.conf on Linux
+                        <a href="#adtdeployrunhttpisoshonlinux">
+                            <strong>Step 5 -</strong> ADT Deploy run_httpiso.sh on Linux
                         </a>
                     </p>
 
         
 
                     <p class="text-muted pt-2">
-                        <a href="#setupfirewallforsambaonlinux">
-                            <strong>Step 1.6 -</strong> Setup Firewall for Samba on Linux
+                        <a href="#adtsetpermissionsforrunhttpisoshonlinux">
+                            <strong>Step 6 -</strong> ADT Set Permissions for run_httpiso.sh on Linux
                         </a>
                     </p>
 
         
 
                     <p class="text-muted pt-2">
-                        <a href="#installprerequisitesonlinux">
-                            <strong>Step 1.7 -</strong> Install Prerequisites on Linux
+                        <a href="#adtpushhttpisoserviceonlinux">
+                            <strong>Step 7 -</strong> ADT Push httpiso.service on Linux
                         </a>
                     </p>
 
         
 
                     <p class="text-muted pt-2">
-                        <a href="#setupselinuxforsambaonlinux">
-                            <strong>Step 1.8 -</strong> Setup SELinux for Samba on Linux
+                        <a href="#createdkickstartdirectoryonlinux">
+                            <strong>Step 8 -</strong> Created kickstart Directory on Linux
                         </a>
                     </p>
 
         
 
                     <p class="text-muted pt-2">
-                        <a href="#checkselinuxforsambaonlinux">
-                            <strong>Step 1.9 -</strong> Check SELinux for Samba on Linux
+                        <a href="#adtreloadsystemdonlinux">
+                            <strong>Step 9 -</strong> ADT Reload Systemd on Linux
                         </a>
                     </p>
 
         
 
                     <p class="text-muted pt-2">
-                        <a href="#startsmbonlinux">
-                            <strong>Step 1.10 -</strong> Start smb on Linux
+                        <a href="#adtstartandenablehttpisoonlinux">
+                            <strong>Step 10 -</strong> ADT Start and Enable httpiso on Linux
                         </a>
                     </p>
 
         
 
                     <p class="text-muted pt-2">
-                        <a href="#checkservicesmbonlinux">
-                            <strong>Step 1.11 -</strong> Check Service smb on Linux
+                        <a href="#checkhttpisostartedonlinux">
+                            <strong>Step 11 -</strong> Check httpiso Started on Linux
                         </a>
                     </p>
 
         
 
                     <p class="text-muted pt-2">
-                        <a href="#startservicenmbonlinux">
-                            <strong>Step 1.12 -</strong> Start Service nmb on Linux
+                        <a href="#adtopenport8050onfirewalldonlinux">
+                            <strong>Step 12 -</strong> ADT Open Port 8050 on firewalld on Linux
                         </a>
                     </p>
-
-        
-
-                    <p class="text-muted pt-2">
-                        <a href="#checkservicenmbonlinux">
-                            <strong>Step 1.13 -</strong> Check Service nmb on Linux
-                        </a>
-                    </p>
-
-        
-
-                    <p class="text-muted pt-2">
-                        <a href="#setlinuxhomefolderpermissionsforsamba">
-                            <strong>Step 1.14 -</strong> Set Linux Home Folder Permissions for Samba
-                        </a>
-                    </p>
-
-
-        
-
-                    <p class="text-muted pt-2">
-                        <a href="#setupwimlibutilsonlinuxworker">
-                            <strong>Step 2 -</strong> Setup wimlib-utils on Linux Worker
-                        </a>
-                    </p>
-    
-        
-
-                    <p class="text-muted pt-2">
-                        <a href="#installwimlibonlinuxworker">
-                            <strong>Step 2.1 -</strong> Install wimlib on Linux Worker
-                        </a>
-                    </p>
-
-        
-
-                    <p class="text-muted pt-2">
-                        <a href="#checkwimlibinstalledonlinuxworker">
-                            <strong>Step 2.2 -</strong> Check wimlib Installed on Linux Worker
-                        </a>
-                    </p>
-
 
 
                 </div>
@@ -408,7 +365,7 @@
                 </ol>
             </p>
             <p class="lead text-center">
-                You've automated: <strong>Setup WinPE Support on Linux Worker</strong>
+                You've automated: <strong>Setup ISO HTTP Support on Linux</strong>
             </p>
             <hr class="my-4 text-center">
             <div class="col px-0">
@@ -439,1102 +396,9 @@
 
 
                     <div class="row pt-5">
-                        <h3 id="setupsambashareforwindowsosfilesonmacosorlinux">
-                            <a href="#setupsambashareforwindowsosfilesonmacosorlinux">
-                                <strong>Step 1 -</strong> Setup Samba Share for Windows OS Files on macOS or Linux
-                            </a>
-                        </h3>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                <p>Sets up a Samba server with the folder at 
-<code>{automationWorkerLinuxBaseDirectory}/windows_iso_data_for_winpe</code>.</p>
-<p>This Samba Share on Linux is required to host the Windows OS files 
-making them accessible over the network.</p>
-<p>For uploading specific Windows distributions to the Samba Share, see 
-<code>Deploy and extract {os_name} ISO for Samba Share</code> Blueprints in 
-this Project.</p>
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-    
-
-
-
-
-    
-
-
-
-                    <div class="row pt-5">
-                        <h4 id="installsambaonlinux">
-                            <a href="#installsambaonlinux">
-                                <strong>Step 1.1 -</strong> Install Samba on Linux
-                            </a>
-                        </h4>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                <p>Install packages required for Samba.</p>
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-
-                        <div class="row">
-                            <p>
-                                Connect via ssh:
-                            </p>
-                        </div>
-                        <div class="row py-1">
-                            <code class="language-sql">
-ssh {automationworkerlinuxuserroot}@{automationworkerlinuxnode}
-                            </code>
-                        </div>
-
-
-
-    
-
-
-
-    <div class="row">
-        <p>
-            Execute the following script:
-        </p>
-    </div>
-    <div class="row">
-        <div class="col px-0">
-            <pre>
-                <code class="language-sql py-0">
-if [[ -f /etc/redhat-release ]] || [[ -f /etc/lsb-release ]]
-then
-
-    dnf -y install samba samba-common samba-client
-
-elif [[ -f /etc/debian_version ]]
-then
-
-    apt -y install samba samba-common samba-client
-    
-elif [[ &quot;Darwin&quot; == &quot;$(uname)&quot; ]]
-then
-
-    brew install samba
-
-else
-    
-    echo &quot;Unsupported operating system.&quot;
-    exit 1
-fi
-                </code>
-            </pre>
-        </div>
-    </div>
-
-
-
-
-
-    
-
-
-
-                    <div class="row pt-5">
-                        <h4 id="setupsharedfolderonlinux">
-                            <a href="#setupsharedfolderonlinux">
-                                <strong>Step 1.2 -</strong> Setup Shared Folder on Linux
-                            </a>
-                        </h4>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-    
-
-
-    
-
-
-
-    <div class="row">
-        <p>
-            Execute the following script:
-        </p>
-    </div>
-    <div class="row">
-        <div class="col px-0">
-            <pre>
-                <code class="language-sql py-0">
-shared_dir=&quot;{automationWorkerLinuxBaseDirectory}/windows_iso_data_for_winpe&quot;
-
-USER=&quot;{automationWorkerLinuxUser.user}&quot;
-GROUP=&quot;$(id -gn $USER)&quot;
-echo &quot;User: $USER, Group: $GROUP&quot;
-
-mkdir -p $shared_dir
-chmod -R 0775 $shared_dir
-chown -R nobody:$GROUP $shared_dir
-ls -lrh $shared_dir
-                </code>
-            </pre>
-        </div>
-    </div>
-
-
-
-
-
-    
-
-
-
-                    <div class="row pt-5">
-                        <h4 id="configureselinuxsecuritycontextonlinux">
-                            <a href="#configureselinuxsecuritycontextonlinux">
-                                <strong>Step 1.3 -</strong> Configure SELinux Security Context on Linux
-                            </a>
-                        </h4>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-    
-
-
-    
-
-
-
-    <div class="row">
-        <p>
-            Execute the following script:
-        </p>
-    </div>
-    <div class="row">
-        <div class="col px-0">
-            <pre>
-                <code class="language-sql py-0">
-shared_dir=&quot;{automationWorkerLinuxBaseDirectory}/windows_iso_data_for_winpe&quot;
-
-if [[ -f /etc/redhat-release ]] || [[ -f /etc/lsb-release ]]
-then
-
-    chcon -R -t samba_share_t $shared_dir
-    
-elif [[ -f /etc/debian_version ]]
-then
-
-    echo &quot;This is Debian, Nothing to do!&quot;
-    
-elif [[ &quot;Darwin&quot; == &quot;$(uname)&quot; ]]
-then
-
-    echo &quot;This is macOS, Nothing to do!&quot;
-
-else
-    
-    echo &quot;Unsupported operating system.&quot;
-    exit 1
-fi
-                </code>
-            </pre>
-        </div>
-    </div>
-
-
-
-
-
-    
-
-
-
-                    <div class="row pt-5">
-                        <h4 id="setupsmbconfonlinux">
-                            <a href="#setupsmbconfonlinux">
-                                <strong>Step 1.4 -</strong> Setup smb.conf on Linux
-                            </a>
-                        </h4>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                <p>Populate <code>/etc/samba/smb.conf</code>.</p>
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-    
-
-
-    
-
-
-
-    <div class="row">
-        <p>
-            Execute the following script:
-        </p>
-    </div>
-    <div class="row">
-        <div class="col px-0">
-            <pre>
-                <code class="language-sql py-0">
-if [[ -f /etc/redhat-release ]] || [[ -f /etc/lsb-release ]] || [[ -f /etc/debian_version ]]
-then
-
-    cd /etc/samba/
-
-elif [[ &quot;Darwin&quot; == &quot;$(uname)&quot; ]]
-then
-
-    cd /usr/local/etc/
-
-else
-    
-    echo &quot;Unsupported operating system.&quot;
-    exit 1
-fi
-
-cat &lt;&lt; EOF &gt; smb.conf
-# See smb.conf.example for a more detailed config file or
-# read the smb.conf manpage.
-# Run &#x27;testparm&#x27; to verify the config is correct after
-# you modified it.
-
-[global]
-	workgroup = WORKGROUP
-	security = user
-	passdb backend = tdbsam
-	map to guest = bad user
-
-[share]
-        comment = public share
-        path = {automationWorkerLinuxBaseDirectory}/windows_iso_data_for_winpe
-        browseable = yes
-        guest ok = yes
-        guest only = yes
-        writable = yes
-        read only = no
-EOF
-
-cat smb.conf
-                </code>
-            </pre>
-        </div>
-    </div>
-
-
-
-
-
-    
-
-
-
-                    <div class="row pt-5">
-                        <h4 id="checksmbconfonlinux">
-                            <a href="#checksmbconfonlinux">
-                                <strong>Step 1.5 -</strong> Check smb.conf on Linux
-                            </a>
-                        </h4>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-
-                        <div class="row">
-                            <p>
-                                Connect via ssh:
-                            </p>
-                        </div>
-                        <div class="row py-1">
-                            <code class="language-sql">
-ssh {automationworkerlinuxuser}@{automationworkerlinuxnode}
-                            </code>
-                        </div>
-
-
-
-    
-
-
-
-    <div class="row">
-        <p>
-            Execute the following script:
-        </p>
-    </div>
-    <div class="row">
-        <div class="col px-0">
-            <pre>
-                <code class="language-sql py-0">
-testparm --suppress-prompt
-exit $?
-                </code>
-            </pre>
-        </div>
-    </div>
-
-
-
-
-
-    
-
-
-
-                    <div class="row pt-5">
-                        <h4 id="setupfirewallforsambaonlinux">
-                            <a href="#setupfirewallforsambaonlinux">
-                                <strong>Step 1.6 -</strong> Setup Firewall for Samba on Linux
-                            </a>
-                        </h4>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                <p>Open up firewall rules for Samba.</p>
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-
-                        <div class="row">
-                            <p>
-                                Connect via ssh:
-                            </p>
-                        </div>
-                        <div class="row py-1">
-                            <code class="language-sql">
-ssh {automationworkerlinuxuserroot}@{automationworkerlinuxnode}
-                            </code>
-                        </div>
-
-
-
-    
-
-
-
-    <div class="row">
-        <p>
-            Execute the following script:
-        </p>
-    </div>
-    <div class="row">
-        <div class="col px-0">
-            <pre>
-                <code class="language-sql py-0">
-if [[ -f /etc/redhat-release ]] || [[ -f /etc/lsb-release ]]
-then
-
-    firewall-cmd --add-service=samba --zone=public --permanent
-    firewall-cmd --reload
-    
-elif [[ -f /etc/debian_version ]]
-then
-
-    echo &quot;This is Debian, Nothing to do!&quot;
-    
-elif [[ &quot;Darwin&quot; == &quot;$(uname)&quot; ]]
-then
-
-    echo &quot;This is macOS, Nothing to do!&quot;
-
-else
-    
-    echo &quot;Unsupported operating system.&quot;
-    exit 1
-fi
-                </code>
-            </pre>
-        </div>
-    </div>
-
-
-
-
-
-    
-
-
-
-                    <div class="row pt-5">
-                        <h4 id="installprerequisitesonlinux">
-                            <a href="#installprerequisitesonlinux">
-                                <strong>Step 1.7 -</strong> Install Prerequisites on Linux
-                            </a>
-                        </h4>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                <p>Installs packages required by Samba.</p>
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-    
-
-
-    
-
-
-
-    <div class="row">
-        <p>
-            Execute the following script:
-        </p>
-    </div>
-    <div class="row">
-        <div class="col px-0">
-            <pre>
-                <code class="language-sql py-0">
-if [[ -f /etc/redhat-release ]] || [[ -f /etc/lsb-release ]]
-then
-
-    dnf -y install \
-        policycoreutils-python-utils \
-        fuse3-devel \
-        fuse3-libs \
-        epel-release \
-        p7zip p7zip-plugins
-
-elif [[ -f /etc/debian_version ]]
-then
-
-    apt-get -y install \
-        policycoreutils \
-        libfuse3-dev \
-        fuse3 \
-        p7zip-full p7zip-rar
-
-elif [[ &quot;Darwin&quot; == &quot;$(uname)&quot; ]]
-then
-
-    brew install osxfuse p7zip
-
-else
-    
-    echo &quot;Unsupported operating system.&quot;
-    exit 1
-fi
-                </code>
-            </pre>
-        </div>
-    </div>
-
-
-
-
-
-    
-
-
-
-                    <div class="row pt-5">
-                        <h4 id="setupselinuxforsambaonlinux">
-                            <a href="#setupselinuxforsambaonlinux">
-                                <strong>Step 1.8 -</strong> Setup SELinux for Samba on Linux
-                            </a>
-                        </h4>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                <p>Sets up SELinux for Samba.</p>
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-    
-
-
-    
-
-
-
-    <div class="row">
-        <p>
-            Execute the following script:
-        </p>
-    </div>
-    <div class="row">
-        <div class="col px-0">
-            <pre>
-                <code class="language-sql py-0">
-if [[ -f /etc/redhat-release ]] || [[ -f /etc/lsb-release ]]
-then
-
-    if sestatus | grep -i &quot;SELinux status:&quot; | grep -q &quot;enabled&quot;
-    then
-        setsebool -P samba_export_all_ro=1 samba_export_all_rw=1
-        semanage fcontext -at samba_share_t &quot;{automationWorkerLinuxBaseDirectory}/windows_iso_data_for_winpe(/.*)?&quot;
-    else
-        echo &quot;SElinux is disabled&quot;
-    fi
-    
-elif [[ -f /etc/debian_version ]]
-then
-
-    echo &quot;This is Debian, Nothing to do!&quot;
-    
-elif [[ &quot;Darwin&quot; == &quot;$(uname)&quot; ]]
-then
-
-    echo &quot;This is macOS, Nothing to do!&quot;
-
-else
-    
-    echo &quot;Unsupported operating system.&quot;
-    exit 1
-fi
-                </code>
-            </pre>
-        </div>
-    </div>
-
-
-
-
-
-    
-
-
-
-                    <div class="row pt-5">
-                        <h4 id="checkselinuxforsambaonlinux">
-                            <a href="#checkselinuxforsambaonlinux">
-                                <strong>Step 1.9 -</strong> Check SELinux for Samba on Linux
-                            </a>
-                        </h4>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                <p>Checks if SELinux is set up correctly for Samba.</p>
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-
-                        <div class="row">
-                            <p>
-                                Connect via ssh:
-                            </p>
-                        </div>
-                        <div class="row py-1">
-                            <code class="language-sql">
-ssh {automationworkerlinuxuser}@{automationworkerlinuxnode}
-                            </code>
-                        </div>
-
-
-
-    
-
-
-
-    <div class="row">
-        <p>
-            Execute the following script:
-        </p>
-    </div>
-    <div class="row">
-        <div class="col px-0">
-            <pre>
-                <code class="language-sql py-0">
-if [[ -f /etc/redhat-release ]] || [[ -f /etc/lsb-release ]]
-then
-
-    if sestatus | grep -i &quot;SELinux status:&quot; | grep -q &quot;enabled&quot;
-    then
-        line_count=$(getsebool -a | grep samba_export | wc -l)
-        
-        if [ $line_count -eq 2 ]
-        then
-            echo &quot;ok&quot;
-        else
-            echo &quot;wrong number of occurrences for samba_export&quot;
-            exit 1
-        fi
-    else
-        echo &quot;SElinux is disabled&quot;
-    fi
-    
-elif [[ -f /etc/debian_version ]]
-then
-
-    echo &quot;This is Debian, Nothing to do!&quot;
-    
-elif [[ &quot;Darwin&quot; == &quot;$(uname)&quot; ]]
-then
-
-    echo &quot;This is macOS, Nothing to do!&quot;
-
-else
-    
-    echo &quot;Unsupported operating system.&quot;
-    exit 1
-fi
-                </code>
-            </pre>
-        </div>
-    </div>
-
-
-
-
-
-    
-
-
-
-                    <div class="row pt-5">
-                        <h4 id="startsmbonlinux">
-                            <a href="#startsmbonlinux">
-                                <strong>Step 1.10 -</strong> Start smb on Linux
-                            </a>
-                        </h4>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                <p>Starts <code>smb</code> service.</p>
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-
-                        <div class="row">
-                            <p>
-                                Connect via ssh:
-                            </p>
-                        </div>
-                        <div class="row py-1">
-                            <code class="language-sql">
-ssh {automationworkerlinuxuserroot}@{automationworkerlinuxnode}
-                            </code>
-                        </div>
-
-
-
-    
-
-
-
-    <div class="row">
-        <p>
-            Execute the following script:
-        </p>
-    </div>
-    <div class="row">
-        <div class="col px-0">
-            <pre>
-                <code class="language-sql py-0">
-systemctl restart smb
-systemctl enable smb
-systemctl status smb
-                </code>
-            </pre>
-        </div>
-    </div>
-
-
-
-
-
-    
-
-
-
-                    <div class="row pt-5">
-                        <h4 id="checkservicesmbonlinux">
-                            <a href="#checkservicesmbonlinux">
-                                <strong>Step 1.11 -</strong> Check Service smb on Linux
-                            </a>
-                        </h4>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                <p>Checks if the <code>smb</code> service is running.</p>
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-
-                        <div class="row">
-                            <p>
-                                Connect via ssh:
-                            </p>
-                        </div>
-                        <div class="row py-1">
-                            <code class="language-sql">
-ssh {automationworkerlinuxuser}@{automationworkerlinuxnode}
-                            </code>
-                        </div>
-
-
-
-    
-
-
-
-    <div class="row">
-        <p>
-            Execute the following script:
-        </p>
-    </div>
-    <div class="row">
-        <div class="col px-0">
-            <pre>
-                <code class="language-sql py-0">
-service=&quot;smb&quot;
-line_count=$(systemctl status $service | grep running | wc -l)
-if [ $line_count -eq 0 ]
-then
-    echo &quot;$service is not running&quot;
-    exit 1
-else
-    echo &quot;ok&quot;
-fi
-                </code>
-            </pre>
-        </div>
-    </div>
-
-
-
-
-
-    
-
-
-
-                    <div class="row pt-5">
-                        <h4 id="startservicenmbonlinux">
-                            <a href="#startservicenmbonlinux">
-                                <strong>Step 1.12 -</strong> Start Service nmb on Linux
-                            </a>
-                        </h4>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                <p>Starts <code>nmb</code> service.</p>
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-
-                        <div class="row">
-                            <p>
-                                Connect via ssh:
-                            </p>
-                        </div>
-                        <div class="row py-1">
-                            <code class="language-sql">
-ssh {automationworkerlinuxuserroot}@{automationworkerlinuxnode}
-                            </code>
-                        </div>
-
-
-
-    
-
-
-
-    <div class="row">
-        <p>
-            Execute the following script:
-        </p>
-    </div>
-    <div class="row">
-        <div class="col px-0">
-            <pre>
-                <code class="language-sql py-0">
-systemctl restart nmb
-systemctl enable nmb
-systemctl status nmb
-                </code>
-            </pre>
-        </div>
-    </div>
-
-
-
-
-
-    
-
-
-
-                    <div class="row pt-5">
-                        <h4 id="checkservicenmbonlinux">
-                            <a href="#checkservicenmbonlinux">
-                                <strong>Step 1.13 -</strong> Check Service nmb on Linux
-                            </a>
-                        </h4>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                <p>Checks if <code>nmb</code> service is running.</p>
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-
-                        <div class="row">
-                            <p>
-                                Connect via ssh:
-                            </p>
-                        </div>
-                        <div class="row py-1">
-                            <code class="language-sql">
-ssh {automationworkerlinuxuser}@{automationworkerlinuxnode}
-                            </code>
-                        </div>
-
-
-
-    
-
-
-
-    <div class="row">
-        <p>
-            Execute the following script:
-        </p>
-    </div>
-    <div class="row">
-        <div class="col px-0">
-            <pre>
-                <code class="language-sql py-0">
-service=&quot;nmb&quot;
-line_count=$(systemctl status $service | grep running | wc -l)
-if [ $line_count -eq 0 ]
-then
-    echo &quot;$service is not running&quot;
-    exit 1
-else
-    echo &quot;ok&quot;
-fi
-                </code>
-            </pre>
-        </div>
-    </div>
-
-
-
-
-
-    
-
-
-
-                    <div class="row pt-5">
-                        <h4 id="setlinuxhomefolderpermissionsforsamba">
-                            <a href="#setlinuxhomefolderpermissionsforsamba">
-                                <strong>Step 1.14 -</strong> Set Linux Home Folder Permissions for Samba
-                            </a>
-                        </h4>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                <p>Sets the permissions of the home folder.</p>
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-    
-
-
-    
-
-
-
-    <div class="row">
-        <p>
-            Execute the following script:
-        </p>
-    </div>
-    <div class="row">
-        <div class="col px-0">
-            <pre>
-                <code class="language-sql py-0">
-chmod -v +rx $HOME
-                </code>
-            </pre>
-        </div>
-    </div>
-
-
-
-
-
-
-        
-
-
-
-                    <div class="row pt-5">
-                        <h3 id="setupwimlibutilsonlinuxworker">
-                            <a href="#setupwimlibutilsonlinuxworker">
-                                <strong>Step 2 -</strong> Setup wimlib-utils on Linux Worker
+                        <h3 id="installpython39onlinux">
+                            <a href="#installpython39onlinux">
+                                <strong>Step 1 -</strong> Install Python 3.9 on Linux
                             </a>
                         </h3>
                     </div>
@@ -1551,21 +415,477 @@ chmod -v +rx $HOME
 
 
 
+
+
+
+
+
+                        <div class="row">
+                            <p>
+                                Connect via ssh:
+                            </p>
+                        </div>
+                        <div class="row py-1">
+                            <code class="language-sql">
+ssh {automationworkerlinuxuserroot}@{automationworkerlinuxnode}
+                            </code>
+                        </div>
+
+
+
     
 
 
 
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+dnf -y install python39 python39-pip
+                </code>
+            </pre>
+        </div>
+    </div>
 
-    
+
+
+
+
+        
 
 
 
                     <div class="row pt-5">
-                        <h4 id="installwimlibonlinuxworker">
-                            <a href="#installwimlibonlinuxworker">
-                                <strong>Step 2.1 -</strong> Install wimlib on Linux Worker
+                        <h3 id="installtwistdonlinux">
+                            <a href="#installtwistdonlinux">
+                                <strong>Step 2 -</strong> Install twistd on Linux
                             </a>
-                        </h4>
+                        </h3>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+pip3.9 install twisted
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+        
+
+
+
+                    <div class="row pt-5">
+                        <h3 id="adtcheckiftwistdisinstalledonlinux">
+                            <a href="#adtcheckiftwistdisinstalledonlinux">
+                                <strong>Step 3 -</strong> ADT Check if twistd is Installed on Linux
+                            </a>
+                        </h3>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+which twistd
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+        
+
+
+
+                    <div class="row pt-5">
+                        <h3 id="createstandarduseronlinux">
+                            <a href="#createstandarduseronlinux">
+                                <strong>Step 4 -</strong> Create Standard User on Linux
+                            </a>
+                        </h3>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+useradd --create-home &quot;{automationWorkerLinuxUser.user}&quot;
+
+echo &quot;{automationWorkerLinuxUser.user}&quot;:&quot;{automationWorkerLinuxUser.password}&quot; \
+    | chpasswd
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+        
+
+
+
+                    <div class="row pt-5">
+                        <h3 id="adtdeployrunhttpisoshonlinux">
+                            <a href="#adtdeployrunhttpisoshonlinux">
+                                <strong>Step 5 -</strong> ADT Deploy run_httpiso.sh on Linux
+                            </a>
+                        </h3>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                        <div class="row">
+                            <p>
+                                Connect via ssh:
+                            </p>
+                        </div>
+                        <div class="row py-1">
+                            <code class="language-sql">
+ssh {automationworkerlinuxuser}@{automationworkerlinuxnode}
+                            </code>
+                        </div>
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            
+        </p>
+        <p>
+            Copy the File(s)
+            <strong>run_httpisosh.tar</strong>
+            to the target node.
+        </p>
+        <p>
+            <strong>Extract and deploy the File(s)</strong> here:
+        </p>
+    </div>
+    <div class="row py-1">
+        <code class="language-bash">
+$HOME, relative to the home directory
+        </code>
+    </div>
+
+
+
+
+
+        
+
+
+
+                    <div class="row pt-5">
+                        <h3 id="adtsetpermissionsforrunhttpisoshonlinux">
+                            <a href="#adtsetpermissionsforrunhttpisoshonlinux">
+                                <strong>Step 6 -</strong> ADT Set Permissions for run_httpiso.sh on Linux
+                            </a>
+                        </h3>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+chmod a+x run_httpiso.sh
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+        
+
+
+
+                    <div class="row pt-5">
+                        <h3 id="adtpushhttpisoserviceonlinux">
+                            <a href="#adtpushhttpisoserviceonlinux">
+                                <strong>Step 7 -</strong> ADT Push httpiso.service on Linux
+                            </a>
+                        </h3>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                        <div class="row">
+                            <p>
+                                Connect via ssh:
+                            </p>
+                        </div>
+                        <div class="row py-1">
+                            <code class="language-sql">
+ssh {automationworkerlinuxuserroot}@{automationworkerlinuxnode}
+                            </code>
+                        </div>
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            
+        </p>
+        <p>
+            Copy the File(s)
+            <strong>httpisoservice.tar</strong>
+            to the target node.
+        </p>
+        <p>
+            <strong>Extract and deploy the File(s)</strong> here:
+        </p>
+    </div>
+    <div class="row py-1">
+        <code class="language-bash">
+/usr/lib/systemd/system/
+        </code>
+    </div>
+
+
+
+
+
+        
+
+
+
+                    <div class="row pt-5">
+                        <h3 id="createdkickstartdirectoryonlinux">
+                            <a href="#createdkickstartdirectoryonlinux">
+                                <strong>Step 8 -</strong> Created kickstart Directory on Linux
+                            </a>
+                        </h3>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                        <div class="row">
+                            <p>
+                                Connect via ssh:
+                            </p>
+                        </div>
+                        <div class="row py-1">
+                            <code class="language-sql">
+ssh {automationworkerlinuxuser}@{automationworkerlinuxnode}
+                            </code>
+                        </div>
+
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+mkdir --parents kickstart
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+        
+
+
+
+                    <div class="row pt-5">
+                        <h3 id="adtreloadsystemdonlinux">
+                            <a href="#adtreloadsystemdonlinux">
+                                <strong>Step 9 -</strong> ADT Reload Systemd on Linux
+                            </a>
+                        </h3>
                     </div>
 
                     <div class="row">
@@ -1611,7 +931,7 @@ ssh {automationworkerlinuxuserroot}@{automationworkerlinuxnode}
         <div class="col px-0">
             <pre>
                 <code class="language-sql py-0">
-dnf -y install wimlib wimlib-utils fuse
+systemctl daemon-reload
                 </code>
             </pre>
         </div>
@@ -1621,16 +941,16 @@ dnf -y install wimlib wimlib-utils fuse
 
 
 
-    
+        
 
 
 
                     <div class="row pt-5">
-                        <h4 id="checkwimlibinstalledonlinuxworker">
-                            <a href="#checkwimlibinstalledonlinuxworker">
-                                <strong>Step 2.2 -</strong> Check wimlib Installed on Linux Worker
+                        <h3 id="adtstartandenablehttpisoonlinux">
+                            <a href="#adtstartandenablehttpisoonlinux">
+                                <strong>Step 10 -</strong> ADT Start and Enable httpiso on Linux
                             </a>
-                        </h4>
+                        </h3>
                     </div>
 
                     <div class="row">
@@ -1665,13 +985,142 @@ dnf -y install wimlib wimlib-utils fuse
         <div class="col px-0">
             <pre>
                 <code class="language-sql py-0">
-which mkwinpeimg
-which wimcapture
+systemctl enable --now httpiso
                 </code>
             </pre>
         </div>
     </div>
 
+
+
+
+
+        
+
+
+
+                    <div class="row pt-5">
+                        <h3 id="checkhttpisostartedonlinux">
+                            <a href="#checkhttpisostartedonlinux">
+                                <strong>Step 11 -</strong> Check httpiso Started on Linux
+                            </a>
+                        </h3>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                        <div class="row">
+                            <p>
+                                Connect via ssh:
+                            </p>
+                        </div>
+                        <div class="row py-1">
+                            <code class="language-sql">
+ssh {automationworkerlinuxuser}@{automationworkerlinuxnode}
+                            </code>
+                        </div>
+
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+systemctl status httpiso
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+        
+
+
+
+                    <div class="row pt-5">
+                        <h3 id="adtopenport8050onfirewalldonlinux">
+                            <a href="#adtopenport8050onfirewalldonlinux">
+                                <strong>Step 12 -</strong> ADT Open Port 8050 on firewalld on Linux
+                            </a>
+                        </h3>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                        <div class="row">
+                            <p>
+                                Connect via ssh:
+                            </p>
+                        </div>
+                        <div class="row py-1">
+                            <code class="language-sql">
+ssh {automationworkerlinuxuserroot}@{automationworkerlinuxnode}
+                            </code>
+                        </div>
+
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+firewall-cmd --zone=public --add-port=8050/tcp
+firewall-cmd --zone=public --add-port=8050/tcp
+                </code>
+            </pre>
+        </div>
+    </div>
 
 
 

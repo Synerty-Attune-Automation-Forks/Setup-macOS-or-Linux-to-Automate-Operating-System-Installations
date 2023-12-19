@@ -1,0 +1,12 @@
+{
+    "actionOnStepFail": "stop", 
+    "enabled": true, 
+    "externalUuid4": "0aceeba0-d9b7-4dfa-a33b-d2a61e2fb183", 
+    "interpreter": 1, 
+    "key": "installfuseonlinux", 
+    "name": "Install FUSE on Linux", 
+    "osCredKey": "automationworkerlinuxuserroot", 
+    "serverKey": "automationworkerlinuxnode", 
+    "successExitCode": 0, 
+    "type": "com.servertribe.attune.tuples.StepSshTuple"
+}
