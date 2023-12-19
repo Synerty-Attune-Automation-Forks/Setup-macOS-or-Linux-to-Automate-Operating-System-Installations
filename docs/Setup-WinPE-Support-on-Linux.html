@@ -206,148 +206,26 @@
         
 
                     <p class="text-muted pt-2">
-                        <a href="#setupsambashareforwindowsosfilesonmacosorlinux">
-                            <strong>Step 1 -</strong> Setup Samba Share for Windows OS Files on macOS or Linux
-                        </a>
-                    </p>
-    
-        
-
-                    <p class="text-muted pt-2">
-                        <a href="#installsambaonlinux">
-                            <strong>Step 1.1 -</strong> Install Samba on Linux
+                        <a href="#installp7ziponmacosorlinux">
+                            <strong>Step 1 -</strong> Install p7zip on macOS or Linux
                         </a>
                     </p>
 
         
 
                     <p class="text-muted pt-2">
-                        <a href="#setupsharedfolderonlinux">
-                            <strong>Step 1.2 -</strong> Setup Shared Folder on Linux
+                        <a href="#installfuseonlinux">
+                            <strong>Step 2 -</strong> Install FUSE on Linux
                         </a>
                     </p>
 
         
 
                     <p class="text-muted pt-2">
-                        <a href="#configureselinuxsecuritycontextonlinux">
-                            <strong>Step 1.3 -</strong> Configure SELinux Security Context on Linux
+                        <a href="#installwimlibutilsonmacosorlinux">
+                            <strong>Step 3 -</strong> Install wimlib-utils on macOS or Linux
                         </a>
                     </p>
-
-        
-
-                    <p class="text-muted pt-2">
-                        <a href="#setupsmbconfonlinux">
-                            <strong>Step 1.4 -</strong> Setup smb.conf on Linux
-                        </a>
-                    </p>
-
-        
-
-                    <p class="text-muted pt-2">
-                        <a href="#checksmbconfonlinux">
-                            <strong>Step 1.5 -</strong> Check smb.conf on Linux
-                        </a>
-                    </p>
-
-        
-
-                    <p class="text-muted pt-2">
-                        <a href="#setupfirewallforsambaonlinux">
-                            <strong>Step 1.6 -</strong> Setup Firewall for Samba on Linux
-                        </a>
-                    </p>
-
-        
-
-                    <p class="text-muted pt-2">
-                        <a href="#installprerequisitesonlinux">
-                            <strong>Step 1.7 -</strong> Install Prerequisites on Linux
-                        </a>
-                    </p>
-
-        
-
-                    <p class="text-muted pt-2">
-                        <a href="#setupselinuxforsambaonlinux">
-                            <strong>Step 1.8 -</strong> Setup SELinux for Samba on Linux
-                        </a>
-                    </p>
-
-        
-
-                    <p class="text-muted pt-2">
-                        <a href="#checkselinuxforsambaonlinux">
-                            <strong>Step 1.9 -</strong> Check SELinux for Samba on Linux
-                        </a>
-                    </p>
-
-        
-
-                    <p class="text-muted pt-2">
-                        <a href="#startsmbonlinux">
-                            <strong>Step 1.10 -</strong> Start smb on Linux
-                        </a>
-                    </p>
-
-        
-
-                    <p class="text-muted pt-2">
-                        <a href="#checkservicesmbonlinux">
-                            <strong>Step 1.11 -</strong> Check Service smb on Linux
-                        </a>
-                    </p>
-
-        
-
-                    <p class="text-muted pt-2">
-                        <a href="#startservicenmbonlinux">
-                            <strong>Step 1.12 -</strong> Start Service nmb on Linux
-                        </a>
-                    </p>
-
-        
-
-                    <p class="text-muted pt-2">
-                        <a href="#checkservicenmbonlinux">
-                            <strong>Step 1.13 -</strong> Check Service nmb on Linux
-                        </a>
-                    </p>
-
-        
-
-                    <p class="text-muted pt-2">
-                        <a href="#setlinuxhomefolderpermissionsforsamba">
-                            <strong>Step 1.14 -</strong> Set Linux Home Folder Permissions for Samba
-                        </a>
-                    </p>
-
-
-        
-
-                    <p class="text-muted pt-2">
-                        <a href="#setupwimlibutilsonlinux">
-                            <strong>Step 2 -</strong> Setup wimlib-utils on Linux
-                        </a>
-                    </p>
-    
-        
-
-                    <p class="text-muted pt-2">
-                        <a href="#installwimlibonlinux">
-                            <strong>Step 2.1 -</strong> Install wimlib on Linux
-                        </a>
-                    </p>
-
-        
-
-                    <p class="text-muted pt-2">
-                        <a href="#checkwimlibinstalledonlinux">
-                            <strong>Step 2.2 -</strong> Check wimlib Installed on Linux
-                        </a>
-                    </p>
-
 
 
                 </div>
@@ -439,9 +317,9 @@
 
 
                     <div class="row pt-5">
-                        <h3 id="setupsambashareforwindowsosfilesonmacosorlinux">
-                            <a href="#setupsambashareforwindowsosfilesonmacosorlinux">
-                                <strong>Step 1 -</strong> Setup Samba Share for Windows OS Files on macOS or Linux
+                        <h3 id="installp7ziponmacosorlinux">
+                            <a href="#installp7ziponmacosorlinux">
+                                <strong>Step 1 -</strong> Install p7zip on macOS or Linux
                             </a>
                         </h3>
                     </div>
@@ -449,42 +327,7 @@
                     <div class="row">
                         <div class="description col px-0">
                             <p>
-                                <p>Sets up a Samba server with the folder at 
-<code>{automationWorkerLinuxBaseDirectory}/windows_iso_data_for_winpe</code>.</p>
-<p>This Samba Share on Linux is required to host the Windows OS files 
-making them accessible over the network.</p>
-<p>For uploading specific Windows distributions to the Samba Share, see 
-<code>Deploy and extract {os_name} ISO for Samba Share</code> Blueprints in 
-this Project.</p>
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-    
-
-
-
-
-    
-
-
-
-                    <div class="row pt-5">
-                        <h4 id="installsambaonlinux">
-                            <a href="#installsambaonlinux">
-                                <strong>Step 1.1 -</strong> Install Samba on Linux
-                            </a>
-                        </h4>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                <p>Install packages required for Samba.</p>
+                                
                             </p>
                         </div>
                     </div>
@@ -527,656 +370,32 @@ ssh {automationworkerlinuxuserroot}@{automationworkerlinuxnode}
 if [[ -f /etc/redhat-release ]] || [[ -f /etc/lsb-release ]]
 then
 
-    dnf -y install samba samba-common samba-client
-
-elif [[ -f /etc/debian_version ]]
-then
-
-    apt -y install samba samba-common samba-client
-    
-elif [[ &quot;Darwin&quot; == &quot;$(uname)&quot; ]]
-then
-
-    brew install samba
-
-else
-    
-    echo &quot;Unsupported operating system.&quot;
-    exit 1
-fi
-                </code>
-            </pre>
-        </div>
-    </div>
-
-
-
-
-
-    
-
-
-
-                    <div class="row pt-5">
-                        <h4 id="setupsharedfolderonlinux">
-                            <a href="#setupsharedfolderonlinux">
-                                <strong>Step 1.2 -</strong> Setup Shared Folder on Linux
-                            </a>
-                        </h4>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-    
-
-
-    
-
-
-
-    <div class="row">
-        <p>
-            Execute the following script:
-        </p>
-    </div>
-    <div class="row">
-        <div class="col px-0">
-            <pre>
-                <code class="language-sql py-0">
-shared_dir=&quot;{automationWorkerLinuxBaseDirectory}/windows_iso_data_for_winpe&quot;
-
-USER=&quot;{automationWorkerLinuxUser.user}&quot;
-GROUP=&quot;$(id -gn $USER)&quot;
-echo &quot;User: $USER, Group: $GROUP&quot;
-
-mkdir -p $shared_dir
-chmod -R 0775 $shared_dir
-chown -R nobody:$GROUP $shared_dir
-ls -lrh $shared_dir
-                </code>
-            </pre>
-        </div>
-    </div>
-
-
-
-
-
-    
-
-
-
-                    <div class="row pt-5">
-                        <h4 id="configureselinuxsecuritycontextonlinux">
-                            <a href="#configureselinuxsecuritycontextonlinux">
-                                <strong>Step 1.3 -</strong> Configure SELinux Security Context on Linux
-                            </a>
-                        </h4>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-    
-
-
-    
-
-
-
-    <div class="row">
-        <p>
-            Execute the following script:
-        </p>
-    </div>
-    <div class="row">
-        <div class="col px-0">
-            <pre>
-                <code class="language-sql py-0">
-shared_dir=&quot;{automationWorkerLinuxBaseDirectory}/windows_iso_data_for_winpe&quot;
-
-if [[ -f /etc/redhat-release ]] || [[ -f /etc/lsb-release ]]
-then
-
-    chcon -R -t samba_share_t $shared_dir
-    
-elif [[ -f /etc/debian_version ]]
-then
-
-    echo &quot;This is Debian, Nothing to do!&quot;
-    
-elif [[ &quot;Darwin&quot; == &quot;$(uname)&quot; ]]
-then
-
-    echo &quot;This is macOS, Nothing to do!&quot;
-
-else
-    
-    echo &quot;Unsupported operating system.&quot;
-    exit 1
-fi
-                </code>
-            </pre>
-        </div>
-    </div>
-
-
-
-
-
-    
-
-
-
-                    <div class="row pt-5">
-                        <h4 id="setupsmbconfonlinux">
-                            <a href="#setupsmbconfonlinux">
-                                <strong>Step 1.4 -</strong> Setup smb.conf on Linux
-                            </a>
-                        </h4>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                <p>Populate <code>/etc/samba/smb.conf</code>.</p>
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-    
-
-
-    
-
-
-
-    <div class="row">
-        <p>
-            Execute the following script:
-        </p>
-    </div>
-    <div class="row">
-        <div class="col px-0">
-            <pre>
-                <code class="language-sql py-0">
-if [[ -f /etc/redhat-release ]] || [[ -f /etc/lsb-release ]] || [[ -f /etc/debian_version ]]
-then
-
-    cd /etc/samba/
-
-elif [[ &quot;Darwin&quot; == &quot;$(uname)&quot; ]]
-then
-
-    cd /usr/local/etc/
-
-else
-    
-    echo &quot;Unsupported operating system.&quot;
-    exit 1
-fi
-
-cat &lt;&lt; EOF &gt; smb.conf
-# See smb.conf.example for a more detailed config file or
-# read the smb.conf manpage.
-# Run &#x27;testparm&#x27; to verify the config is correct after
-# you modified it.
-
-[global]
-	workgroup = WORKGROUP
-	security = user
-	passdb backend = tdbsam
-	map to guest = bad user
-
-[share]
-        comment = public share
-        path = {automationWorkerLinuxBaseDirectory}/windows_iso_data_for_winpe
-        browseable = yes
-        guest ok = yes
-        guest only = yes
-        writable = yes
-        read only = no
-EOF
-
-cat smb.conf
-                </code>
-            </pre>
-        </div>
-    </div>
-
-
-
-
-
-    
-
-
-
-                    <div class="row pt-5">
-                        <h4 id="checksmbconfonlinux">
-                            <a href="#checksmbconfonlinux">
-                                <strong>Step 1.5 -</strong> Check smb.conf on Linux
-                            </a>
-                        </h4>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-
-                        <div class="row">
-                            <p>
-                                Connect via ssh:
-                            </p>
-                        </div>
-                        <div class="row py-1">
-                            <code class="language-sql">
-ssh {automationworkerlinuxuser}@{automationworkerlinuxnode}
-                            </code>
-                        </div>
-
-
-
-    
-
-
-
-    <div class="row">
-        <p>
-            Execute the following script:
-        </p>
-    </div>
-    <div class="row">
-        <div class="col px-0">
-            <pre>
-                <code class="language-sql py-0">
-testparm --suppress-prompt
-exit $?
-                </code>
-            </pre>
-        </div>
-    </div>
-
-
-
-
-
-    
-
-
-
-                    <div class="row pt-5">
-                        <h4 id="setupfirewallforsambaonlinux">
-                            <a href="#setupfirewallforsambaonlinux">
-                                <strong>Step 1.6 -</strong> Setup Firewall for Samba on Linux
-                            </a>
-                        </h4>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                <p>Open up firewall rules for Samba.</p>
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-
-                        <div class="row">
-                            <p>
-                                Connect via ssh:
-                            </p>
-                        </div>
-                        <div class="row py-1">
-                            <code class="language-sql">
-ssh {automationworkerlinuxuserroot}@{automationworkerlinuxnode}
-                            </code>
-                        </div>
-
-
-
-    
-
-
-
-    <div class="row">
-        <p>
-            Execute the following script:
-        </p>
-    </div>
-    <div class="row">
-        <div class="col px-0">
-            <pre>
-                <code class="language-sql py-0">
-if [[ -f /etc/redhat-release ]] || [[ -f /etc/lsb-release ]]
-then
-
-    firewall-cmd --add-service=samba --zone=public --permanent
-    firewall-cmd --reload
-    
-elif [[ -f /etc/debian_version ]]
-then
-
-    echo &quot;This is Debian, Nothing to do!&quot;
-    
-elif [[ &quot;Darwin&quot; == &quot;$(uname)&quot; ]]
-then
-
-    echo &quot;This is macOS, Nothing to do!&quot;
-
-else
-    
-    echo &quot;Unsupported operating system.&quot;
-    exit 1
-fi
-                </code>
-            </pre>
-        </div>
-    </div>
-
-
-
-
-
-    
-
-
-
-                    <div class="row pt-5">
-                        <h4 id="installprerequisitesonlinux">
-                            <a href="#installprerequisitesonlinux">
-                                <strong>Step 1.7 -</strong> Install Prerequisites on Linux
-                            </a>
-                        </h4>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                <p>Installs packages required by Samba.</p>
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-    
-
-
-    
-
-
-
-    <div class="row">
-        <p>
-            Execute the following script:
-        </p>
-    </div>
-    <div class="row">
-        <div class="col px-0">
-            <pre>
-                <code class="language-sql py-0">
-if [[ -f /etc/redhat-release ]] || [[ -f /etc/lsb-release ]]
-then
-
-    dnf -y install \
-        policycoreutils-python-utils \
-        fuse3-devel \
-        fuse3-libs \
-        epel-release \
-        p7zip p7zip-plugins
-
-elif [[ -f /etc/debian_version ]]
-then
-
-    apt-get -y install \
-        policycoreutils \
-        libfuse3-dev \
-        fuse3 \
-        p7zip-full p7zip-rar
-
-elif [[ &quot;Darwin&quot; == &quot;$(uname)&quot; ]]
-then
-
-    brew install osxfuse p7zip
-
-else
-    
-    echo &quot;Unsupported operating system.&quot;
-    exit 1
-fi
-                </code>
-            </pre>
-        </div>
-    </div>
-
-
-
-
-
-    
-
-
-
-                    <div class="row pt-5">
-                        <h4 id="setupselinuxforsambaonlinux">
-                            <a href="#setupselinuxforsambaonlinux">
-                                <strong>Step 1.8 -</strong> Setup SELinux for Samba on Linux
-                            </a>
-                        </h4>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                <p>Sets up SELinux for Samba.</p>
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-    
-
-
-    
-
-
-
-    <div class="row">
-        <p>
-            Execute the following script:
-        </p>
-    </div>
-    <div class="row">
-        <div class="col px-0">
-            <pre>
-                <code class="language-sql py-0">
-if [[ -f /etc/redhat-release ]] || [[ -f /etc/lsb-release ]]
-then
-
-    if sestatus | grep -i &quot;SELinux status:&quot; | grep -q &quot;enabled&quot;
-    then
-        setsebool -P samba_export_all_ro=1 samba_export_all_rw=1
-        semanage fcontext -at samba_share_t &quot;{automationWorkerLinuxBaseDirectory}/windows_iso_data_for_winpe(/.*)?&quot;
+    if which 7z &gt;/dev/null; then
+        echo &quot;p7zip is installed.&quot;
     else
-        echo &quot;SElinux is disabled&quot;
+        echo &quot;p7zip is not installed.&quot;
+        dnf -y install p7zip p7zip-plugins
     fi
-    
+
 elif [[ -f /etc/debian_version ]]
 then
 
-    echo &quot;This is Debian, Nothing to do!&quot;
-    
-elif [[ &quot;Darwin&quot; == &quot;$(uname)&quot; ]]
-then
-
-    echo &quot;This is macOS, Nothing to do!&quot;
-
-else
-    
-    echo &quot;Unsupported operating system.&quot;
-    exit 1
-fi
-                </code>
-            </pre>
-        </div>
-    </div>
-
-
-
-
-
-    
-
-
-
-                    <div class="row pt-5">
-                        <h4 id="checkselinuxforsambaonlinux">
-                            <a href="#checkselinuxforsambaonlinux">
-                                <strong>Step 1.9 -</strong> Check SELinux for Samba on Linux
-                            </a>
-                        </h4>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                <p>Checks if SELinux is set up correctly for Samba.</p>
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-
-                        <div class="row">
-                            <p>
-                                Connect via ssh:
-                            </p>
-                        </div>
-                        <div class="row py-1">
-                            <code class="language-sql">
-ssh {automationworkerlinuxuser}@{automationworkerlinuxnode}
-                            </code>
-                        </div>
-
-
-
-    
-
-
-
-    <div class="row">
-        <p>
-            Execute the following script:
-        </p>
-    </div>
-    <div class="row">
-        <div class="col px-0">
-            <pre>
-                <code class="language-sql py-0">
-if [[ -f /etc/redhat-release ]] || [[ -f /etc/lsb-release ]]
-then
-
-    if sestatus | grep -i &quot;SELinux status:&quot; | grep -q &quot;enabled&quot;
-    then
-        line_count=$(getsebool -a | grep samba_export | wc -l)
-        
-        if [ $line_count -eq 2 ]
-        then
-            echo &quot;ok&quot;
-        else
-            echo &quot;wrong number of occurrences for samba_export&quot;
-            exit 1
-        fi
+    if which 7z &gt;/dev/null; then
+        echo &quot;p7zip is installed.&quot;
     else
-        echo &quot;SElinux is disabled&quot;
+        echo &quot;p7zip is not installed.&quot;
+        apt-get -y install p7zip p7zip-plugins
     fi
-    
-elif [[ -f /etc/debian_version ]]
-then
 
-    echo &quot;This is Debian, Nothing to do!&quot;
-    
 elif [[ &quot;Darwin&quot; == &quot;$(uname)&quot; ]]
 then
 
-    echo &quot;This is macOS, Nothing to do!&quot;
+    if which 7z &gt;/dev/null; then
+        echo &quot;p7zip is installed.&quot;
+    else
+        echo &quot;p7zip is not installed.&quot;
+        brew install p7zip
+    fi
 
 else
     
@@ -1187,341 +406,6 @@ fi
             </pre>
         </div>
     </div>
-
-
-
-
-
-    
-
-
-
-                    <div class="row pt-5">
-                        <h4 id="startsmbonlinux">
-                            <a href="#startsmbonlinux">
-                                <strong>Step 1.10 -</strong> Start smb on Linux
-                            </a>
-                        </h4>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                <p>Starts <code>smb</code> service.</p>
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-
-                        <div class="row">
-                            <p>
-                                Connect via ssh:
-                            </p>
-                        </div>
-                        <div class="row py-1">
-                            <code class="language-sql">
-ssh {automationworkerlinuxuserroot}@{automationworkerlinuxnode}
-                            </code>
-                        </div>
-
-
-
-    
-
-
-
-    <div class="row">
-        <p>
-            Execute the following script:
-        </p>
-    </div>
-    <div class="row">
-        <div class="col px-0">
-            <pre>
-                <code class="language-sql py-0">
-systemctl restart smb
-systemctl enable smb
-systemctl status smb
-                </code>
-            </pre>
-        </div>
-    </div>
-
-
-
-
-
-    
-
-
-
-                    <div class="row pt-5">
-                        <h4 id="checkservicesmbonlinux">
-                            <a href="#checkservicesmbonlinux">
-                                <strong>Step 1.11 -</strong> Check Service smb on Linux
-                            </a>
-                        </h4>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                <p>Checks if the <code>smb</code> service is running.</p>
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-
-                        <div class="row">
-                            <p>
-                                Connect via ssh:
-                            </p>
-                        </div>
-                        <div class="row py-1">
-                            <code class="language-sql">
-ssh {automationworkerlinuxuser}@{automationworkerlinuxnode}
-                            </code>
-                        </div>
-
-
-
-    
-
-
-
-    <div class="row">
-        <p>
-            Execute the following script:
-        </p>
-    </div>
-    <div class="row">
-        <div class="col px-0">
-            <pre>
-                <code class="language-sql py-0">
-service=&quot;smb&quot;
-line_count=$(systemctl status $service | grep running | wc -l)
-if [ $line_count -eq 0 ]
-then
-    echo &quot;$service is not running&quot;
-    exit 1
-else
-    echo &quot;ok&quot;
-fi
-                </code>
-            </pre>
-        </div>
-    </div>
-
-
-
-
-
-    
-
-
-
-                    <div class="row pt-5">
-                        <h4 id="startservicenmbonlinux">
-                            <a href="#startservicenmbonlinux">
-                                <strong>Step 1.12 -</strong> Start Service nmb on Linux
-                            </a>
-                        </h4>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                <p>Starts <code>nmb</code> service.</p>
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-
-                        <div class="row">
-                            <p>
-                                Connect via ssh:
-                            </p>
-                        </div>
-                        <div class="row py-1">
-                            <code class="language-sql">
-ssh {automationworkerlinuxuserroot}@{automationworkerlinuxnode}
-                            </code>
-                        </div>
-
-
-
-    
-
-
-
-    <div class="row">
-        <p>
-            Execute the following script:
-        </p>
-    </div>
-    <div class="row">
-        <div class="col px-0">
-            <pre>
-                <code class="language-sql py-0">
-systemctl restart nmb
-systemctl enable nmb
-systemctl status nmb
-                </code>
-            </pre>
-        </div>
-    </div>
-
-
-
-
-
-    
-
-
-
-                    <div class="row pt-5">
-                        <h4 id="checkservicenmbonlinux">
-                            <a href="#checkservicenmbonlinux">
-                                <strong>Step 1.13 -</strong> Check Service nmb on Linux
-                            </a>
-                        </h4>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                <p>Checks if <code>nmb</code> service is running.</p>
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-
-                        <div class="row">
-                            <p>
-                                Connect via ssh:
-                            </p>
-                        </div>
-                        <div class="row py-1">
-                            <code class="language-sql">
-ssh {automationworkerlinuxuser}@{automationworkerlinuxnode}
-                            </code>
-                        </div>
-
-
-
-    
-
-
-
-    <div class="row">
-        <p>
-            Execute the following script:
-        </p>
-    </div>
-    <div class="row">
-        <div class="col px-0">
-            <pre>
-                <code class="language-sql py-0">
-service=&quot;nmb&quot;
-line_count=$(systemctl status $service | grep running | wc -l)
-if [ $line_count -eq 0 ]
-then
-    echo &quot;$service is not running&quot;
-    exit 1
-else
-    echo &quot;ok&quot;
-fi
-                </code>
-            </pre>
-        </div>
-    </div>
-
-
-
-
-
-    
-
-
-
-                    <div class="row pt-5">
-                        <h4 id="setlinuxhomefolderpermissionsforsamba">
-                            <a href="#setlinuxhomefolderpermissionsforsamba">
-                                <strong>Step 1.14 -</strong> Set Linux Home Folder Permissions for Samba
-                            </a>
-                        </h4>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                <p>Sets the permissions of the home folder.</p>
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-    
-
-
-    
-
-
-
-    <div class="row">
-        <p>
-            Execute the following script:
-        </p>
-    </div>
-    <div class="row">
-        <div class="col px-0">
-            <pre>
-                <code class="language-sql py-0">
-chmod -v +rx $HOME
-                </code>
-            </pre>
-        </div>
-    </div>
-
 
 
 
@@ -1532,100 +416,13 @@ chmod -v +rx $HOME
 
 
                     <div class="row pt-5">
-                        <h3 id="setupwimlibutilsonlinux">
-                            <a href="#setupwimlibutilsonlinux">
-                                <strong>Step 2 -</strong> Setup wimlib-utils on Linux
+                        <h3 id="installfuseonlinux">
+                            <a href="#installfuseonlinux">
+                                <strong>Step 2 -</strong> Install FUSE on Linux
                             </a>
                         </h3>
                     </div>
 
-
-
-
-
-
-    
-
-
-
-
-    
-
-
-
-                    <div class="row pt-5">
-                        <h4 id="installwimlibonlinux">
-                            <a href="#installwimlibonlinux">
-                                <strong>Step 2.1 -</strong> Install wimlib on Linux
-                            </a>
-                        </h4>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-
-                        <div class="row">
-                            <p>
-                                Connect via ssh:
-                            </p>
-                        </div>
-                        <div class="row py-1">
-                            <code class="language-sql">
-ssh {automationworkerlinuxuserroot}@{automationworkerlinuxnode}
-                            </code>
-                        </div>
-
-
-
-    
-
-
-
-    <div class="row">
-        <p>
-            Execute the following script:
-        </p>
-    </div>
-    <div class="row">
-        <div class="col px-0">
-            <pre>
-                <code class="language-sql py-0">
-dnf -y install wimlib wimlib-utils fuse
-                </code>
-            </pre>
-        </div>
-    </div>
-
-
-
-
-
-    
-
-
-
-                    <div class="row pt-5">
-                        <h4 id="checkwimlibinstalledonlinux">
-                            <a href="#checkwimlibinstalledonlinux">
-                                <strong>Step 2.2 -</strong> Check wimlib Installed on Linux
-                            </a>
-                        </h4>
-                    </div>
-
                     <div class="row">
                         <div class="description col px-0">
                             <p>
@@ -1658,13 +455,128 @@ dnf -y install wimlib wimlib-utils fuse
         <div class="col px-0">
             <pre>
                 <code class="language-sql py-0">
-which mkwinpeimg
-which wimcapture
+if [[ -f /etc/redhat-release ]] || [[ -f /etc/lsb-release ]]
+then
+
+    if fusermount -V &gt;/dev/null; then
+        echo &quot;FUSE is installed.&quot;
+    else
+        echo &quot;FUSE is not installed.&quot;
+        dnf -y install fuse
+    fi
+
+elif [[ -f /etc/debian_version ]]
+then
+
+    if fusermount -V &gt;/dev/null; then
+        echo &quot;FUSE is installed.&quot;
+    else
+        echo &quot;FUSE is not installed.&quot;
+        apt-get -y install fuse
+    fi
+
+elif [[ &quot;Darwin&quot; == &quot;$(uname)&quot; ]]
+then
+
+    echo &quot;FUSE is not required for macOS&quot;
+
+else
+    
+    echo &quot;Unsupported operating system.&quot;
+    exit 1
+fi
                 </code>
             </pre>
         </div>
     </div>
 
+
+
+
+
+        
+
+
+
+                    <div class="row pt-5">
+                        <h3 id="installwimlibutilsonmacosorlinux">
+                            <a href="#installwimlibutilsonmacosorlinux">
+                                <strong>Step 3 -</strong> Install wimlib-utils on macOS or Linux
+                            </a>
+                        </h3>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+if [[ -f /etc/redhat-release ]] || [[ -f /etc/lsb-release ]]
+then
+
+    if which mkwinpeimg &gt;/dev/null; then
+        echo &quot;mkwinpeimg is installed.&quot;
+    else
+        echo &quot;mkwinpeimg is not installed.&quot;
+        dnf -y install wimlib wimlib-utils fuse
+    fi
+
+elif [[ -f /etc/debian_version ]]
+then
+
+    if which mkwinpeimg &gt;/dev/null; then
+        echo &quot;mkwinpeimg is installed.&quot;
+    else
+        echo &quot;mkwinpeimg is not installed.&quot;
+        apt-get -y install wimlib wimlib-utils fuse
+    fi
+
+elif [[ &quot;Darwin&quot; == &quot;$(uname)&quot; ]]
+then
+
+    if which mkwinpeimg &gt;/dev/null; then
+        echo &quot;mkwinpeimg is installed.&quot;
+    else
+        echo &quot;mkwinpeimg is not installed.&quot;
+        brew -y install wimlib
+    fi
+
+else
+    
+    echo &quot;Unsupported operating system.&quot;
+    exit 1
+fi
+                </code>
+            </pre>
+        </div>
+    </div>
 
 
 

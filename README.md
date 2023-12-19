@@ -86,6 +86,16 @@ This Project contains the following Blueprints.
 
 
 
+### Setup Boot ISO Support on Linux
+
+
+### Setup ISO HTTP Support on Linux
+
+This is for OS installs to download ISOs from HTTP.
+
+### Setup oVirt Support on Linux
+
+
 ### Setup Samba Share for Windows OS Files on macOS or Linux
 
 Sets up a Samba server with the folder at 
@@ -98,20 +108,10 @@ For uploading specific Windows distributions to the Samba Share, see
 `Deploy and extract {os_name} ISO for Samba Share` Blueprints in 
 this Project.
 
-### Setup Boot ISO Support on Linux
+### Setup vCenter Support on Linux
 
-
-### Setup ISO HTTP Support on Linux
-
-This is for OS installs to download ISOs from HTTP.
 
 ### Setup WinPE Support on Linux
-
-
-### Setup oVirt Support on Linux
-
-
-### Setup vCenter Support on Linux
 
 
 
@@ -122,10 +122,10 @@ This is for OS installs to download ISOs from HTTP.
 
 | Name | Type | Script Reference | Comment |
 | ---- | ---- | ---------------- | ------- |
+| Automation Worker Linux Base Directory | Text | `automationworkerlinuxbasedirectory` | Base directory for deploying temporary files to build the kickstart ISO on a macOS or Linux Worker. |
 | Automation Worker Linux Node | Linux/Unix Node | `automationworkerlinuxnode` | The Linux automation worker node used to perform tasks to create the ISO. |
 | Automation Worker Linux User | Linux/Unix Credential | `automationworkerlinuxuser` |  |
 | Automation Worker Linux User: root | Linux/Unix Credential | `automationworkerlinuxuserroot` | root user on the Linux Automation Worker node. |
-| Automation Worker Linux Base Directory | Text | `automationworkerlinuxbasedirectory` | Base directory for deploying temporary files to build the kickstart ISO on a macOS or Linux Worker. |
 
 
 
