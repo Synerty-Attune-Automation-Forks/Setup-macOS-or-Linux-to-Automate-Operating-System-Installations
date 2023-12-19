@@ -86,22 +86,6 @@ This Project contains the following Blueprints.
 
 
 
-### Setup Boot ISO Support on Linux Worker
-
-
-### Setup ISO HTTP Support on Linux Worker
-
-This is for OS installs to download ISOs from HTTP.
-
-### Setup oVirt Support on Linux Worker
-
-
-### Setup vCenter Support on Linux Worker
-
-
-### Setup WinPE Support on Linux Worker
-
-
 ### Setup Samba Share for Windows OS Files on macOS or Linux
 
 Sets up a Samba server with the folder at 
@@ -113,6 +97,22 @@ making them accessible over the network.
 For uploading specific Windows distributions to the Samba Share, see 
 `Deploy and extract {os_name} ISO for Samba Share` Blueprints in 
 this Project.
+
+### Setup Boot ISO Support on Linux
+
+
+### Setup ISO HTTP Support on Linux
+
+This is for OS installs to download ISOs from HTTP.
+
+### Setup WinPE Support on Linux
+
+
+### Setup oVirt Support on Linux
+
+
+### Setup vCenter Support on Linux
+
 
 
 

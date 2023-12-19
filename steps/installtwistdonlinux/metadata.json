@@ -1,0 +1,12 @@
+{
+    "actionOnStepFail": "stop", 
+    "enabled": true, 
+    "externalUuid4": "77a4d995-ea48-4681-ad67-61fe8ef8d3da", 
+    "interpreter": 1, 
+    "key": "installtwistdonlinux", 
+    "name": "Install twistd on Linux", 
+    "osCredKey": "automationworkerlinuxuserroot", 
+    "serverKey": "automationworkerlinuxnode", 
+    "successExitCode": 0, 
+    "type": "com.servertribe.attune.tuples.StepSshTuple"
+}

@@ -1,0 +1,12 @@
+{
+    "actionOnStepFail": "stop", 
+    "enabled": true, 
+    "externalUuid4": "5ffa51de-4d50-459e-97e0-6949a9689b1c", 
+    "interpreter": 1, 
+    "key": "installpython39onlinux", 
+    "name": "Install Python 3.9 on Linux", 
+    "osCredKey": "automationworkerlinuxuserroot", 
+    "serverKey": "automationworkerlinuxnode", 
+    "successExitCode": 0, 
+    "type": "com.servertribe.attune.tuples.StepSshTuple"
+}

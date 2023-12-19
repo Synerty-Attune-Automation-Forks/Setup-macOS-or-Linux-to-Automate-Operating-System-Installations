@@ -1,0 +1,12 @@
+{
+    "actionOnStepFail": "stop", 
+    "enabled": true, 
+    "externalUuid4": "88e45e6a-34b9-446f-8c07-e723d162baf5", 
+    "interpreter": 1, 
+    "key": "checkhttpisostartedonlinux", 
+    "name": "Check httpiso Started on Linux", 
+    "osCredKey": "automationworkerlinuxuser", 
+    "serverKey": "automationworkerlinuxnode", 
+    "successExitCode": 0, 
+    "type": "com.servertribe.attune.tuples.StepSshTuple"
+}
