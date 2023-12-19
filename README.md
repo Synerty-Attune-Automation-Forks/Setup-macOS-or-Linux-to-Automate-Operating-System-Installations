@@ -96,23 +96,17 @@ This is for OS installs to download ISOs from HTTP.
 ### Setup oVirt Support on Linux
 
 
-### Setup Samba Share for Windows OS Files on macOS or Linux
-
-Sets up a Samba server with the folder at 
-`{automationWorkerLinuxBaseDirectory}/windows_iso_data_for_winpe`.
-
-This Samba Share on Linux is required to host the Windows OS files 
-making them accessible over the network.
-
-For uploading specific Windows distributions to the Samba Share, see 
-`Deploy and extract {os_name} ISO for Samba Share` Blueprints in 
-this Project.
-
 ### Setup vCenter Support on Linux
 
 
 ### Setup WinPE Support on Linux
 
+This Blueprints installs the required packages on the worker to 
+create WinPE ISO files.
+
+### Setup Samba Share for Windows OS Files on macOS or Linux
+
+This Blueprint sets up a Samba Share for the WinPE installation.
 
 
 
