@@ -1,0 +1,12 @@
+{
+    "actionOnStepFail": null, 
+    "enabled": true, 
+    "externalUuid4": "e293a220-eba8-4614-b5b7-2b2de9b968b6", 
+    "interpreter": 1, 
+    "key": "checkselinuxforsambaonlinux", 
+    "name": "Check SELinux for Samba on Linux", 
+    "osCredKey": "automationworkerlinuxuser", 
+    "serverKey": "automationworkerlinuxnode", 
+    "successExitCode": 0, 
+    "type": "com.servertribe.attune.tuples.StepSshTuple"
+}

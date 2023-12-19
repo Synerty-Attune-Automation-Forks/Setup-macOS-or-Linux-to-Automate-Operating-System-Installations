@@ -102,6 +102,18 @@ This is for OS installs to download ISOs from HTTP.
 ### Setup WinPE Support on Linux Worker
 
 
+### Setup Samba on macOS or Linux
+
+Sets up a Samba server with the folder at 
+`{automationWorkerLinuxBaseDirectory}/windows_iso_data_for_winpe`.
+
+This Samba Share on Linux is required to host the Windows OS files 
+making them accessible over the network.
+
+For uploading specific Windows distributions to the Samba Share, see 
+`Deploy and extract {os_name} ISO for Samba Share` Blueprints in 
+this Project.
+
 
 
 
@@ -113,6 +125,7 @@ This is for OS installs to download ISOs from HTTP.
 | Automation Worker Linux Node | Linux/Unix Node | `automationworkerlinuxnode` | The Linux automation worker node used to perform tasks to create the ISO. |
 | Automation Worker Linux User | Linux/Unix Credential | `automationworkerlinuxuser` |  |
 | Automation Worker Linux User: root | Linux/Unix Credential | `automationworkerlinuxuserroot` | root user on the Linux Automation Worker node. |
+| Automation Worker Linux Base Directory | Text | `automationworkerlinuxbasedirectory` | Base directory for deploying temporary files to build the kickstart ISO on a macOS or Linux Worker. |
 
 
 

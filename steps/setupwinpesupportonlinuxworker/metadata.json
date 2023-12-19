@@ -7,8 +7,8 @@
     "key": "setupwinpesupportonlinuxworker", 
     "links": [
         {
-            "order": 50, 
-            "stepKey": "setupsambaonlinuxworker"
+            "order": 0, 
+            "stepKey": "setupsambaonmacosorlinux"
         }, 
         {
             "order": 150, 

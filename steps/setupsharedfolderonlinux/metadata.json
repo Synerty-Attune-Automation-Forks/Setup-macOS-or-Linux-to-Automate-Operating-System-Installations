@@ -1,0 +1,12 @@
+{
+    "actionOnStepFail": null, 
+    "enabled": true, 
+    "externalUuid4": "a4a6c90a-5273-4073-9890-8d1b49680f8d", 
+    "interpreter": 1, 
+    "key": "setupsharedfolderonlinux", 
+    "name": "Setup Shared Folder on Linux", 
+    "osCredKey": "automationworkerlinuxuserroot", 
+    "serverKey": "automationworkerlinuxnode", 
+    "successExitCode": 0, 
+    "type": "com.servertribe.attune.tuples.StepSshTuple"
+}

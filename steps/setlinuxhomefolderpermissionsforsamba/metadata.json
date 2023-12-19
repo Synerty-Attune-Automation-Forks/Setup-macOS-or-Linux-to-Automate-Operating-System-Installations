@@ -1,0 +1,12 @@
+{
+    "actionOnStepFail": null, 
+    "enabled": true, 
+    "externalUuid4": "a9bbd049-c9fb-475b-b56e-189a84917c3f", 
+    "interpreter": 1, 
+    "key": "setlinuxhomefolderpermissionsforsamba", 
+    "name": "Set Linux Home Folder Permissions for Samba", 
+    "osCredKey": "automationworkerlinuxuser", 
+    "serverKey": "automationworkerlinuxnode", 
+    "successExitCode": 0, 
+    "type": "com.servertribe.attune.tuples.StepSshTuple"
+}
