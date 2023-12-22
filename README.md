@@ -7,7 +7,7 @@
 [![Docs](https://img.shields.io/badge/videos-watch-brightgreen.svg)](https://www.youtube.com/@servertribe)
 [![Generic badge](https://img.shields.io/badge/download-latest-brightgreen.svg)](https://www.servertribe.com/community-edition/)
 
-# Automate Attune Install OS
+# Automate OS Installation Worker Setup
 
 This Attune Project contains the Blueprints to setup a worker for 
 the automate OS installation projects.
