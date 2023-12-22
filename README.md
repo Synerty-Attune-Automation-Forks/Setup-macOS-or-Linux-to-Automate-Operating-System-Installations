@@ -94,6 +94,10 @@ This is for OS installs to download ISOs from HTTP.
 ### Setup oVirt Support on Linux
 
 
+### Setup Samba Share for Windows OS Files on macOS or Linux
+
+This Blueprint sets up a Samba Share for the WinPE installation.
+
 ### Setup vCenter Support on Linux
 
 
@@ -101,10 +105,6 @@ This is for OS installs to download ISOs from HTTP.
 
 This Blueprints installs the required packages on the worker to 
 create WinPE ISO files.
-
-### Setup Samba Share for Windows OS Files on macOS or Linux
-
-This Blueprint sets up a Samba Share for the WinPE installation.
 
 
 
