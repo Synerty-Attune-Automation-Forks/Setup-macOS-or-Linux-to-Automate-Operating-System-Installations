@@ -14,15 +14,16 @@ Attune Projects have been created to run with Windows, macOS, and
 Linux workers. 
 
 # Get Started
+If you haven't already, download and install the free 
+[Attune Community Edition](https://www.servertribe.com/).
+
 Clone the 
 [Automate OS Installation Worker Setup](https://github.com/Attune-Automation/Automate-OS-Installation-Worker-Setup) 
-Project.
+Project into your instance of Attune.
 
 Find, clone, and follow the instructions as per the 
 `Automate {os_name} Installation with {method} on {controller}` Project 
-you are working on.
-
-You can find these Projects in the 
+you are working on. You can find these Projects in the 
 [Attune Documentation - How-to Guides](https://docs.attuneautomation.com/en/latest/howto/index.html).
 
 # Learn more
