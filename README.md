@@ -25,15 +25,16 @@ Attune Projects have been created to run with Windows, macOS, and
 Linux workers. 
 
 ## Get Started
+If you haven't already, download and install the free 
+[Attune Community Edition](https://www.servertribe.com/).
+
 Clone the 
 [Automate OS Installation Worker Setup](https://github.com/Attune-Automation/Automate-OS-Installation-Worker-Setup) 
-Project.
+Project into your instance of Attune.
 
 Find, clone, and follow the instructions as per the 
 `Automate {os_name} Installation with {method} on {controller}` Project 
-you are working on.
-
-You can find these Projects in the 
+you are working on. You can find these Projects in the 
 [Attune Documentation - How-to Guides](https://docs.attuneautomation.com/en/latest/howto/index.html).
 
 ## Learn more
@@ -106,6 +107,17 @@ This Blueprint sets up a Samba Share for the WinPE installation.
 This Blueprints installs the required packages on the worker to 
 create WinPE ISO files.
 
+### Install Windows Assessment and Deployment Kit
+
+The Windows Assessment and Deployment Kit (Windows ADK) and 
+Windows PE add-on has the tools you need to customise 
+Windows images for large-scale deployment, and to test 
+the quality and performance of your system, its added 
+components, and the applications running on it.
+
+### Install Prerequisites on Windows Worker
+
+
 
 
 
@@ -118,6 +130,8 @@ create WinPE ISO files.
 | Automation Worker Linux Node | Linux/Unix Node | `automationworkerlinuxnode` | The Linux automation worker node used to perform tasks to create the ISO. |
 | Automation Worker Linux User | Linux/Unix Credential | `automationworkerlinuxuser` |  |
 | Automation Worker Linux User: root | Linux/Unix Credential | `automationworkerlinuxuserroot` | root user on the Linux Automation Worker node. |
+| Automation Worker Windows User: Administrator | Windows Credential | `automationworkerwindowsuseradministrator` | Administrator user on the Windows Automation Worker node. |
+| Automation Worker Windows Node | Windows Node | `automationworkerwindowsnode` | The Windows automation worker node used to perform tasks to create the ISO. |
 
 
 
