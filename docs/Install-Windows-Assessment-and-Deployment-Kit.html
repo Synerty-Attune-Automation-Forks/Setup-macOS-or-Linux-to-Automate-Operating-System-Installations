@@ -740,7 +740,7 @@ if ($OS.Caption -like &quot;*Windows Server 2022*&quot;) {
                 <code class="language-sql py-0">
 $ADK=&quot;C:\attuneautomationworker\ADKDownloads&quot;
 
-# Set-Location &quot;${ADK}&quot;
+Set-Location &quot;${ADK}&quot;
 
 ./adk_winpe_add_on.exe /quiet `
     /features OptionId.WindowsPreinstallationEnvironment `

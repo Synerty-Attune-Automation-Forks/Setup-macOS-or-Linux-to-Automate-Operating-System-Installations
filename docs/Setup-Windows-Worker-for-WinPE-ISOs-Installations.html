@@ -671,8 +671,8 @@ Write-Host &quot;Restarting in $WAIT seconds.&quot;
     <div class="row">
         <p class="mb-0">
             Check if TCP Port <strong>0</strong> is listening.
-            When the TCP Port is up, wait <strong>60</strong>
-            seconds.
+            Make sure the TCP Port goes down for
+            <strong>1</strong> seconds.
         </p>
         <p>Use Telnet to check if the TCP Service is accepting connections.</p>
     </div>
@@ -1086,7 +1086,7 @@ if ($OS.Caption -like &quot;*Windows Server 2022*&quot;) {
                 <code class="language-sql py-0">
 $ADK=&quot;C:\attuneautomationworker\ADKDownloads&quot;
 
-# Set-Location &quot;${ADK}&quot;
+Set-Location &quot;${ADK}&quot;
 
 ./adk_winpe_add_on.exe /quiet `
     /features OptionId.WindowsPreinstallationEnvironment `
@@ -1186,6 +1186,13 @@ if (Test-Path &quot;${ADKDownloads}&quot;) {
                         </h3>
                     </div>
 
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
 
 
 
