@@ -16,7 +16,7 @@
         }, 
         {
             "order": 100, 
-            "stepKey": "winrmhttpswait60s"
+            "stepKey": "winrmhttpswait"
         }
     ], 
     "name": "Install Prerequisites on Windows Worker", 
