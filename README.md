@@ -120,6 +120,8 @@ create WinPE ISO files.
 
 ### Setup Windows Worker for WinPE ISOs Installations
 
+If using a virtual machine, Windows Subsystem for Linux requires 
+the virtual machine to have nested virtualisation enabled.
 
 
 
