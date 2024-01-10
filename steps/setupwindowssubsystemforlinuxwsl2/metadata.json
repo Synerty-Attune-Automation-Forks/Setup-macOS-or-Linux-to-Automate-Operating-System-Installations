@@ -1,0 +1,34 @@
+{
+    "actionOnStepFail": null, 
+    "blueprintName": "", 
+    "blueprintUuid": "44787e45-a9cb-4c72-ab11-77e7dec34f2d", 
+    "cloneUrl": "https://github.com/Attune-Automation/Windows-Subsystem-for-Linux-WSL2", 
+    "enabled": true, 
+    "externalUuid4": "bb035df8-f1a8-456c-b195-9b8d71e27808", 
+    "key": "setupwindowssubsystemforlinuxwsl2", 
+    "name": "Setup Windows Subsystem for Linux (WSL2)", 
+    "parameterMap": [
+        {
+            "childParameterName": null, 
+            "childParameterType": "c.s.s.b.phv.WindowsServer", 
+            "childParameterUuid": "0e0baf15-0492-4b6d-9bf7-98b74f291b94", 
+            "childProjectName": null, 
+            "childProjectUuid": "e1624fc1-f4c0-4289-acbf-261f448c4236", 
+            "parentParameterKey": "automationworkerwindowsnode", 
+            "parentStaticTextValue": null
+        }, 
+        {
+            "childParameterName": null, 
+            "childParameterType": "c.s.s.b.phv.WinOsCred", 
+            "childParameterUuid": "467707ca-e020-4cba-8bd6-e3f0abdc1bee", 
+            "childProjectName": null, 
+            "childProjectUuid": "e1624fc1-f4c0-4289-acbf-261f448c4236", 
+            "parentParameterKey": "automationworkerwindowsuseradministrator", 
+            "parentStaticTextValue": null
+        }
+    ], 
+    "projectName": "", 
+    "projectUuid": "e1624fc1-f4c0-4289-acbf-261f448c4236", 
+    "projectVersion": "", 
+    "type": "com.servertribe.attune.tuples.StepProjectLinkTuple"
+}
