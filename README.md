@@ -85,9 +85,6 @@ This Project contains the following Blueprints.
 
 
 
-### Install Prerequisites on Windows Worker
-
-
 ### Install Windows Assessment and Deployment Kit
 
 The Windows Assessment and Deployment Kit (Windows ADK) and 
@@ -122,6 +119,9 @@ the virtual machine to have nested virtualisation enabled.
 
 This Blueprints installs the required packages on the worker to 
 create WinPE ISO files.
+
+### Install Worker Prerequisites on Windows
+
 
 
 

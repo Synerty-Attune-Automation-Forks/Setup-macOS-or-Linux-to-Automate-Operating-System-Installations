@@ -12,7 +12,7 @@
         }, 
         {
             "order": 100, 
-            "stepKey": "installprerequisitesonwindowsworker"
+            "stepKey": "installworkerprerequisitesonwindows"
         }
     ], 
     "name": "Setup Windows Worker for WinPE ISOs Installations", 
