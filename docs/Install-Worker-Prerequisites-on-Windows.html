@@ -227,6 +227,14 @@
                         </a>
                     </p>
 
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#cleanup7zinstallationonwindows">
+                            <strong>Step 1.3 -</strong> Cleanup 7z Installation on Windows
+                        </a>
+                    </p>
+
 
 
                 </div>
@@ -514,6 +522,72 @@ try {
     } else {
         Write-Host &quot;7z is successfully installed at $7zPath&quot;
     }
+}
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h4 id="cleanup7zinstallationonwindows">
+                            <a href="#cleanup7zinstallationonwindows">
+                                <strong>Step 1.3 -</strong> Cleanup 7z Installation on Windows
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                <p>This step does the following:
+1. Downloads the 7z <code>.msi</code> file from https://www.7-zip.org/a/7z2301-x64.msi into <code>C:\software</code>.
+2. Installs the 7z <code>.msi</code> file <code>7z2301-x64.msi</code>.</p>
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+$softwareFolder = &quot;C:\software&quot;
+$installerFile = &quot;7z2301-x64.msi&quot;
+$downloadPath = Join-Path -Path $softwareFolder -ChildPath $installerFile
+    
+if (Test-Path -Path $downloadPath) {
+    Write-Host &quot;Cleaning up 7z installer file...&quot;
+    Remove-Item -Path $downloadPath -Verbose
+} else {
+    Write-Host &quot;$downloadPath not found!&quot;
+    Write-Host &quot;nothing to cleanup.&quot;
 }
                 </code>
             </pre>

@@ -13,6 +13,10 @@
         {
             "order": 50, 
             "stepKey": "install7zonwindows"
+        }, 
+        {
+            "order": 100, 
+            "stepKey": "cleanup7zinstallationonwindows"
         }
     ], 
     "name": "Download and Install 7z on Windows", 
