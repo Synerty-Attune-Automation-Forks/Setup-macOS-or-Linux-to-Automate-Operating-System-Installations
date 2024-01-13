@@ -3,7 +3,18 @@ $OS = Get-WmiObject Win32_OperatingSystem
 
 $ADK_DOWNLOADS="C:\attuneautomationworker\ADKDownloads"
 
+if ( -Not (Test-Path "${ADK_DOWNLOADS}") ) {
+  New-Item "${ADK_DOWNLOADS}" -ItemType Directory
+}
+
 Set-Location "${ADK_DOWNLOADS}"
+
+$winPEPath = "C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment"
+
+if (Test-Path $winPEPath) {
+    Write-Host "WinPE add-on for ADK is installed."
+    exit 0
+}
 
 # Check the caption property for Windows Server 2022 or Windows 11
 if ($OS.Caption -like "*Windows Server 2022*") {

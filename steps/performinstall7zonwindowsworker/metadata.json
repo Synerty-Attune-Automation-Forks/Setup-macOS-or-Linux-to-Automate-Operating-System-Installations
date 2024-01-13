@@ -7,6 +7,10 @@
     "key": "performinstall7zonwindowsworker", 
     "links": [
         {
+            "order": 0, 
+            "stepKey": "download7zonwindows"
+        }, 
+        {
             "order": 50, 
             "stepKey": "install7zonwindowsworker"
         }

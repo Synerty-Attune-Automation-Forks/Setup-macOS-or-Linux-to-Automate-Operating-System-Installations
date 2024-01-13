@@ -8,15 +8,11 @@
     "links": [
         {
             "order": 0, 
-            "stepKey": "installprerequisitesonwindowsworker"
-        }, 
-        {
-            "order": 50, 
             "stepKey": "installwindowsassessmentanddeploymentkit"
         }, 
         {
             "order": 100, 
-            "stepKey": "setupwindowssubsystemforlinuxwsl2"
+            "stepKey": "installprerequisitesonwindowsworker"
         }
     ], 
     "name": "Setup Windows Worker for WinPE ISOs Installations", 

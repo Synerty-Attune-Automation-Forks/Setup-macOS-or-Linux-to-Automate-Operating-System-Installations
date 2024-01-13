@@ -9,14 +9,6 @@
         {
             "order": 0, 
             "stepKey": "performinstall7zonwindowsworker"
-        }, 
-        {
-            "order": 50, 
-            "stepKey": "restartwindowsworker"
-        }, 
-        {
-            "order": 100, 
-            "stepKey": "winrmhttpswait"
         }
     ], 
     "name": "Install Prerequisites on Windows Worker", 

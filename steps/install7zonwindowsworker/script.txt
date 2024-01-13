@@ -1,32 +1,27 @@
 try {
-    Get-Command '7z'
-    Write-Host "7z is already installed."
-} Catch {
-    # Install 7z
-    $FOLDER="C:\software"
-
-    if (-not (Test-Path -Path $FOLDER)) {
-        New-Item -ItemType Directory -Path $FOLDER
+    $7zPath = (Get-ItemProperty 'HKLM:\SOFTWARE\7-Zip').Path
+    if (-not $7zPath) {
+        throw "7-Zip not found in registry."
     }
-    
-    Set-Location C:\software
-    
-    $FILE = "7z2301-x64.msi"
-    $URL = "https://www.7-zip.org/a/${FILE}"
-    
-    Write-Host "Downloading from ${URL}"
-    Invoke-WebRequest `
-        -Uri "${URL}" `
-        -OutFile "${FILE}"
-    
-    if (Test-Path -Path ".\*" -Include "*.msi") {    
-        $7Z_MSI_FILE = (dir *.msi).name
-        
-        Write-Host "Installing from $7Z_MSI_FILE"
-        
-        Start-Process msiexec.exe "/qn /i $7Z_MSI_FILE" -Wait
-        
+    Write-Host "7z is already installed at $7zPath"
+} catch {
+    Write-Host "7z is not installed. Proceeding with installation."
+
+    $softwareFolder = "C:\software"
+    $installerFile = "7z2301-x64.msi"
+    $url = "https://www.7-zip.org/a/$installerFile"
+    $downloadPath = Join-Path -Path $softwareFolder -ChildPath $installerFile
+
+    if (Test-Path -Path $downloadPath) {
+        Write-Host "Installing from $downloadPath"
+        Start-Process msiexec.exe -ArgumentList "/qn /i `"$downloadPath`"" -Wait
     } else {
-        Write-Error "No .msi file found"
+        Write-Error "Installer not found at: $downloadPath"
+    }    
+    $7zPath = (Get-ItemProperty 'HKLM:\SOFTWARE\7-Zip').Path
+    if (-not $7zPath) {
+        Write-Error "7-Zip not found in registry. Installation failed."
+    } else {
+        Write-Host "7z is successfully installed at $7zPath"
     }
 }
