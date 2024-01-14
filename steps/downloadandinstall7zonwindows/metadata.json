@@ -11,11 +11,11 @@
             "stepKey": "download7zonwindows"
         }, 
         {
-            "order": 50, 
+            "order": 100, 
             "stepKey": "install7zonwindows"
         }, 
         {
-            "order": 100, 
+            "order": 200, 
             "stepKey": "cleanup7zinstallationonwindows"
         }
     ], 

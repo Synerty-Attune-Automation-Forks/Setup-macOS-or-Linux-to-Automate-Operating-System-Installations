@@ -1,15 +1,15 @@
 try {
     
-    $softwareFolder = "C:\software"
     $installerFile = "7z2301-x64.msi"
     $url = "https://www.7-zip.org/a/$installerFile"
+    $softwareFolder = "C:\software"
     $downloadPath = Join-Path -Path $softwareFolder -ChildPath $installerFile
     
     if (-not (Test-Path -Path $downloadPath)) {
-        throw "Download 7-Zip installer."
+        throw "Download installer."
     }
     
-    Write-Host "7-Zip insatller already downloaded at: $downloadPath"
+    Write-Host "Installer already downloaded at: $downloadPath"
     
 } catch {
     

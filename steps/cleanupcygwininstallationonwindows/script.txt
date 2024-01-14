@@ -1,4 +1,4 @@
-$installerFile = "7z2301-x64.msi"
+$installerFile = "setup-x86_64.exe"
 $softwareFolder = "C:\software"
 $downloadPath = Join-Path -Path $softwareFolder -ChildPath $installerFile
     

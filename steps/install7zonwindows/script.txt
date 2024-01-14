@@ -1,27 +1,31 @@
 try {
-    $7zPath = (Get-ItemProperty 'HKLM:\SOFTWARE\7-Zip').Path
-    if (-not $7zPath) {
-        throw "7-Zip not found in registry."
-    }
-    Write-Host "7z is already installed at $7zPath"
-} catch {
-    Write-Host "7z is not installed. Proceeding with installation."
-
-    $softwareFolder = "C:\software"
+    
+    $softwareName = "7-Zip"
     $installerFile = "7z2301-x64.msi"
-    $url = "https://www.7-zip.org/a/$installerFile"
+    $softwareFolder = "C:\software"
     $downloadPath = Join-Path -Path $softwareFolder -ChildPath $installerFile
+    $windowsRegistry = (Get-ItemProperty 'HKLM:\SOFTWARE\$softwareName').Path
+    
+    if (-not $windowsRegistry) {
+        throw "Not found in registry."
+    }
+    Write-Host "Already installed at $windowsRegistry"
+    
+} catch {
+    
+    Write-Host "Installing..."
 
     if (Test-Path -Path $downloadPath) {
         Write-Host "Installing from $downloadPath"
         Start-Process msiexec.exe -ArgumentList "/qn /i `"$downloadPath`"" -Wait
     } else {
         Write-Error "Installer not found at: $downloadPath"
-    }    
-    $7zPath = (Get-ItemProperty 'HKLM:\SOFTWARE\7-Zip').Path
-    if (-not $7zPath) {
-        Write-Error "7-Zip not found in registry. Installation failed."
+    }  
+    
+    $windowsRegistry = (Get-ItemProperty 'HKLM:\SOFTWARE\$softwareName').Path
+    if (-not $windowsRegistry) {
+        Write-Error "Software not found in registry. Installation failed."
     } else {
-        Write-Host "7z is successfully installed at $7zPath"
+        Write-Host "Installation successful!"
     }
 }

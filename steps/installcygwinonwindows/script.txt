@@ -1,0 +1,41 @@
+try {
+    
+    $installerFile = "setup-x86_64.exe"
+    $softwareFolder = "C:\software"
+    $downloadPath = Join-Path -Path $softwareFolder -ChildPath $installerFile
+    $windowsRegistry = (Get-ItemProperty 'HKLM:\Software\Cygwin\setup').rootdir
+    
+    # check if Cygwin is installed.
+    if($windowsRegistry){
+        
+        Write-Host "Already Installed."
+    } else {
+        
+        # check if Cygwin is installer is downloaded.
+        if (Test-Path -Path $downloadPath) {
+            
+            throw "Install Cygwin."
+        } else {
+            
+            Write-Error "Installer not found."
+        }
+    }
+} catch {
+    
+    Write-Host "Installing from $downloadPath"
+    
+    & $downloadPath `
+        --quiet-mode `
+        --local-install `
+        --local-package-dir $PSScriptRoot `
+        --root C:\cygwin64 `
+        --no-desktop
+
+    
+    # check if Cygwin is installed.
+    if($windowsRegistry){
+        Write-Host "Installation successful!"
+    } else {
+        Write-Error "Installation failed."
+    }
+}

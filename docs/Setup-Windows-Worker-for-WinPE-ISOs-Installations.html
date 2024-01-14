@@ -322,6 +322,39 @@ the virtual machine to have nested virtualisation enabled.</p>
                     </p>
 
 
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#downloadandinstallcygwinpackageonwindows">
+                            <strong>Step 2.2 -</strong> Download and Install Cygwin Package on Windows
+                        </a>
+                    </p>
+    
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#downloadcygwininstalleronwindows">
+                            <strong>Step 2.2.1 -</strong> Download Cygwin Installer on Windows
+                        </a>
+                    </p>
+
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#installcygwinonwindows">
+                            <strong>Step 2.2.2 -</strong> Install Cygwin on Windows
+                        </a>
+                    </p>
+
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#cleanupcygwininstallationonwindows">
+                            <strong>Step 2.2.3 -</strong> Cleanup Cygwin Installation on Windows
+                        </a>
+                    </p>
+
+
 
 
                 </div>
@@ -1036,16 +1069,16 @@ if (Test-Path &quot;${ADKDownloads}&quot;) {
                 <code class="language-sql py-0">
 try {
     
-    $softwareFolder = &quot;C:\software&quot;
     $installerFile = &quot;7z2301-x64.msi&quot;
     $url = &quot;https://www.7-zip.org/a/$installerFile&quot;
+    $softwareFolder = &quot;C:\software&quot;
     $downloadPath = Join-Path -Path $softwareFolder -ChildPath $installerFile
     
     if (-not (Test-Path -Path $downloadPath)) {
-        throw &quot;Download 7-Zip installer.&quot;
+        throw &quot;Download installer.&quot;
     }
     
-    Write-Host &quot;7-Zip insatller already downloaded at: $downloadPath&quot;
+    Write-Host &quot;Installer already downloaded at: $downloadPath&quot;
     
 } catch {
     
@@ -1118,30 +1151,34 @@ try {
             <pre>
                 <code class="language-sql py-0">
 try {
-    $7zPath = (Get-ItemProperty &#x27;HKLM:\SOFTWARE\7-Zip&#x27;).Path
-    if (-not $7zPath) {
-        throw &quot;7-Zip not found in registry.&quot;
-    }
-    Write-Host &quot;7z is already installed at $7zPath&quot;
-} catch {
-    Write-Host &quot;7z is not installed. Proceeding with installation.&quot;
-
-    $softwareFolder = &quot;C:\software&quot;
+    
+    $softwareName = &quot;7-Zip&quot;
     $installerFile = &quot;7z2301-x64.msi&quot;
-    $url = &quot;https://www.7-zip.org/a/$installerFile&quot;
+    $softwareFolder = &quot;C:\software&quot;
     $downloadPath = Join-Path -Path $softwareFolder -ChildPath $installerFile
+    $windowsRegistry = (Get-ItemProperty &#x27;HKLM:\SOFTWARE\$softwareName&#x27;).Path
+    
+    if (-not $windowsRegistry) {
+        throw &quot;Not found in registry.&quot;
+    }
+    Write-Host &quot;Already installed at $windowsRegistry&quot;
+    
+} catch {
+    
+    Write-Host &quot;Installing...&quot;
 
     if (Test-Path -Path $downloadPath) {
         Write-Host &quot;Installing from $downloadPath&quot;
         Start-Process msiexec.exe -ArgumentList &quot;/qn /i `&quot;$downloadPath`&quot;&quot; -Wait
     } else {
         Write-Error &quot;Installer not found at: $downloadPath&quot;
-    }    
-    $7zPath = (Get-ItemProperty &#x27;HKLM:\SOFTWARE\7-Zip&#x27;).Path
-    if (-not $7zPath) {
-        Write-Error &quot;7-Zip not found in registry. Installation failed.&quot;
+    }  
+    
+    $windowsRegistry = (Get-ItemProperty &#x27;HKLM:\SOFTWARE\$softwareName&#x27;).Path
+    if (-not $windowsRegistry) {
+        Write-Error &quot;Software not found in registry. Installation failed.&quot;
     } else {
-        Write-Host &quot;7z is successfully installed at $7zPath&quot;
+        Write-Host &quot;Installation successful!&quot;
     }
 }
                 </code>
@@ -1199,12 +1236,302 @@ try {
         <div class="col px-0">
             <pre>
                 <code class="language-sql py-0">
-$softwareFolder = &quot;C:\software&quot;
 $installerFile = &quot;7z2301-x64.msi&quot;
+$softwareFolder = &quot;C:\software&quot;
 $downloadPath = Join-Path -Path $softwareFolder -ChildPath $installerFile
     
 if (Test-Path -Path $downloadPath) {
-    Write-Host &quot;Cleaning up 7z installer file...&quot;
+    Write-Host &quot;Cleaning up installer file...&quot;
+    Remove-Item -Path $downloadPath -Verbose
+} else {
+    Write-Host &quot;$downloadPath not found!&quot;
+    Write-Host &quot;nothing to cleanup.&quot;
+}
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h4 id="downloadandinstallcygwinpackageonwindows">
+                            <a href="#downloadandinstallcygwinpackageonwindows">
+                                <strong>Step 2.2 -</strong> Download and Install Cygwin Package on Windows
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                <p>Jason Bergner has published great work on 
+<a href="https://silentinstallhq.com/?s=Cygwin">Silent Install HQ</a>. Check out the 
+work Jason has created and shout them a coffee or five.</p>
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+    
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h5 id="downloadcygwininstalleronwindows">
+                            <a href="#downloadcygwininstalleronwindows">
+                                <strong>Step 2.2.1 -</strong> Download Cygwin Installer on Windows
+                            </a>
+                        </h5>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                <p>This step does the following:
+1. Downloads the 7z <code>.msi</code> file from https://www.7-zip.org/a/7z2301-x64.msi into <code>C:\software</code>.
+2. Installs the 7z <code>.msi</code> file <code>7z2301-x64.msi</code>.</p>
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+try {
+    
+    $installerFile = &quot;setup-x86_64.exe&quot;
+    $url = &quot;https://www.cygwin.com/$installerFile&quot;
+    $softwareFolder = &quot;C:\software&quot;
+    $downloadPath = Join-Path -Path $softwareFolder -ChildPath $installerFile
+    $windowsRegistry = (Get-ItemProperty &#x27;HKLM:\Software\Cygwin\setup&#x27;).rootdir
+    
+    # check if Cygwin is installed.
+    if($windowsRegistry){
+            
+        Write-Host &quot;Already Installed.&quot;
+    }
+    else {
+        
+        # check if Cygwin is installer is downloaded.
+        if (-not (Test-Path -Path $downloadPath)) {
+            throw &quot;Download installer.&quot;
+        } else {
+            
+            Write-Host &quot;Installer already Downloaded.&quot;
+        }
+    }
+    
+} catch {
+    
+    # create installer directory if it doesn&#x27;t exist.
+    if (-not (Test-Path -Path $softwareFolder)) {
+        New-Item -ItemType Directory -Path $softwareFolder
+    }
+
+    Write-Host &quot;Downloading from $url&quot;
+    Invoke-WebRequest -Uri $url -OutFile $downloadPath
+
+    # check if download was successful.
+    if (Test-Path -Path $downloadPath) {
+        Write-Host &quot;Installer download successful.&quot;
+    } else {
+        Write-Error &quot;Failed to download the installer.&quot;
+    }
+}
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h5 id="installcygwinonwindows">
+                            <a href="#installcygwinonwindows">
+                                <strong>Step 2.2.2 -</strong> Install Cygwin on Windows
+                            </a>
+                        </h5>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                <p>This step does the following:
+1. Downloads the 7z <code>.msi</code> file from https://www.7-zip.org/a/7z2301-x64.msi into <code>C:\software</code>.
+2. Installs the 7z <code>.msi</code> file <code>7z2301-x64.msi</code>.</p>
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+try {
+    
+    $installerFile = &quot;setup-x86_64.exe&quot;
+    $softwareFolder = &quot;C:\software&quot;
+    $downloadPath = Join-Path -Path $softwareFolder -ChildPath $installerFile
+    $windowsRegistry = (Get-ItemProperty &#x27;HKLM:\Software\Cygwin\setup&#x27;).rootdir
+    
+    # check if Cygwin is installed.
+    if($windowsRegistry){
+        
+        Write-Host &quot;Already Installed.&quot;
+    } else {
+        
+        # check if Cygwin is installer is downloaded.
+        if (Test-Path -Path $downloadPath) {
+            
+            throw &quot;Install Cygwin.&quot;
+        } else {
+            
+            Write-Error &quot;Installer not found.&quot;
+        }
+    }
+} catch {
+    
+    Write-Host &quot;Installing from $downloadPath&quot;
+    
+    &amp; $downloadPath `
+        --quiet-mode `
+        --local-install `
+        --local-package-dir $PSScriptRoot `
+        --root C:\cygwin64 `
+        --no-desktop
+
+    
+    # check if Cygwin is installed.
+    if($windowsRegistry){
+        Write-Host &quot;Installation successful!&quot;
+    } else {
+        Write-Error &quot;Installation failed.&quot;
+    }
+}
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h5 id="cleanupcygwininstallationonwindows">
+                            <a href="#cleanupcygwininstallationonwindows">
+                                <strong>Step 2.2.3 -</strong> Cleanup Cygwin Installation on Windows
+                            </a>
+                        </h5>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                <p>This step does the following:
+1. Downloads the 7z <code>.msi</code> file from https://www.7-zip.org/a/7z2301-x64.msi into <code>C:\software</code>.
+2. Installs the 7z <code>.msi</code> file <code>7z2301-x64.msi</code>.</p>
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+$installerFile = &quot;setup-x86_64.exe&quot;
+$softwareFolder = &quot;C:\software&quot;
+$downloadPath = Join-Path -Path $softwareFolder -ChildPath $installerFile
+    
+if (Test-Path -Path $downloadPath) {
+    Write-Host &quot;Cleaning up installer file...&quot;
     Remove-Item -Path $downloadPath -Verbose
 } else {
     Write-Host &quot;$downloadPath not found!&quot;
