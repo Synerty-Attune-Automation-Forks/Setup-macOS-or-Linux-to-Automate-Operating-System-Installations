@@ -4,7 +4,7 @@ try {
     $installerFile = "7z2301-x64.msi"
     $softwareFolder = "C:\software"
     $downloadPath = Join-Path -Path $softwareFolder -ChildPath $installerFile
-    $windowsRegistry = (Get-ItemProperty 'HKLM:\SOFTWARE\$softwareName').Path
+    $windowsRegistry = (Get-ItemProperty "HKLM:\SOFTWARE\$softwareName").Path
     
     if (-not $windowsRegistry) {
         throw "Not found in registry."
@@ -22,7 +22,7 @@ try {
         Write-Error "Installer not found at: $downloadPath"
     }  
     
-    $windowsRegistry = (Get-ItemProperty 'HKLM:\SOFTWARE\$softwareName').Path
+    $windowsRegistry = (Get-ItemProperty "HKLM:\SOFTWARE\$softwareName").Path
     if (-not $windowsRegistry) {
         Write-Error "Software not found in registry. Installation failed."
     } else {

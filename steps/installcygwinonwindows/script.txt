@@ -33,6 +33,8 @@ try {
 
     
     # check if Cygwin is installed.
+    
+    $windowsRegistry = (Get-ItemProperty 'HKLM:\Software\Cygwin\setup').rootdir
     if($windowsRegistry){
         Write-Host "Installation successful!"
     } else {

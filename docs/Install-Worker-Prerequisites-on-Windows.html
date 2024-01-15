@@ -535,7 +535,7 @@ try {
     $installerFile = &quot;7z2301-x64.msi&quot;
     $softwareFolder = &quot;C:\software&quot;
     $downloadPath = Join-Path -Path $softwareFolder -ChildPath $installerFile
-    $windowsRegistry = (Get-ItemProperty &#x27;HKLM:\SOFTWARE\$softwareName&#x27;).Path
+    $windowsRegistry = (Get-ItemProperty &quot;HKLM:\SOFTWARE\$softwareName&quot;).Path
     
     if (-not $windowsRegistry) {
         throw &quot;Not found in registry.&quot;
@@ -553,7 +553,7 @@ try {
         Write-Error &quot;Installer not found at: $downloadPath&quot;
     }  
     
-    $windowsRegistry = (Get-ItemProperty &#x27;HKLM:\SOFTWARE\$softwareName&#x27;).Path
+    $windowsRegistry = (Get-ItemProperty &quot;HKLM:\SOFTWARE\$softwareName&quot;).Path
     if (-not $windowsRegistry) {
         Write-Error &quot;Software not found in registry. Installation failed.&quot;
     } else {
@@ -844,6 +844,8 @@ try {
 
     
     # check if Cygwin is installed.
+    
+    $windowsRegistry = (Get-ItemProperty &#x27;HKLM:\Software\Cygwin\setup&#x27;).rootdir
     if($windowsRegistry){
         Write-Host &quot;Installation successful!&quot;
     } else {

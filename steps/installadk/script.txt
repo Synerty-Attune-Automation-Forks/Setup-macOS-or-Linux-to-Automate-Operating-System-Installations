@@ -22,6 +22,7 @@ while (-not $adkInstalled) {
     if (Test-Path -Path $adkPath) {
         Write-Host "Windows ADK is installed."
         $adkInstalled = $true
+        exit 0
     } else {
         Start-Sleep -Seconds 5
     }

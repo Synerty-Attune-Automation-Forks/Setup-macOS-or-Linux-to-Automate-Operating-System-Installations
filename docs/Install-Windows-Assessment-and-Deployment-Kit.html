@@ -580,6 +580,7 @@ while (-not $adkInstalled) {
     if (Test-Path -Path $adkPath) {
         Write-Host &quot;Windows ADK is installed.&quot;
         $adkInstalled = $true
+        exit 0
     } else {
         Start-Sleep -Seconds 5
     }
@@ -790,6 +791,7 @@ while (-not $adkInstalled) {
     if (Test-Path -Path $winPEPath) {
         Write-Host &quot;Windows ADK WinPE add-on is installed.&quot;
         $adkInstalled = $true
+        exit 0
     } else {
         Start-Sleep -Seconds 5
     }
@@ -853,7 +855,7 @@ Set-Location &quot;C:\attuneautomationworker\&quot;
 $ADKDownloads = &quot;ADKDownloads&quot;
 
 if (Test-Path &quot;${ADKDownloads}&quot;) {
-    Remove-Item -Recurse &quot;.\${ADKDownloads}&quot;
+    Remove-Item -Recurse &quot;.\${ADKDownloads}&quot; -Verbose
 }
                 </code>
             </pre>
