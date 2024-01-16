@@ -322,38 +322,22 @@ the virtual machine to have nested virtualisation enabled.</p>
                     </p>
 
 
+
         
 
                     <p class="text-muted pt-2">
-                        <a href="#downloadandinstallcygwinpackageonwindows">
-                            <strong>Step 2.2 -</strong> Download and Install Cygwin Package on Windows
+                        <a href="#setupwindowsosfilesforwinpeinstallationonwindows">
+                            <strong>Step 3 -</strong> Setup Windows OS Files for WinPE Installation on Windows
                         </a>
                     </p>
     
         
 
                     <p class="text-muted pt-2">
-                        <a href="#downloadcygwininstalleronwindows">
-                            <strong>Step 2.2.1 -</strong> Download Cygwin Installer on Windows
+                        <a href="#createasharingfolderonwindows">
+                            <strong>Step 3.1 -</strong> Create a sharing folder on Windows
                         </a>
                     </p>
-
-        
-
-                    <p class="text-muted pt-2">
-                        <a href="#installcygwinonwindows">
-                            <strong>Step 2.2.2 -</strong> Install Cygwin on Windows
-                        </a>
-                    </p>
-
-        
-
-                    <p class="text-muted pt-2">
-                        <a href="#cleanupcygwininstallationonwindows">
-                            <strong>Step 2.2.3 -</strong> Cleanup Cygwin Installation on Windows
-                        </a>
-                    </p>
-
 
 
 
@@ -570,7 +554,7 @@ mstsc /admin /v:{automationworkerwindowsnode}
 # Get the OS information
 $OS = Get-WmiObject Win32_OperatingSystem
 
-$ADK_DOWNLOADS=&quot;C:\attuneautomationworker\ADKDownloads&quot;
+$ADK_DOWNLOADS=&quot;C:\software\ADKDownloads&quot;
 
 if ( -Not (Test-Path &quot;${ADK_DOWNLOADS}&quot;) ) {
   New-Item &quot;${ADK_DOWNLOADS}&quot; -ItemType Directory
@@ -661,7 +645,7 @@ if ($OS.Caption -like &quot;*Windows Server 2022*&quot;) {
         <div class="col px-0">
             <pre>
                 <code class="language-sql py-0">
-$ADK=&quot;C:\attuneautomationworker\ADKDownloads&quot;
+$ADK=&quot;C:\software\ADKDownloads&quot;
 $adkInstalled = $false
 
 Set-Location &quot;${ADK}&quot;
@@ -776,7 +760,7 @@ while (-not $adkInstalled) {
 # Get the OS information
 $OS = Get-WmiObject Win32_OperatingSystem
 
-$ADK_DOWNLOADS=&quot;C:\attuneautomationworker\ADKDownloads&quot;
+$ADK_DOWNLOADS=&quot;C:\software\ADKDownloads&quot;
 
 if ( -Not (Test-Path &quot;${ADK_DOWNLOADS}&quot;) ) {
   New-Item &quot;${ADK_DOWNLOADS}&quot; -ItemType Directory
@@ -872,7 +856,7 @@ if ($OS.Caption -like &quot;*Windows Server 2022*&quot;) {
         <div class="col px-0">
             <pre>
                 <code class="language-sql py-0">
-$ADK=&quot;C:\attuneautomationworker\ADKDownloads&quot;
+$ADK=&quot;C:\software\ADKDownloads&quot;
 $adkInstalled = $false
 
 Set-Location &quot;${ADK}&quot;
@@ -1266,14 +1250,44 @@ if (Test-Path -Path $downloadPath) {
 
 
 
+
+        
+
+
+
+                    <div class="row pt-5">
+                        <h3 id="setupwindowsosfilesforwinpeinstallationonwindows">
+                            <a href="#setupwindowsosfilesforwinpeinstallationonwindows">
+                                <strong>Step 3 -</strong> Setup Windows OS Files for WinPE Installation on Windows
+                            </a>
+                        </h3>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+    
+
+
+
+
     
 
 
 
                     <div class="row pt-5">
-                        <h4 id="downloadandinstallcygwinpackageonwindows">
-                            <a href="#downloadandinstallcygwinpackageonwindows">
-                                <strong>Step 2.2 -</strong> Download and Install Cygwin Package on Windows
+                        <h4 id="createasharingfolderonwindows">
+                            <a href="#createasharingfolderonwindows">
+                                <strong>Step 3.1 -</strong> Create a sharing folder on Windows
                             </a>
                         </h4>
                     </div>
@@ -1281,40 +1295,7 @@ if (Test-Path -Path $downloadPath) {
                     <div class="row">
                         <div class="description col px-0">
                             <p>
-                                <p>Jason Bergner has published great work on 
-<a href="https://silentinstallhq.com/?s=Cygwin">Silent Install HQ</a>. Check out the 
-work Jason has created and shout them a coffee or five.</p>
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-    
-
-
-
-
-    
-
-
-
-                    <div class="row pt-5">
-                        <h5 id="downloadcygwininstalleronwindows">
-                            <a href="#downloadcygwininstalleronwindows">
-                                <strong>Step 2.2.1 -</strong> Download Cygwin Installer on Windows
-                            </a>
-                        </h5>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                <p>This step does the following:
-1. Downloads the 7z <code>.msi</code> file from https://www.7-zip.org/a/7z2301-x64.msi into <code>C:\software</code>.
-2. Installs the 7z <code>.msi</code> file <code>7z2301-x64.msi</code>.</p>
+                                
                             </p>
                         </div>
                     </div>
@@ -1343,216 +1324,47 @@ work Jason has created and shout them a coffee or five.</p>
         <div class="col px-0">
             <pre>
                 <code class="language-sql py-0">
-try {
-    
-    $installerFile = &quot;setup-x86_64.exe&quot;
-    $url = &quot;https://www.cygwin.com/$installerFile&quot;
-    $softwareFolder = &quot;C:\software&quot;
-    $downloadPath = Join-Path -Path $softwareFolder -ChildPath $installerFile
-    $windowsRegistry = (Get-ItemProperty &#x27;HKLM:\Software\Cygwin\setup&#x27;).rootdir
-    
-    # check if Cygwin is installed.
-    if($windowsRegistry){
-            
-        Write-Host &quot;Already Installed.&quot;
-    }
-    else {
-        
-        # check if Cygwin is installer is downloaded.
-        if (-not (Test-Path -Path $downloadPath)) {
-            throw &quot;Download installer.&quot;
-        } else {
-            
-            Write-Host &quot;Installer already Downloaded.&quot;
-        }
-    }
-    
-} catch {
-    
-    # create installer directory if it doesn&#x27;t exist.
-    if (-not (Test-Path -Path $softwareFolder)) {
-        New-Item -ItemType Directory -Path $softwareFolder
-    }
+# Define the folder path and share name
+$ShareName = &quot;share&quot;
+$FolderPath = &quot;{automationWorkerWindowsBaseDirectory}\$ShareName&quot;
 
-    Write-Host &quot;Downloading from $url&quot;
-    Invoke-WebRequest -Uri $url -OutFile $downloadPath
-
-    # check if download was successful.
-    if (Test-Path -Path $downloadPath) {
-        Write-Host &quot;Installer download successful.&quot;
-    } else {
-        Write-Error &quot;Failed to download the installer.&quot;
+# Ensure the File and Printer Sharing for Microsoft Networks service is enabled
+Get-NetAdapter | ForEach-Object { 
+    if (-not ($_ | Get-NetAdapterBinding -ComponentID ms_server).Enabled) {
+        $_ | Enable-NetAdapterBinding -ComponentID ms_server
     }
 }
-                </code>
-            </pre>
-        </div>
-    </div>
 
+Enable-NetFirewallRule -DisplayGroup &quot;Network Discovery&quot;
 
-
-
-
-    
-
-
-
-                    <div class="row pt-5">
-                        <h5 id="installcygwinonwindows">
-                            <a href="#installcygwinonwindows">
-                                <strong>Step 2.2.2 -</strong> Install Cygwin on Windows
-                            </a>
-                        </h5>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                <p>This step does the following:
-1. Downloads the 7z <code>.msi</code> file from https://www.7-zip.org/a/7z2301-x64.msi into <code>C:\software</code>.
-2. Installs the 7z <code>.msi</code> file <code>7z2301-x64.msi</code>.</p>
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-    
-
-
-    
-
-
-
-    <div class="row">
-        <p>
-            Execute the following script:
-        </p>
-    </div>
-    <div class="row">
-        <div class="col px-0">
-            <pre>
-                <code class="language-sql py-0">
-try {
-    
-    $installerFile = &quot;setup-x86_64.exe&quot;
-    $softwareFolder = &quot;C:\software&quot;
-    $downloadPath = Join-Path -Path $softwareFolder -ChildPath $installerFile
-    $windowsRegistry = (Get-ItemProperty &#x27;HKLM:\Software\Cygwin\setup&#x27;).rootdir
-    
-    # check if Cygwin is installed.
-    if($windowsRegistry){
-        
-        Write-Host &quot;Already Installed.&quot;
-    } else {
-        
-        # check if Cygwin is installer is downloaded.
-        if (Test-Path -Path $downloadPath) {
-            
-            throw &quot;Install Cygwin.&quot;
-        } else {
-            
-            Write-Error &quot;Installer not found.&quot;
-        }
-    }
-} catch {
-    
-    Write-Host &quot;Installing from $downloadPath&quot;
-    
-    &amp; $downloadPath `
-        --quiet-mode `
-        --local-install `
-        --local-package-dir $PSScriptRoot `
-        --root C:\cygwin64 `
-        --no-desktop
-
-    
-    # check if Cygwin is installed.
-    
-    $windowsRegistry = (Get-ItemProperty &#x27;HKLM:\Software\Cygwin\setup&#x27;).rootdir
-    if($windowsRegistry){
-        Write-Host &quot;Installation successful!&quot;
-    } else {
-        Write-Error &quot;Installation failed.&quot;
-    }
+# Check if the folder exists
+if (-not (Test-Path $folderPath)) {
+    Write-Host &quot;Folder does not exist: $folderPath&quot;
+    New-Item -Path $FolderPath -ItemType Directory
 }
-                </code>
-            </pre>
-        </div>
-    </div>
 
+$AccessRule = New-Object System.Security.AccessControl.FileSystemAccessRule(&quot;Everyone&quot;, &quot;FullControl&quot;, &quot;ContainerInherit,ObjectInherit&quot;, &quot;None&quot;, &quot;Allow&quot;)
+$Acl = Get-Acl $FolderPath
+$Acl.SetAccessRule($AccessRule)
+Set-Acl -Path $FolderPath -AclObject $Acl
+Get-Acl $FolderPath | Format-List
 
-
-
-
-    
-
-
-
-                    <div class="row pt-5">
-                        <h5 id="cleanupcygwininstallationonwindows">
-                            <a href="#cleanupcygwininstallationonwindows">
-                                <strong>Step 2.2.3 -</strong> Cleanup Cygwin Installation on Windows
-                            </a>
-                        </h5>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                <p>This step does the following:
-1. Downloads the 7z <code>.msi</code> file from https://www.7-zip.org/a/7z2301-x64.msi into <code>C:\software</code>.
-2. Installs the 7z <code>.msi</code> file <code>7z2301-x64.msi</code>.</p>
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-    
-
-
-    
-
-
-
-    <div class="row">
-        <p>
-            Execute the following script:
-        </p>
-    </div>
-    <div class="row">
-        <div class="col px-0">
-            <pre>
-                <code class="language-sql py-0">
-$installerFile = &quot;setup-x86_64.exe&quot;
-$softwareFolder = &quot;C:\software&quot;
-$downloadPath = Join-Path -Path $softwareFolder -ChildPath $installerFile
-    
-if (Test-Path -Path $downloadPath) {
-    Write-Host &quot;Cleaning up installer file...&quot;
-    Remove-Item -Path $downloadPath -Verbose
+# Check if the share already exists
+$shareExists = Get-SmbShare -Name $shareName -ErrorAction SilentlyContinue
+if ($shareExists) {
+    Write-Host &quot;Share already exists: $shareName&quot;
 } else {
-    Write-Host &quot;$downloadPath not found!&quot;
-    Write-Host &quot;nothing to cleanup.&quot;
+    # Create a new file share
+    New-SmbShare -Name $shareName -Path $folderPath -FullAccess Everyone
+    Write-Host &quot;Share created: $shareName&quot;
 }
+
+# Display current shares
+Get-SmbShare
                 </code>
             </pre>
         </div>
     </div>
-
 
 
 

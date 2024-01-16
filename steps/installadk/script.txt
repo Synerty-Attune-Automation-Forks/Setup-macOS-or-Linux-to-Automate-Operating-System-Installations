@@ -1,4 +1,4 @@
-$ADK="C:\attuneautomationworker\ADKDownloads"
+$ADK="C:\software\ADKDownloads"
 $adkInstalled = $false
 
 Set-Location "${ADK}"

@@ -465,7 +465,7 @@ mstsc /admin /v:{automationworkerwindowsnode}
 # Get the OS information
 $OS = Get-WmiObject Win32_OperatingSystem
 
-$ADK_DOWNLOADS=&quot;C:\attuneautomationworker\ADKDownloads&quot;
+$ADK_DOWNLOADS=&quot;C:\software\ADKDownloads&quot;
 
 if ( -Not (Test-Path &quot;${ADK_DOWNLOADS}&quot;) ) {
   New-Item &quot;${ADK_DOWNLOADS}&quot; -ItemType Directory
@@ -556,7 +556,7 @@ if ($OS.Caption -like &quot;*Windows Server 2022*&quot;) {
         <div class="col px-0">
             <pre>
                 <code class="language-sql py-0">
-$ADK=&quot;C:\attuneautomationworker\ADKDownloads&quot;
+$ADK=&quot;C:\software\ADKDownloads&quot;
 $adkInstalled = $false
 
 Set-Location &quot;${ADK}&quot;
@@ -671,7 +671,7 @@ while (-not $adkInstalled) {
 # Get the OS information
 $OS = Get-WmiObject Win32_OperatingSystem
 
-$ADK_DOWNLOADS=&quot;C:\attuneautomationworker\ADKDownloads&quot;
+$ADK_DOWNLOADS=&quot;C:\software\ADKDownloads&quot;
 
 if ( -Not (Test-Path &quot;${ADK_DOWNLOADS}&quot;) ) {
   New-Item &quot;${ADK_DOWNLOADS}&quot; -ItemType Directory
@@ -767,7 +767,7 @@ if ($OS.Caption -like &quot;*Windows Server 2022*&quot;) {
         <div class="col px-0">
             <pre>
                 <code class="language-sql py-0">
-$ADK=&quot;C:\attuneautomationworker\ADKDownloads&quot;
+$ADK=&quot;C:\software\ADKDownloads&quot;
 $adkInstalled = $false
 
 Set-Location &quot;${ADK}&quot;
