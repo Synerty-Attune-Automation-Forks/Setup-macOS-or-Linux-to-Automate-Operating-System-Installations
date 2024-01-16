@@ -6,41 +6,32 @@
 
 
 <head>
-    <title>How to Install Windows Assessment and Deployment Kit - Attune Automation</title>
+    <title>How to Setup Windows Worker for WinPE ISOs Installations - Attune Automation</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="title"
-          content="How to Install Windows Assessment and Deployment Kit - Attune Automation">
+          content="How to Setup Windows Worker for WinPE ISOs Installations - Attune Automation">
     <meta name="description"
-          content="The Windows Assessment and Deployment Kit (Windows ADK) and 
-Windows PE add-on has the tools you need to customise 
-Windows images for large-scale deployment, and to test 
-the quality and performance of your system, its added 
-components, and the applications running on it.">
+          content="If using a virtual machine, Windows Subsystem for Linux requires 
+the virtual machine to have nested virtualisation enabled.">
     <meta name="robots"
           content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
 
     <meta property="og:locale" content="en_AU" />
     <meta property="og:type" content="article" />
     <meta property="og:title"
-          content="HowTo Install Windows Assessment and Deployment Kit - Attune Automation" />
-    <meta property="og:description" content="The Windows Assessment and Deployment Kit (Windows ADK) and 
-Windows PE add-on has the tools you need to customise 
-Windows images for large-scale deployment, and to test 
-the quality and performance of your system, its added 
-components, and the applications running on it." />
+          content="HowTo Setup Windows Worker for WinPE ISOs Installations - Attune Automation" />
+    <meta property="og:description" content="If using a virtual machine, Windows Subsystem for Linux requires 
+the virtual machine to have nested virtualisation enabled." />
     <meta property="og:site_name" content="Attune Automation" />
     <meta property="article:section" content="IT Instruction" />
 
     <meta name="twitter:title"
-          content="How to Install Windows Assessment and Deployment Kit - Attune Automation" />
-    <meta name="twitter:description" content="The Windows Assessment and Deployment Kit (Windows ADK) and 
-Windows PE add-on has the tools you need to customise 
-Windows images for large-scale deployment, and to test 
-the quality and performance of your system, its added 
-components, and the applications running on it." />
+          content="How to Setup Windows Worker for WinPE ISOs Installations - Attune Automation" />
+    <meta name="twitter:description" content="If using a virtual machine, Windows Subsystem for Linux requires 
+the virtual machine to have nested virtualisation enabled." />
 
     <link rel="icon" href="https://www.servertribe.com/wp-content/uploads/2020/10/cropped-server_tribe_favicon-32x32.png" sizes="32x32">
     <link rel="icon" href="https://www.servertribe.com/wp-content/uploads/2020/10/cropped-server_tribe_favicon-192x192.png" sizes="192x192">
@@ -131,7 +122,7 @@ components, and the applications running on it." />
                     </a>
                 </li>
                 <li class="breadcrumb-item active" aria-current="page">
-                    <strong>Install Windows Assessment and Deployment Kit</strong>
+                    <strong>Setup Windows Worker for WinPE ISOs Installations</strong>
                 </li>
             </ol>
         </nav>
@@ -145,7 +136,7 @@ components, and the applications running on it." />
     <div class="row">
         <div class="col px-0">
             <h1 class="text-left">
-                How to Install Windows Assessment and Deployment Kit
+                How to Setup Windows Worker for WinPE ISOs Installations
             </h1>
         </div>
     </div>
@@ -154,11 +145,8 @@ components, and the applications running on it." />
     <div class="row">
         <div class="description col px-0">
             <p class="text-left">
-                <p>The Windows Assessment and Deployment Kit (Windows ADK) and 
-Windows PE add-on has the tools you need to customise 
-Windows images for large-scale deployment, and to test 
-the quality and performance of your system, its added 
-components, and the applications running on it.</p>
+                <p>If using a virtual machine, Windows Subsystem for Linux requires 
+the virtual machine to have nested virtualisation enabled.</p>
             </p>
         </div>
     </div>
@@ -220,7 +208,7 @@ components, and the applications running on it.</p>
                     </p>
                     <p class="text-muted">
                         <a href="#top">
-                            <strong>Install Windows Assessment and Deployment Kit</strong>
+                            <strong>Setup Windows Worker for WinPE ISOs Installations</strong>
                         </a>
                     </p>
 
@@ -229,8 +217,16 @@ components, and the applications running on it.</p>
         
 
                     <p class="text-muted pt-2">
+                        <a href="#installwindowsassessmentanddeploymentkit">
+                            <strong>Step 1 -</strong> Install Windows Assessment and Deployment Kit
+                        </a>
+                    </p>
+    
+        
+
+                    <p class="text-muted pt-2">
                         <a href="#downloadandinstalladk">
-                            <strong>Step 1 -</strong> Download and Install ADK
+                            <strong>Step 1.1 -</strong> Download and Install ADK
                         </a>
                     </p>
     
@@ -238,7 +234,7 @@ components, and the applications running on it.</p>
 
                     <p class="text-muted pt-2">
                         <a href="#downloadadk">
-                            <strong>Step 1.1 -</strong> Download ADK
+                            <strong>Step 1.1.1 -</strong> Download ADK
                         </a>
                     </p>
 
@@ -246,7 +242,7 @@ components, and the applications running on it.</p>
 
                     <p class="text-muted pt-2">
                         <a href="#installadk">
-                            <strong>Step 1.2 -</strong> Install ADK
+                            <strong>Step 1.1.2 -</strong> Install ADK
                         </a>
                     </p>
 
@@ -255,7 +251,7 @@ components, and the applications running on it.</p>
 
                     <p class="text-muted pt-2">
                         <a href="#downloadandinstallwinpeaddonforadk">
-                            <strong>Step 2 -</strong> Download and Install WinPE Add-On for ADK
+                            <strong>Step 1.2 -</strong> Download and Install WinPE Add-On for ADK
                         </a>
                     </p>
     
@@ -263,7 +259,7 @@ components, and the applications running on it.</p>
 
                     <p class="text-muted pt-2">
                         <a href="#downloadwinpeaddonforadk">
-                            <strong>Step 2.1 -</strong> Download WinPE Add-On for ADK
+                            <strong>Step 1.2.1 -</strong> Download WinPE Add-On for ADK
                         </a>
                     </p>
 
@@ -271,7 +267,7 @@ components, and the applications running on it.</p>
 
                     <p class="text-muted pt-2">
                         <a href="#installwinpeaddonforadk">
-                            <strong>Step 2.2 -</strong> Install WinPE Add-On for ADK
+                            <strong>Step 1.2.2 -</strong> Install WinPE Add-On for ADK
                         </a>
                     </p>
 
@@ -280,9 +276,69 @@ components, and the applications running on it.</p>
 
                     <p class="text-muted pt-2">
                         <a href="#cleanuptheadkdownloadsfolder">
-                            <strong>Step 3 -</strong> Cleanup the ADK Downloads Folder
+                            <strong>Step 1.3 -</strong> Cleanup the ADK Downloads Folder
                         </a>
                     </p>
+
+
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#installworkerprerequisitesonwindows">
+                            <strong>Step 2 -</strong> Install Worker Prerequisites on Windows
+                        </a>
+                    </p>
+    
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#downloadandinstall7zonwindows">
+                            <strong>Step 2.1 -</strong> Download and Install 7z on Windows
+                        </a>
+                    </p>
+    
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#download7zonwindows">
+                            <strong>Step 2.1.1 -</strong> Download 7z on Windows
+                        </a>
+                    </p>
+
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#install7zonwindows">
+                            <strong>Step 2.1.2 -</strong> Install 7z on Windows
+                        </a>
+                    </p>
+
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#cleanup7zinstallationonwindows">
+                            <strong>Step 2.1.3 -</strong> Cleanup 7z Installation on Windows
+                        </a>
+                    </p>
+
+
+
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#setupwindowsosfilesforwinpeinstallationonwindows">
+                            <strong>Step 3 -</strong> Setup Windows OS Files for WinPE Installation on Windows
+                        </a>
+                    </p>
+    
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#createasharingfolderonwindows">
+                            <strong>Step 3.1 -</strong> Create a sharing folder on Windows
+                        </a>
+                    </p>
+
 
 
                 </div>
@@ -343,7 +399,7 @@ components, and the applications running on it.</p>
                 </ol>
             </p>
             <p class="lead text-center">
-                You've automated: <strong>Install Windows Assessment and Deployment Kit</strong>
+                You've automated: <strong>Setup Windows Worker for WinPE ISOs Installations</strong>
             </p>
             <hr class="my-4 text-center">
             <div class="col px-0">
@@ -374,11 +430,44 @@ components, and the applications running on it.</p>
 
 
                     <div class="row pt-5">
-                        <h3 id="downloadandinstalladk">
-                            <a href="#downloadandinstalladk">
-                                <strong>Step 1 -</strong> Download and Install ADK
+                        <h3 id="installwindowsassessmentanddeploymentkit">
+                            <a href="#installwindowsassessmentanddeploymentkit">
+                                <strong>Step 1 -</strong> Install Windows Assessment and Deployment Kit
                             </a>
                         </h3>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                <p>The Windows Assessment and Deployment Kit (Windows ADK) and 
+Windows PE add-on has the tools you need to customise 
+Windows images for large-scale deployment, and to test 
+the quality and performance of your system, its added 
+components, and the applications running on it.</p>
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+    
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h4 id="downloadandinstalladk">
+                            <a href="#downloadandinstalladk">
+                                <strong>Step 1.1 -</strong> Download and Install ADK
+                            </a>
+                        </h4>
                     </div>
 
                     <div class="row">
@@ -403,11 +492,11 @@ components, and the applications running on it.</p>
 
 
                     <div class="row pt-5">
-                        <h4 id="downloadadk">
+                        <h5 id="downloadadk">
                             <a href="#downloadadk">
-                                <strong>Step 1.1 -</strong> Download ADK
+                                <strong>Step 1.1.1 -</strong> Download ADK
                             </a>
-                        </h4>
+                        </h5>
                     </div>
 
                     <div class="row">
@@ -516,11 +605,11 @@ if ($OS.Caption -like &quot;*Windows Server 2022*&quot;) {
 
 
                     <div class="row pt-5">
-                        <h4 id="installadk">
+                        <h5 id="installadk">
                             <a href="#installadk">
-                                <strong>Step 1.2 -</strong> Install ADK
+                                <strong>Step 1.1.2 -</strong> Install ADK
                             </a>
-                        </h4>
+                        </h5>
                     </div>
 
                     <div class="row">
@@ -595,16 +684,16 @@ while (-not $adkInstalled) {
 
 
 
-        
+    
 
 
 
                     <div class="row pt-5">
-                        <h3 id="downloadandinstallwinpeaddonforadk">
+                        <h4 id="downloadandinstallwinpeaddonforadk">
                             <a href="#downloadandinstallwinpeaddonforadk">
-                                <strong>Step 2 -</strong> Download and Install WinPE Add-On for ADK
+                                <strong>Step 1.2 -</strong> Download and Install WinPE Add-On for ADK
                             </a>
-                        </h3>
+                        </h4>
                     </div>
 
                     <div class="row">
@@ -629,11 +718,11 @@ while (-not $adkInstalled) {
 
 
                     <div class="row pt-5">
-                        <h4 id="downloadwinpeaddonforadk">
+                        <h5 id="downloadwinpeaddonforadk">
                             <a href="#downloadwinpeaddonforadk">
-                                <strong>Step 2.1 -</strong> Download WinPE Add-On for ADK
+                                <strong>Step 1.2.1 -</strong> Download WinPE Add-On for ADK
                             </a>
-                        </h4>
+                        </h5>
                     </div>
 
                     <div class="row">
@@ -722,11 +811,11 @@ if ($OS.Caption -like &quot;*Windows Server 2022*&quot;) {
 
 
                     <div class="row pt-5">
-                        <h4 id="installwinpeaddonforadk">
+                        <h5 id="installwinpeaddonforadk">
                             <a href="#installwinpeaddonforadk">
-                                <strong>Step 2.2 -</strong> Install WinPE Add-On for ADK
+                                <strong>Step 1.2.2 -</strong> Install WinPE Add-On for ADK
                             </a>
-                        </h4>
+                        </h5>
                     </div>
 
                     <div class="row">
@@ -806,16 +895,16 @@ while (-not $adkInstalled) {
 
 
 
-        
+    
 
 
 
                     <div class="row pt-5">
-                        <h3 id="cleanuptheadkdownloadsfolder">
+                        <h4 id="cleanuptheadkdownloadsfolder">
                             <a href="#cleanuptheadkdownloadsfolder">
-                                <strong>Step 3 -</strong> Cleanup the ADK Downloads Folder
+                                <strong>Step 1.3 -</strong> Cleanup the ADK Downloads Folder
                             </a>
-                        </h3>
+                        </h4>
                     </div>
 
                     <div class="row">
@@ -861,6 +950,422 @@ if (Test-Path &quot;${ADKDownloads}&quot;) {
             </pre>
         </div>
     </div>
+
+
+
+
+
+
+        
+
+
+
+                    <div class="row pt-5">
+                        <h3 id="installworkerprerequisitesonwindows">
+                            <a href="#installworkerprerequisitesonwindows">
+                                <strong>Step 2 -</strong> Install Worker Prerequisites on Windows
+                            </a>
+                        </h3>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+    
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h4 id="downloadandinstall7zonwindows">
+                            <a href="#downloadandinstall7zonwindows">
+                                <strong>Step 2.1 -</strong> Download and Install 7z on Windows
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+    
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h5 id="download7zonwindows">
+                            <a href="#download7zonwindows">
+                                <strong>Step 2.1.1 -</strong> Download 7z on Windows
+                            </a>
+                        </h5>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                <p>This step does the following:
+1. Downloads the 7z <code>.msi</code> file from https://www.7-zip.org/a/7z2301-x64.msi into <code>C:\software</code>.
+2. Installs the 7z <code>.msi</code> file <code>7z2301-x64.msi</code>.</p>
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+try {
+    
+    $installerFile = &quot;7z2301-x64.msi&quot;
+    $url = &quot;https://www.7-zip.org/a/$installerFile&quot;
+    $softwareFolder = &quot;C:\software&quot;
+    $downloadPath = Join-Path -Path $softwareFolder -ChildPath $installerFile
+    
+    if (-not (Test-Path -Path $downloadPath)) {
+        throw &quot;Download installer.&quot;
+    }
+    
+    Write-Host &quot;Installer already downloaded at: $downloadPath&quot;
+    
+} catch {
+    
+    if (-not (Test-Path -Path $softwareFolder)) {
+        New-Item -ItemType Directory -Path $softwareFolder
+    }
+
+    Write-Host &quot;Downloading from $url&quot;
+    Invoke-WebRequest -Uri $url -OutFile $downloadPath
+
+    if (Test-Path -Path $downloadPath) {
+        Write-Host &quot;Installer download successful.&quot;
+    } else {
+        Write-Error &quot;Failed to download the installer.&quot;
+    }
+}
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h5 id="install7zonwindows">
+                            <a href="#install7zonwindows">
+                                <strong>Step 2.1.2 -</strong> Install 7z on Windows
+                            </a>
+                        </h5>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                <p>This step does the following:
+1. Downloads the 7z <code>.msi</code> file from https://www.7-zip.org/a/7z2301-x64.msi into <code>C:\software</code>.
+2. Installs the 7z <code>.msi</code> file <code>7z2301-x64.msi</code>.</p>
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+try {
+    
+    $softwareName = &quot;7-Zip&quot;
+    $installerFile = &quot;7z2301-x64.msi&quot;
+    $softwareFolder = &quot;C:\software&quot;
+    $downloadPath = Join-Path -Path $softwareFolder -ChildPath $installerFile
+    $windowsRegistry = (Get-ItemProperty &quot;HKLM:\SOFTWARE\$softwareName&quot;).Path
+    
+    if (-not $windowsRegistry) {
+        throw &quot;Not found in registry.&quot;
+    }
+    Write-Host &quot;Already installed at $windowsRegistry&quot;
+    
+} catch {
+    
+    Write-Host &quot;Installing...&quot;
+
+    if (Test-Path -Path $downloadPath) {
+        Write-Host &quot;Installing from $downloadPath&quot;
+        Start-Process msiexec.exe -ArgumentList &quot;/qn /i `&quot;$downloadPath`&quot;&quot; -Wait
+    } else {
+        Write-Error &quot;Installer not found at: $downloadPath&quot;
+    }  
+    
+    $windowsRegistry = (Get-ItemProperty &quot;HKLM:\SOFTWARE\$softwareName&quot;).Path
+    if (-not $windowsRegistry) {
+        Write-Error &quot;Software not found in registry. Installation failed.&quot;
+    } else {
+        Write-Host &quot;Installation successful!&quot;
+    }
+}
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h5 id="cleanup7zinstallationonwindows">
+                            <a href="#cleanup7zinstallationonwindows">
+                                <strong>Step 2.1.3 -</strong> Cleanup 7z Installation on Windows
+                            </a>
+                        </h5>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                <p>This step does the following:
+1. Downloads the 7z <code>.msi</code> file from https://www.7-zip.org/a/7z2301-x64.msi into <code>C:\software</code>.
+2. Installs the 7z <code>.msi</code> file <code>7z2301-x64.msi</code>.</p>
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+$installerFile = &quot;7z2301-x64.msi&quot;
+$softwareFolder = &quot;C:\software&quot;
+$downloadPath = Join-Path -Path $softwareFolder -ChildPath $installerFile
+    
+if (Test-Path -Path $downloadPath) {
+    Write-Host &quot;Cleaning up installer file...&quot;
+    Remove-Item -Path $downloadPath -Verbose
+} else {
+    Write-Host &quot;$downloadPath not found!&quot;
+    Write-Host &quot;nothing to cleanup.&quot;
+}
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+
+
+        
+
+
+
+                    <div class="row pt-5">
+                        <h3 id="setupwindowsosfilesforwinpeinstallationonwindows">
+                            <a href="#setupwindowsosfilesforwinpeinstallationonwindows">
+                                <strong>Step 3 -</strong> Setup Windows OS Files for WinPE Installation on Windows
+                            </a>
+                        </h3>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+    
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h4 id="createasharingfolderonwindows">
+                            <a href="#createasharingfolderonwindows">
+                                <strong>Step 3.1 -</strong> Create a sharing folder on Windows
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+# Define the folder path and share name
+$ShareName = &quot;share&quot;
+$FolderPath = &quot;{automationWorkerWindowsBaseDirectory}\$ShareName&quot;
+
+# Ensure the File and Printer Sharing for Microsoft Networks service is enabled
+Get-NetAdapter | ForEach-Object { 
+    if (-not ($_ | Get-NetAdapterBinding -ComponentID ms_server).Enabled) {
+        $_ | Enable-NetAdapterBinding -ComponentID ms_server
+    }
+}
+
+Enable-NetFirewallRule -DisplayGroup &quot;Network Discovery&quot;
+
+# Check if the folder exists
+if (-not (Test-Path $folderPath)) {
+    Write-Host &quot;Folder does not exist: $folderPath&quot;
+    New-Item -Path $FolderPath -ItemType Directory
+}
+
+$AccessRule = New-Object System.Security.AccessControl.FileSystemAccessRule(&quot;Everyone&quot;, &quot;FullControl&quot;, &quot;ContainerInherit,ObjectInherit&quot;, &quot;None&quot;, &quot;Allow&quot;)
+$Acl = Get-Acl $FolderPath
+$Acl.SetAccessRule($AccessRule)
+Set-Acl -Path $FolderPath -AclObject $Acl
+Get-Acl $FolderPath | Format-List
+
+# Check if the share already exists
+$shareExists = Get-SmbShare -Name $shareName -ErrorAction SilentlyContinue
+if ($shareExists) {
+    Write-Host &quot;Share already exists: $shareName&quot;
+} else {
+    # Create a new file share
+    New-SmbShare -Name $shareName -Path $folderPath -FullAccess Everyone
+    Write-Host &quot;Share created: $shareName&quot;
+}
+
+# Display current shares
+Get-SmbShare
+                </code>
+            </pre>
+        </div>
+    </div>
+
 
 
 

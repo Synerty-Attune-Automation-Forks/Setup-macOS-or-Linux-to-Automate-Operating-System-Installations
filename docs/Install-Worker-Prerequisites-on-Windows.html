@@ -6,13 +6,13 @@
 
 
 <head>
-    <title>How to Install Prerequisites on Windows Worker - Attune Automation</title>
+    <title>How to Install Worker Prerequisites on Windows - Attune Automation</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="title"
-          content="How to Install Prerequisites on Windows Worker - Attune Automation">
+          content="How to Install Worker Prerequisites on Windows - Attune Automation">
     <meta name="description"
           content="">
     <meta name="robots"
@@ -21,13 +21,13 @@
     <meta property="og:locale" content="en_AU" />
     <meta property="og:type" content="article" />
     <meta property="og:title"
-          content="HowTo Install Prerequisites on Windows Worker - Attune Automation" />
+          content="HowTo Install Worker Prerequisites on Windows - Attune Automation" />
     <meta property="og:description" content="" />
     <meta property="og:site_name" content="Attune Automation" />
     <meta property="article:section" content="IT Instruction" />
 
     <meta name="twitter:title"
-          content="How to Install Prerequisites on Windows Worker - Attune Automation" />
+          content="How to Install Worker Prerequisites on Windows - Attune Automation" />
     <meta name="twitter:description" content="" />
 
     <link rel="icon" href="https://www.servertribe.com/wp-content/uploads/2020/10/cropped-server_tribe_favicon-32x32.png" sizes="32x32">
@@ -119,7 +119,7 @@
                     </a>
                 </li>
                 <li class="breadcrumb-item active" aria-current="page">
-                    <strong>Install Prerequisites on Windows Worker</strong>
+                    <strong>Install Worker Prerequisites on Windows</strong>
                 </li>
             </ol>
         </nav>
@@ -133,7 +133,7 @@
     <div class="row">
         <div class="col px-0">
             <h1 class="text-left">
-                How to Install Prerequisites on Windows Worker
+                How to Install Worker Prerequisites on Windows
             </h1>
         </div>
     </div>
@@ -197,7 +197,7 @@
                     </p>
                     <p class="text-muted">
                         <a href="#top">
-                            <strong>Install Prerequisites on Windows Worker</strong>
+                            <strong>Install Worker Prerequisites on Windows</strong>
                         </a>
                     </p>
 
@@ -206,8 +206,8 @@
         
 
                     <p class="text-muted pt-2">
-                        <a href="#performinstall7zonwindowsworker">
-                            <strong>Step 1 -</strong> Perform Install 7z on Windows Worker
+                        <a href="#downloadandinstall7zonwindows">
+                            <strong>Step 1 -</strong> Download and Install 7z on Windows
                         </a>
                     </p>
     
@@ -222,8 +222,16 @@
         
 
                     <p class="text-muted pt-2">
-                        <a href="#install7zonwindowsworker">
-                            <strong>Step 1.2 -</strong> Install 7z on Windows Worker
+                        <a href="#install7zonwindows">
+                            <strong>Step 1.2 -</strong> Install 7z on Windows
+                        </a>
+                    </p>
+
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#cleanup7zinstallationonwindows">
+                            <strong>Step 1.3 -</strong> Cleanup 7z Installation on Windows
                         </a>
                     </p>
 
@@ -287,7 +295,7 @@
                 </ol>
             </p>
             <p class="lead text-center">
-                You've automated: <strong>Install Prerequisites on Windows Worker</strong>
+                You've automated: <strong>Install Worker Prerequisites on Windows</strong>
             </p>
             <hr class="my-4 text-center">
             <div class="col px-0">
@@ -318,9 +326,9 @@
 
 
                     <div class="row pt-5">
-                        <h3 id="performinstall7zonwindowsworker">
-                            <a href="#performinstall7zonwindowsworker">
-                                <strong>Step 1 -</strong> Perform Install 7z on Windows Worker
+                        <h3 id="downloadandinstall7zonwindows">
+                            <a href="#downloadandinstall7zonwindows">
+                                <strong>Step 1 -</strong> Download and Install 7z on Windows
                             </a>
                         </h3>
                     </div>
@@ -407,16 +415,16 @@ mstsc /admin /v:{automationworkerwindowsnode}
                 <code class="language-sql py-0">
 try {
     
-    $softwareFolder = &quot;C:\software&quot;
     $installerFile = &quot;7z2301-x64.msi&quot;
     $url = &quot;https://www.7-zip.org/a/$installerFile&quot;
+    $softwareFolder = &quot;C:\software&quot;
     $downloadPath = Join-Path -Path $softwareFolder -ChildPath $installerFile
     
     if (-not (Test-Path -Path $downloadPath)) {
-        throw &quot;Download 7-Zip installer.&quot;
+        throw &quot;Download installer.&quot;
     }
     
-    Write-Host &quot;7-Zip insatller already downloaded at: $downloadPath&quot;
+    Write-Host &quot;Installer already downloaded at: $downloadPath&quot;
     
 } catch {
     
@@ -447,9 +455,9 @@ try {
 
 
                     <div class="row pt-5">
-                        <h4 id="install7zonwindowsworker">
-                            <a href="#install7zonwindowsworker">
-                                <strong>Step 1.2 -</strong> Install 7z on Windows Worker
+                        <h4 id="install7zonwindows">
+                            <a href="#install7zonwindows">
+                                <strong>Step 1.2 -</strong> Install 7z on Windows
                             </a>
                         </h4>
                     </div>
@@ -489,31 +497,101 @@ try {
             <pre>
                 <code class="language-sql py-0">
 try {
-    $7zPath = (Get-ItemProperty &#x27;HKLM:\SOFTWARE\7-Zip&#x27;).Path
-    if (-not $7zPath) {
-        throw &quot;7-Zip not found in registry.&quot;
-    }
-    Write-Host &quot;7z is already installed at $7zPath&quot;
-} catch {
-    Write-Host &quot;7z is not installed. Proceeding with installation.&quot;
-
-    $softwareFolder = &quot;C:\software&quot;
+    
+    $softwareName = &quot;7-Zip&quot;
     $installerFile = &quot;7z2301-x64.msi&quot;
-    $url = &quot;https://www.7-zip.org/a/$installerFile&quot;
+    $softwareFolder = &quot;C:\software&quot;
     $downloadPath = Join-Path -Path $softwareFolder -ChildPath $installerFile
+    $windowsRegistry = (Get-ItemProperty &quot;HKLM:\SOFTWARE\$softwareName&quot;).Path
+    
+    if (-not $windowsRegistry) {
+        throw &quot;Not found in registry.&quot;
+    }
+    Write-Host &quot;Already installed at $windowsRegistry&quot;
+    
+} catch {
+    
+    Write-Host &quot;Installing...&quot;
 
     if (Test-Path -Path $downloadPath) {
         Write-Host &quot;Installing from $downloadPath&quot;
         Start-Process msiexec.exe -ArgumentList &quot;/qn /i `&quot;$downloadPath`&quot;&quot; -Wait
     } else {
         Write-Error &quot;Installer not found at: $downloadPath&quot;
-    }    
-    $7zPath = (Get-ItemProperty &#x27;HKLM:\SOFTWARE\7-Zip&#x27;).Path
-    if (-not $7zPath) {
-        Write-Error &quot;7-Zip not found in registry. Installation failed.&quot;
+    }  
+    
+    $windowsRegistry = (Get-ItemProperty &quot;HKLM:\SOFTWARE\$softwareName&quot;).Path
+    if (-not $windowsRegistry) {
+        Write-Error &quot;Software not found in registry. Installation failed.&quot;
     } else {
-        Write-Host &quot;7z is successfully installed at $7zPath&quot;
+        Write-Host &quot;Installation successful!&quot;
     }
+}
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h4 id="cleanup7zinstallationonwindows">
+                            <a href="#cleanup7zinstallationonwindows">
+                                <strong>Step 1.3 -</strong> Cleanup 7z Installation on Windows
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                <p>This step does the following:
+1. Downloads the 7z <code>.msi</code> file from https://www.7-zip.org/a/7z2301-x64.msi into <code>C:\software</code>.
+2. Installs the 7z <code>.msi</code> file <code>7z2301-x64.msi</code>.</p>
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+$installerFile = &quot;7z2301-x64.msi&quot;
+$softwareFolder = &quot;C:\software&quot;
+$downloadPath = Join-Path -Path $softwareFolder -ChildPath $installerFile
+    
+if (Test-Path -Path $downloadPath) {
+    Write-Host &quot;Cleaning up installer file...&quot;
+    Remove-Item -Path $downloadPath -Verbose
+} else {
+    Write-Host &quot;$downloadPath not found!&quot;
+    Write-Host &quot;nothing to cleanup.&quot;
 }
                 </code>
             </pre>
