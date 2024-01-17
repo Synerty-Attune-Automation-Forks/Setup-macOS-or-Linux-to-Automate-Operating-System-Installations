@@ -16,7 +16,7 @@
         }, 
         {
             "order": 150, 
-            "stepKey": "setupwindowsosfilesforwinpeinstallationonwindows"
+            "stepKey": "setupandcreatesmbsharefolderonwindows"
         }
     ], 
     "name": "Setup Windows Worker for WinPE ISOs Installations", 

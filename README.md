@@ -113,9 +113,6 @@ This Blueprint sets up a Samba Share for the WinPE installation.
 ### Setup vCenter Support on Linux
 
 
-### Setup Windows OS Files for WinPE Installation on Windows
-
-
 ### Setup Windows Worker for WinPE ISOs Installations
 
 If using a virtual machine, Windows Subsystem for Linux requires 
@@ -125,6 +122,9 @@ the virtual machine to have nested virtualisation enabled.
 
 This Blueprints installs the required packages on the worker to 
 create WinPE ISO files.
+
+### Setup and create SmbShare folder on Windows
+
 
 
 
