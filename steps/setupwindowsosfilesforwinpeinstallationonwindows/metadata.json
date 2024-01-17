@@ -16,7 +16,7 @@
         }, 
         {
             "order": 100, 
-            "stepKey": "createasharingfolderonwindows"
+            "stepKey": "createasmbsharefolderonwindows"
         }
     ], 
     "name": "Setup Windows OS Files for WinPE Installation on Windows", 
