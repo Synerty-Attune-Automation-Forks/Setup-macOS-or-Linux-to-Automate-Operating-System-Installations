@@ -8,6 +8,14 @@
     "links": [
         {
             "order": 0, 
+            "stepKey": "ensurethefileandprintersharingformicrosoftnetworksserviceisenabled"
+        }, 
+        {
+            "order": 50, 
+            "stepKey": "enablefirewallrulenetworkdiscoveryonwindows"
+        }, 
+        {
+            "order": 100, 
             "stepKey": "createasharingfolderonwindows"
         }
     ], 

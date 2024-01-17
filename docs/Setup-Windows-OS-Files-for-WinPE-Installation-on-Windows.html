@@ -206,8 +206,24 @@
         
 
                     <p class="text-muted pt-2">
+                        <a href="#ensurethefileandprintersharingformicrosoftnetworksserviceisenabled">
+                            <strong>Step 1 -</strong> Ensure the File and Printer Sharing for Microsoft Networks service is enabled
+                        </a>
+                    </p>
+
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#enablefirewallrulenetworkdiscoveryonwindows">
+                            <strong>Step 2 -</strong> Enable Firewall Rule Network Discovery on Windows
+                        </a>
+                    </p>
+
+        
+
+                    <p class="text-muted pt-2">
                         <a href="#createasharingfolderonwindows">
-                            <strong>Step 1 -</strong> Create a sharing folder on Windows
+                            <strong>Step 3 -</strong> Create a sharing folder on Windows
                         </a>
                     </p>
 
@@ -301,20 +317,13 @@
 
 
                     <div class="row pt-5">
-                        <h3 id="createasharingfolderonwindows">
-                            <a href="#createasharingfolderonwindows">
-                                <strong>Step 1 -</strong> Create a sharing folder on Windows
+                        <h3 id="ensurethefileandprintersharingformicrosoftnetworksserviceisenabled">
+                            <a href="#ensurethefileandprintersharingformicrosoftnetworksserviceisenabled">
+                                <strong>Step 1 -</strong> Ensure the File and Printer Sharing for Microsoft Networks service is enabled
                             </a>
                         </h3>
                     </div>
 
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                
-                            </p>
-                        </div>
-                    </div>
 
 
 
@@ -357,30 +366,115 @@ mstsc /admin /v:{automationworkerwindowsnode}
         <div class="col px-0">
             <pre>
                 <code class="language-sql py-0">
-# Define the folder path and share name
-$ShareName = &quot;share&quot;
-$FolderPath = &quot;{automationWorkerWindowsBaseDirectory}\$ShareName&quot;
-
-# Ensure the File and Printer Sharing for Microsoft Networks service is enabled
 Get-NetAdapter | ForEach-Object { 
     if (-not ($_ | Get-NetAdapterBinding -ComponentID ms_server).Enabled) {
         $_ | Enable-NetAdapterBinding -ComponentID ms_server
     }
+    Get-NetAdapterBinding -ComponentID ms_server
 }
+                </code>
+            </pre>
+        </div>
+    </div>
 
+
+
+
+
+        
+
+
+
+                    <div class="row pt-5">
+                        <h3 id="enablefirewallrulenetworkdiscoveryonwindows">
+                            <a href="#enablefirewallrulenetworkdiscoveryonwindows">
+                                <strong>Step 2 -</strong> Enable Firewall Rule Network Discovery on Windows
+                            </a>
+                        </h3>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
 Enable-NetFirewallRule -DisplayGroup &quot;Network Discovery&quot;
+                </code>
+            </pre>
+        </div>
+    </div>
 
-# Check if the folder exists
-if (-not (Test-Path $folderPath)) {
-    Write-Host &quot;Folder does not exist: $folderPath&quot;
-    New-Item -Path $FolderPath -ItemType Directory
-}
 
-$AccessRule = New-Object System.Security.AccessControl.FileSystemAccessRule(&quot;Everyone&quot;, &quot;FullControl&quot;, &quot;ContainerInherit,ObjectInherit&quot;, &quot;None&quot;, &quot;Allow&quot;)
-$Acl = Get-Acl $FolderPath
-$Acl.SetAccessRule($AccessRule)
-Set-Acl -Path $FolderPath -AclObject $Acl
-Get-Acl $FolderPath | Format-List
+
+
+
+        
+
+
+
+                    <div class="row pt-5">
+                        <h3 id="createasharingfolderonwindows">
+                            <a href="#createasharingfolderonwindows">
+                                <strong>Step 3 -</strong> Create a sharing folder on Windows
+                            </a>
+                        </h3>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+# Define the folder path and share name
+$ShareName = &quot;share&quot;
+$FolderPath = &quot;{automationWorkerWindowsBaseDirectory}\$ShareName&quot;
 
 # Check if the share already exists
 $shareExists = Get-SmbShare -Name $shareName -ErrorAction SilentlyContinue
