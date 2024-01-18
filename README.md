@@ -102,11 +102,6 @@ This Blueprint sets up a Samba Share for the WinPE installation.
 ### Setup vCenter Support on Linux
 
 
-### Setup Windows Worker for WinPE ISOs Installations
-
-If using a virtual machine, Windows Subsystem for Linux requires 
-the virtual machine to have nested virtualisation enabled.
-
 ### Setup WinPE Support on Linux
 
 This Blueprints installs the required packages on the worker to 
@@ -124,7 +119,6 @@ create WinPE ISO files.
 | Automation Worker Linux Node | Linux/Unix Node | `automationworkerlinuxnode` | The Linux automation worker node used to perform tasks to create the ISO. |
 | Automation Worker Linux User | Linux/Unix Credential | `automationworkerlinuxuser` |  |
 | Automation Worker Linux User: root | Linux/Unix Credential | `automationworkerlinuxuserroot` | root user on the Linux Automation Worker node. |
-| Automation Worker Windows Base Directory | Text | `automationworkerwindowsbasedirectory` | Base directory for deploying temporary files to build the ISO on a Windows Worker.<br><br>eg. "C:/attune_auto_installer" |
 | Automation Worker Windows Node | Windows Node | `automationworkerwindowsnode` | The Windows automation worker node used to perform tasks to create the ISO. |
 | Automation Worker Windows User: Administrator | Windows Credential | `automationworkerwindowsuseradministrator` | Administrator user on the Windows Automation Worker node. |
 
