@@ -955,7 +955,7 @@ while (-not $adkInstalled) {
         <div class="col px-0">
             <pre>
                 <code class="language-sql py-0">
-Set-Location &quot;C:\attuneautomationworker\&quot;
+Set-Location &quot;C:\software\&quot;
 
 $ADKDownloads = &quot;ADKDownloads&quot;
 
@@ -984,13 +984,6 @@ if (Test-Path &quot;${ADKDownloads}&quot;) {
                         </h3>
                     </div>
 
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                
-                            </p>
-                        </div>
-                    </div>
 
 
 
@@ -1308,6 +1301,13 @@ if (Test-Path -Path $downloadPath) {
                         </h4>
                     </div>
 
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
 
 
 
@@ -1360,6 +1360,13 @@ Get-NetAdapter | ForEach-Object {
                         </h4>
                     </div>
 
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
 
 
 
@@ -1440,8 +1447,14 @@ Enable-NetFirewallRule -DisplayGroup &quot;Network Discovery&quot;
             <pre>
                 <code class="language-sql py-0">
 # Define the folder path and share name
-$ShareName = &quot;share&quot;
-$FolderPath = &quot;{automationWorkerWindowsBaseDirectory}\$ShareName&quot;
+$shareName = &quot;share&quot;
+$folderPath = &quot;{automationWorkerWindowsBaseDirectory}\$shareName&quot;
+
+# Check if the folder exists
+if (-not (Test-Path $folderPath)) {
+    Write-Host &quot;Folder does not exist: $folderPath&quot;
+    New-Item -Path $folderPath -ItemType Directory
+}
 
 # Check if the share already exists
 $shareExists = Get-SmbShare -Name $shareName -ErrorAction SilentlyContinue
@@ -1455,6 +1468,17 @@ if ($shareExists) {
 
 # Display current shares
 Get-SmbShare
+
+# Modifying NTFS permissions of the folder to allow full access to everyone
+Write-Host &quot;Modifying NTFS permissions for &#x27;$folderPath&#x27; to grant full access to Everyone...&quot;
+$Acl = Get-Acl $folderPath
+$AccessRule = New-Object System.Security.AccessControl.FileSystemAccessRule(&quot;Everyone&quot;, &quot;FullControl&quot;, &quot;ContainerInherit,ObjectInherit&quot;, &quot;None&quot;, &quot;Allow&quot;)
+$Acl.SetAccessRule($AccessRule)
+Set-Acl -Path $folderPath -AclObject $Acl
+Write-Host &quot;NTFS permissions modified successfully.&quot;
+
+# Reminder for manual action
+Write-Error &quot;Please ensure that &#x27;Password Protected Sharing&#x27; is turned off in &#x27;Network and Sharing Center&#x27; -&gt; &#x27;Change advanced sharing settings&#x27;. This step requires manual action.&quot;
                 </code>
             </pre>
         </div>
