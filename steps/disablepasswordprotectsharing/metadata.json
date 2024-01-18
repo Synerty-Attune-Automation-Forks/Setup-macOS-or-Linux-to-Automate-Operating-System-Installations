@@ -1,16 +1,16 @@
 {
     "actionOnStepFail": null, 
     "enabled": true, 
-    "externalUuid4": "83dc8155-32e0-42da-a64c-733ead196f2b", 
+    "externalUuid4": "81b1a150-1d48-4891-85fa-2e0578978d60", 
     "interpreter": 2, 
     "interpreterCommand": "", 
     "interpreterScriptExt": null, 
     "interpreterScriptSyntax": "", 
-    "key": "createasharingfolderonwindows", 
-    "name": "Create a sharing folder on Windows", 
+    "key": "disablepasswordprotectsharing", 
+    "name": "Disable Password Protect Sharing", 
     "osCredKey": "automationworkerwindowsuseradministrator", 
     "serverKey": "automationworkerwindowsnode", 
     "successExitCode": 0, 
-    "timeout": 180, 
+    "timeout": 5, 
     "type": "com.servertribe.attune.tuples.StepWinRmTuple"
 }

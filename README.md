@@ -85,17 +85,6 @@ This Project contains the following Blueprints.
 
 
 
-### Install Windows Assessment and Deployment Kit
-
-The Windows Assessment and Deployment Kit (Windows ADK) and 
-Windows PE add-on has the tools you need to customise 
-Windows images for large-scale deployment, and to test 
-the quality and performance of your system, its added 
-components, and the applications running on it.
-
-### Install Worker Prerequisites on Windows
-
-
 ### Setup Boot ISO Support on Linux
 
 
@@ -111,9 +100,6 @@ This is for OS installs to download ISOs from HTTP.
 This Blueprint sets up a Samba Share for the WinPE installation.
 
 ### Setup vCenter Support on Linux
-
-
-### Setup Windows OS Files for WinPE Installation on Windows
 
 
 ### Setup Windows Worker for WinPE ISOs Installations

@@ -3,7 +3,7 @@
     "concurrency": 1, 
     "enabled": true, 
     "externalUuid4": "7dbbe67c-c71d-48bd-b7a3-222c59a8a1b4", 
-    "isBlueprint": true, 
+    "isBlueprint": false, 
     "key": "installworkerprerequisitesonwindows", 
     "links": [
         {

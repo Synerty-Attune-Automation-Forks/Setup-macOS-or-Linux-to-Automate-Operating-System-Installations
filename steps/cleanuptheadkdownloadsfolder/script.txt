@@ -1,4 +1,4 @@
-Set-Location "C:\attuneautomationworker\"
+Set-Location "C:\software\"
 
 $ADKDownloads = "ADKDownloads"
 
