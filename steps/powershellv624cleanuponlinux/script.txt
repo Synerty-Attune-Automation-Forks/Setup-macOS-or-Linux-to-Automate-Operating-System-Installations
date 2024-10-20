@@ -1,3 +1,0 @@
-
-echo "Deleting RPMs"
-[ ! -e "/tmp/attune_deploy_rpm_rhelattunesvcsinstallpowershellv624" ] || rm -rf "/tmp/attune_deploy_rpm_rhelattunesvcsinstallpowershellv624"

@@ -7,15 +7,12 @@
     "key": "setupwinpesupportonlinux", 
     "links": [
         {
-            "order": 0, 
             "stepKey": "installp7ziponmacosorlinux"
         }, 
         {
-            "order": 50, 
             "stepKey": "installfuseonlinux"
         }, 
         {
-            "order": 200, 
             "stepKey": "installwimlibutilsonmacosorlinux"
         }
     ], 
