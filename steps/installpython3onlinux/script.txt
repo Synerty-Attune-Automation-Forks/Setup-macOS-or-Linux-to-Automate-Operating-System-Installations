@@ -1,1 +1,0 @@
-yum install -y gcc libxml2-devel nss-devel python3-devel python3 virtualenv

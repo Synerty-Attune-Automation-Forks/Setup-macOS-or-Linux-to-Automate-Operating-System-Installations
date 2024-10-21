@@ -7,15 +7,12 @@
     "key": "setupovirtsupportonlinux", 
     "links": [
         {
-            "order": 0, 
             "stepKey": "installpython3onlinux"
         }, 
         {
-            "order": 50, 
             "stepKey": "installlibcurldevelonlinux"
         }, 
         {
-            "order": 100, 
             "stepKey": "createvirtualenvonlinux"
         }
     ], 

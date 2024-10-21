@@ -7,7 +7,6 @@
     "key": "setupbootisosupportonlinux", 
     "links": [
         {
-            "order": 0, 
             "stepKey": "installgenisoimageonlinux"
         }
     ], 

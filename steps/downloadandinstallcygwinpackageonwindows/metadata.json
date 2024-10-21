@@ -7,15 +7,12 @@
     "key": "downloadandinstallcygwinpackageonwindows", 
     "links": [
         {
-            "order": 0, 
             "stepKey": "downloadcygwininstalleronwindows"
         }, 
         {
-            "order": 50, 
             "stepKey": "installcygwinonwindows"
         }, 
         {
-            "order": 100, 
             "stepKey": "cleanupcygwininstallationonwindows"
         }
     ], 
